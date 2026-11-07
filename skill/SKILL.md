@@ -186,7 +186,7 @@ Plans live in `<Book> <Ch>\plans\` next to the media. The script renders piece b
 
 ## 11. Intro, subtitles and logo (finishing)
 
-References (images + exact prompts): `automation/references/` in the repo, copies on the PC in `C:\Users\USER\Bible Studio\_tools\references\` — see `PROMPTS.md` there.
+References (images + exact prompts): `references/` in the bible-studio-automation repo (also `automation/references/` in the app repo), copies on the PC in `C:\Users\USER\Bible Studio\_tools\references\` — see `PROMPTS.md` there.
 
 **11a. Two films per chapter (always).** `final\<Book>_<Ch>_clean.mp4` = the chapter film alone (no intro, no subtitles, no logo — the backup the user cuts other content from) and `final\<Book>_<Ch>_final.mp4` = intro + film with subtitles and logo. Deliver both.
 

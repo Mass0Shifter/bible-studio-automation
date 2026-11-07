@@ -38,11 +38,12 @@ Length: **450–700 words ≈ 3–5 minutes** (Paz reads ~17 characters per seco
    - at least one KJV quote with its reference;
    - an explicit line tying it to Christ or the gospel. Where it fits, use the **"true and better"** contrast (*"Jesus was the true and better Jonah who…"*) or a **side-by-side contrast** (*"In the Storm: … The Sacrifice: … The Heart: …"*).
 5. **Summary.** One paragraph headed "Summary": the book's message in the salvation story, ending on one memorable line (*"…salvation belongs to the Lord, and His grace is shockingly wider than our human borders."*).
+6. **Subscribe close (always the last line).** One or two sentences, about 8–10 s (≤ 25 words), inviting the viewer to subscribe, e.g. *"If this helped you see Christ in the Book of Jonah, subscribe to Can You Behold Him, and behold the Word with us, book by book."* It plays over the channel outro (below).
 
 Save it as `Prophetic Implications\<Book>\<Book>_PI_script.md` in the Bible Studio media folder on the PC, and send the user the script to read **before** storyboarding. A wrong claim is cheap to fix here and expensive later.
 
 ## 3. Shot-by-shot storyboard
-Split the approved script into **Scenes** (hook = Scene 1, one scene per numbered point, Summary = last scene) and then **Shots**.
+Split the approved script into **Scenes** (hook = Scene 1, one scene per numbered point, then Summary) and then **Shots**. The **final scene is always "Outro"** with one shot: the subscribe line, and instead of an image/animation prompt write `Video: CAN_YOU_BEHOLD_HIM_OUTTRO.mp4 (channel outro — no picture or clip to make)`.
 - **No shot over 10–12 s of narration (≈ 20–25 words)** — the video generators' limit. Split long sentences at a comma or clause; keep scripture quotes word for word (a long quote may span two shots).
 - Every word of the script appears in exactly one shot, in order.
 - Estimated duration = words ÷ 2.3 (≈ Paz's pace), rounded, written "~Ns".
@@ -85,7 +86,8 @@ Same pipeline as the chapter films (`../SKILL.md`), with these differences:
 - **Voice:** Google Vids, voice **Paz**, one scene of the script per Vids scene, each part ≤ ~620 characters (a Vids scene export stops at the scene length). Quoted words of Jesus or God are read by the narrator (this is teaching, not drama), with no divine-voice treatment unless the user asks.
 - **Clips:** Google Vids AI video (default) from the Animation Prompts; Flow only if the user says so.
 - **Music:** Flow Music, a reflective, building score; same −9.8 dB mix.
-- **Finishing:** intro card (as in the chapter films, with the title "THE BOOK OF <BOOK>" and "PROPHETIC IMPLICATION" in place of the chapter line), logo, calm 3 s ending. Subtitles: show the narration sentence by sentence (there are no verse numbers); when a KJV quote is on screen, add its reference.
+- **Outro (every PI):** the last shot is the channel outro `CAN_YOU_BEHOLD_HIM_OUTTRO.mp4` — PC: `Bible Studio\_tools\references\`, repo: `references/`. It is 10 s, 1920×1080, 24 fps, silent: the narrator's subscribe line plays over it and the music carries on and fades out with it. Use it as is — no Vids badge, no logo and no subtitle bar over it (the logo and title are already in it). If the subscribe line runs longer than 10 s, hold the outro's last frame.
+- **Finishing:** intro card (as in the chapter films, with the title "THE BOOK OF <BOOK>" and "PROPHETIC IMPLICATION" in place of the chapter line), logo, then the outro as the ending (it replaces the usual calm 3 s ending). Subtitles: show the narration sentence by sentence (there are no verse numbers); when a KJV quote is on screen, add its reference.
 - Deliver `<Book>_PI_final.mp4` and `<Book>_PI_clean.mp4`.
 
 ## Reference: Jonah (the model)
@@ -97,4 +99,5 @@ Same pipeline as the chapter films (`../SKILL.md`), with these differences:
 - **Summary:** God relentlessly pursues rebels, both the pagan city and His own prophet; "salvation belongs to the Lord, and His grace is shockingly wider than our human borders."
 - **Storyboard:** 5 scenes, 34 shots of 4–11 s; symbolic shots for teaching lines (scroll, map, tomb, crosses, the Earth bathed in gold).
 - **Titles:** "The Hidden Secret of Jonah (It's Not About the Fish)", "Why Jesus Called Himself 'Jonah'", "The Dark Truth About the Book of Jonah", "Jonah vs. Jesus: The Shocking Comparison", "The Most Misunderstood Book in the Bible".
+- **Outro:** the channel outro video closes every PI, under the subscribe line.
 - **Description chapters:** 0:00 The Real Story of Jonah · 0:39 The Sign of Jonah · 1:25 The Scandal of Global Grace · 2:00 The Contrast of Two Saviors · 2:36 The Ultimate Message of Salvation.
