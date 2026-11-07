@@ -144,9 +144,18 @@
     },
     "19": {
      "project_id": "01a19109-42f6-7246-a17c-fe8690126345",
-     "status": "paused",
+     "status": "pictures + voiceover done; music needs extending to 5:48; clips next (Vids > Flow > Grok)",
      "images": "38/38 main shots in the app + on PC (v32–v38 saved as .jpg); extras v02b/v14b/v14c on PC only. Contact sheet _check/g19_sheet3.jpg (v29–v38)",
-     "voiceover": "to be re-recorded in ElevenLabs (user decision 2026-11-07); sample of v1 made with library voice 'Ralph - Slow, Protective, Wise' — waiting for the user's OK. Old Vids parts kept in audio\\",
+     "voiceover": {
+      "status": "done",
+      "engine": "ElevenLabs",
+      "voice": "Ralph - Slow, Protective, Wise (library voice, model Eleven v4, stability 50, similarity 75)",
+      "length": "5:47.6",
+      "file": "audio\\Genesis_19_voiceover.wav (48 kHz, -21 LUFS like the Paz chapters)",
+      "parts": "audio\\Genesis_19_el_part1_v01-22.mp3 (3:40) + Genesis_19_el_part2_v23-38.mp3 (2:07), joined with 0.9 s gap",
+      "credits_used": "~5,630",
+      "todo": "angel spans (v1-22) -> divine_voice.py voice=angel; God/LORD has no direct speech in ch19"
+     },
      "music": "2 takes (~3 min), extend at assembly",
      "intro": "card + 6 s Flow animation done",
      "clips": "prompts ready (plans/clips19.json), none generated",
