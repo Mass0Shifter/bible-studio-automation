@@ -20,3 +20,10 @@ Newest first. When a lesson is merged into the skill, delete it here.
 - **Upload from the PC straight into the app:** get `BDS.uploadLink(kind,id)` in the Bible Studio tab, then on the PC `curl -F "file=@<png>;filename=<fileStem>.png;type=image/png" "<link>"` → `{"success":true}`. Keep each device_bash call to ≤5 uploads (3-min limit); background jobs on the PC get killed.
 - **Browser pane tabs:** `preview_start` can re-use an existing tab (it hijacked tab-1); the pane caps at ~9 tabs. Agents must use `tabs_create` + their own tabIds.
 - **CrossTalk hub** (user asked to join channel on the railway hub): blocked — cloud workspace and PC proxy return 403, and the hub refuses browser origins. Needs the hub domain allowed in the org's network settings.
+
+## 2026-11-08 (Genesis 19 clips)
+- **Vids AI video can be fully automated now:** a script click on the Generate button works (no real click needed). `tools/vids_queue.js` runs a whole chapter. After each clip the composer collapses: click "Expand", then "Clear", to get the image input back.
+- Vids now offers **3–15 s** clips; this account's settings would only stay at **720p** (1080p option didn't stick). The result card has an **Upscale** button (not tried yet).
+- Busy = a visible "Cancel" button in the AI video panel. A 13 s clip took ~1.5 min.
+- **Verse windows without a transcriber:** `Genesis 19/plans/g19_windows.py` places verse ends by reading speed and snaps to the nearest pause; check chars/second per verse (≈15–18) to spot bad boundaries.
+- Google accounts signed in (2026-11-08): 5 (A = u/0 … E = u/4). Account A had Vids AI-video allowance on 8 Nov.

@@ -11,6 +11,7 @@ Synced 2026-11-07 from `C:\Users\USER\Bible Studio\_tools\` (Oct–Nov PC). The 
 | `finish.py` + `overlay.py` | Intro, subtitles (lower third), logo, calm ending → `_final.mp4`; also the `_clean.mp4`. |
 | `divine_voice.py` | Voice treatment for God (`voice=god`, default) and angels (`voice=angel`, `gabriel`, `michael`) over given time spans of the narration. |
 | `chatgpt_queue.js` | Paste into a ChatGPT tab in project "Ai Bible Imagery": generates a list of shot pictures one chat per scene, saves them in the browser (IndexedDB). v5 clears the composer first. |
+| `vids_queue.js` | Paste into a Google Vids doc tab (AI Video → Animate open): generates a list of clips one after another fully by itself (picture from an image URL, prompt, length 3–15 s), downloads each to Downloads (arrives as `<uuid>.tmp` — map by download order). Written 2026-11-08 for Genesis 19. |
 | `flow_queue.js` | Paste into a Google Flow project tab: uploads start frames and queues clips (only when the user approves Flow credits). |
 | `win/winrun.py`, `win/watcher.bat`, `win/run_chapter2.bat` | Render natively on Windows with CapCut's ffmpeg + the NVIDIA encoder: drop a job file `"<n> <plan base>"` into `win\queue\`; the watcher runs speech_fit → fit_edit → finish → speech_check → film_check. |
 
