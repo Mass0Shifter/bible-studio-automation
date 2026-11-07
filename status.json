@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T15:45+01:00",
+ "updated": "2026-11-07T23:10+01:00",
  "books": {
   "Genesis": {
    "workspace": "The Book Genesis",
@@ -145,8 +145,8 @@
     "19": {
      "project_id": "01a19109-42f6-7246-a17c-fe8690126345",
      "status": "paused",
-     "images": "22/41 (v01–v11, v02b, v13–v21, v14b, v14c)",
-     "voiceover": "partial: intro, v1–3, v14–16 recorded; Vids refused v4–7 and v8–10 — waiting for user decision",
+     "images": "31/41 on PC disk (v01–v28, v02b, v14b, v14c) — missing v29–v38; v22–v28 + v12 made 2026-11-06, not yet confirmed uploaded to app shot slots",
+     "voiceover": "partial: intro, v1–3, v6–7 (b2), v9 (c2), v10 (c3), v14–16 recorded (each export is a 53 s Vids scene, trim silence). Still missing: v4–5, v8, v11–13, v17–38",
      "music": "2 takes (~3 min), extend at assembly",
      "intro": "card + 6 s Flow animation done",
      "clips": "prompts ready (plans/clips19.json), none generated",
@@ -171,7 +171,8 @@
      },
      "clips": "none — prep: plans/verse_windows.json; Vids doc 'Genesis 20 Clips' https://docs.google.com/videos/d/1tTnFXe5JvagzAx6KR4wmVyRUxjObQ8sGWbNHYgj-psw/edit; Flow project 'Genesis 20' https://flow.google.com/project/57bc226e-e008-44ed-a11b-0f5c923f4b86 (13 images uploaded)",
      "final": "none",
-     "chatgpt_scene4": "https://chatgpt.com/c/6aee9537-2e1c-83e9-b7ec-f68655f93f90"
+     "chatgpt_scene4": "https://chatgpt.com/c/6aee9537-2e1c-83e9-b7ec-f68655f93f90",
+     "images_on_pc": "none — images folder on C:\\Users\\USER\\Bible Studio is empty; not included when the 21–27 work was transferred from the other PC (revivalist-hp); pictures are in the app shot slots and maybe on that PC. Download copies from the app before editing."
     },
     "21": {
      "project_id": "01a1b3e0-15d7-71a3-8653-2588e9bf5220",
@@ -198,7 +199,8 @@
      ],
      "issues": [
       "Ishmael stored as 'symbol' — no portrait"
-     ]
+     ],
+     "images_on_pc": "none — images folder on C:\\Users\\USER\\Bible Studio is empty; not included when the 21–27 work was transferred from the other PC (revivalist-hp); pictures are in the app shot slots and maybe on that PC. Download copies from the app before editing."
     },
     "22": {
      "project_id": "01a1b3e0-4126-703d-821c-a3d60dd1e626",
@@ -222,7 +224,8 @@
      "portraits_made": [
       "Isaac (Young Adult)"
      ],
-     "chatgpt_scene4": "https://chatgpt.com/c/6aee94a1-a7d0-83e9-8be3-becc8123c705"
+     "chatgpt_scene4": "https://chatgpt.com/c/6aee94a1-a7d0-83e9-8be3-becc8123c705",
+     "images_on_pc": "none — images folder on C:\\Users\\USER\\Bible Studio is empty; not included when the 21–27 work was transferred from the other PC (revivalist-hp); pictures are in the app shot slots and maybe on that PC. Download copies from the app before editing."
     },
     "23": {
      "project_id": "01a1b3f9-5dcb-70a9-ab18-91d53526cbd9",
@@ -284,7 +287,7 @@
       "status": "done",
       "length": "4:06.7",
       "vids": "https://docs.google.com/videos/d/19Mn8lpuJXWUzpNPqG_yCajIUnR8TYl5nA2pzRSgeTh0/edit",
-      "note": "verify copy in audio folder (original in Downloads as 'Genesis Chapter 25.mp4')"
+      "note": "mp4 copy in audio\\ OK (4:06.7); Genesis_25_voiceover.wav is 4:00.3 — ~6 s short, regenerate from the mp4"
      },
      "music": {
       "status": "done",
@@ -318,7 +321,7 @@
       "status": "done",
       "length": "4:37.3",
       "vids": "https://docs.google.com/videos/d/1YM-NvjC_scl2qyJ9jL0hlew0_iNP6UkZFR5FDCmsGSE/edit",
-      "note": "Genesis_26_voiceover.wav incomplete (118 s) — regenerate from mp4"
+      "note": "Genesis_26_voiceover.wav confirmed broken (1:58.5 of 4:37.3) — regenerate from the mp4"
      },
      "music": {
       "status": "todo"
@@ -353,7 +356,8 @@
      ],
      "issues": [
       "Remove wrongly linked 'Haran' (person) entity — it is the town"
-     ]
+     ],
+     "pc_files": "folder on C:\\Users\\USER\\Bible Studio has empty subfolders only — no voiceover/music yet"
     },
     "28": {
      "status": "not_started"

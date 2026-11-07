@@ -1,6 +1,6 @@
 # QUICK BRIEF — read this first, then only the files it points to
 
-_Last updated: 2026-11-07 15:50 (Africa/Lagos) — synced the Oct–Nov PC's logs, skill and tools._
+_Last updated: 2026-11-07 23:10 (Africa/Lagos) — reviewed Genesis 19–28 against the files on PC `C:\Users\USER\Bible Studio`._
 Keep this file under ~150 lines. Update it at the end of every work session (and after each finished stage).
 
 ## What this repo is
@@ -29,13 +29,13 @@ Legend: ✅ done · 🟡 partial · ⬜ not started · ❔ made before this repo
 |---|---|---|---|---|---|---|---|
 | 1–3 | ❔ | ❔ | ❔ | ❔ | ❔ | ❔ | not on the Oct–Nov PC — audit with `BDS.project(id)` |
 | 4–18 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | final + clean films on the Oct–Nov PC (`C:\Users\USER\Bible Studio`); 7–18 passed the speech check 3–4 Nov |
-| 19 | ✅ 38 shots | 🟡 22/41 | 🟡 intro, v1–3, v14–16 | ✅ 2 takes | ⬜ (prompts ready) | ⬜ | paused 4 Nov; Vids refused v4–7 + v8–10 — user to decide; intro card + Flow intro done |
-| 20 | ✅ 18 shots | 🟡 13/18 | ✅ 2:44 | ✅ 2 takes | ⬜ | ⬜ | images missing v14–18 |
-| 21 | ✅ 21 shots | 🟡 15/21 | ✅ 4:07 | ✅ 2 takes | ⬜ | ⬜ | images missing v22–34; Ishmael has no portrait (stored as "symbol") |
-| 22 | ✅ 22 shots | 🟡 16/22 | ✅ 3:30 | ✅ 2 takes | ⬜ | ⬜ | images missing v18–24 |
+| 19 | ✅ 38 shots | 🟡 31/41 (v29–38 missing) | 🟡 intro, v1–3, v6–7, v9, v10, v14–16 | ✅ 2 takes | ⬜ (prompts ready) | ⬜ | v4–5 + v8 still refused/missing; v11–13, v17–38 not recorded; intro card + Flow intro done |
+| 20 | ✅ 18 shots | 🟡 13/18 (in app; not in the transfer) | ✅ 2:44 | ✅ 2 takes | ⬜ | ⬜ | images missing v14–18 |
+| 21 | ✅ 21 shots | 🟡 15/21 (in app; not in the transfer) | ✅ 4:07 | ✅ 2 takes | ⬜ | ⬜ | images missing v22–34; Ishmael has no portrait (stored as "symbol") |
+| 22 | ✅ 22 shots | 🟡 16/22 (in app; not in the transfer) | ✅ 3:30 | ✅ 2 takes | ⬜ | ⬜ | images missing v18–24 |
 | 23 | ✅ 20 shots | ⬜ 0/20 | ✅ 2:44 | ✅ 1 take | ⬜ | ⬜ | portrait needed: Ephron |
 | 24 | ✅ 40 shots | ⬜ 0/40 | ✅ 9:14 | ✅ 2 takes | ⬜ | ⬜ | portraits: Servant, Rebekah, Laban, Bethuel, Isaac(Adult); set Abraham stage=Elder |
-| 25 | ✅ 24 shots | ⬜ 0/24 | ✅ 4:07 (verify copy in audio\) | ✅ 2 takes | ⬜ | ⬜ | portraits: Keturah, Rebekah(Adult), Esau, Jacob; set Abraham stage=Elder |
+| 25 | ✅ 24 shots | ⬜ 0/24 | ✅ 4:07 mp4 OK; .wav 6 s short, redo | ✅ 2 takes | ⬜ | ⬜ | portraits: Keturah, Rebekah(Adult), Esau, Jacob; set Abraham stage=Elder |
 | 26 | ✅ 22 shots | ⬜ 0/22 | ✅ 4:37 (wav copy broken, redo) | ⬜ | ⬜ | ⬜ | portraits: Isaac(Adult), Rebekah(Adult) |
 | 27 | ✅ 26 shots | ⬜ 0/26 | 🟡 v21–46 inserted, v1–20 + export to do | ⬜ | ⬜ | ⬜ | remove wrong "Haran" (person) entity; Vids scene 5 may be doubled |
 | 28 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | next |
@@ -48,6 +48,12 @@ Legend: ✅ done · 🟡 partial · ⬜ not started · ❔ made before this repo
 | Jonah | 1–4 (+ whole-book project) | ❔ produced earlier — audit |
 | Esther | 1–10 projects exist | ch 9 ✅ final + clean (5:41); others ❔ audit |
 | Everything else | — | ⬜ |
+
+## Review 2026-11-07 night (files on PC `C:\Users\USER\Bible Studio`)
+- Chapter folders on this PC are `C:\Users\USER\Bible Studio\Genesis NN` (not Desktop). Genesis 28 has no folder yet.
+- Genesis 20–27 was made on the other PC (revivalist-hp) and transferred here by the user on 2026-11-07. Genesis 20–22 pictures were not in the transfer (images folders empty) — they are in the app shot slots; download from there.
+- Genesis 25 .wav 4:00 vs mp4 4:07; Genesis 26 .wav 1:58 vs mp4 4:37 → rebuild both .wav files from the mp4.
+- Genesis 27 folder is empty (voiceover not exported, no music).
 
 ## Current decisions / blockers (2026-11-07)
 - **User: no video generation for now.** Focus = storyboard, images, voiceover, music up to Genesis 28.
