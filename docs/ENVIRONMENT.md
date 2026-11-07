@@ -37,3 +37,13 @@ Browser-pane sites approved for the pane: biblestudio.nachamtns.com, chatgpt.com
 
 ## Rendering on Windows (Oct–Nov PC)
 The PC (i7-11800H, 16 threads, 16 GB, NVIDIA GPU) renders natively: `_tools\win\watcher.bat` watches `_tools\win\queue\*.job` and runs the whole render + checks; `winrun.py` wraps CapCut's ffmpeg (`AppData\Local\CapCut\Apps\<ver>\ffmpeg.exe`, no ffprobe/libx264 → emulated / h264_nvenc). The Linux VM shell (2 cores) is only for small jobs.
+
+## Google accounts — Vids AI-video allowance per account (user signed in 5 accounts, 2026-11-08)
+Accounts are A = docs.google.com/videos/u/0 … E = u/4 (the user knows which is which). Allowance is counted in **seconds of clip** and shown as "Exceeds your remaining quota" when the length slider can't be set.
+| Account | 2026-11-08 |
+|---|---|
+| A (u/0) | used ~156 s (Genesis 19 v01–v15, v18), then out |
+| B (u/1) | Genesis 19 from v16 on |
+| C (u/2) | not checked yet |
+| D (u/3) | not checked yet |
+| E (u/4) | not checked yet |
