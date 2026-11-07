@@ -19,7 +19,7 @@ Shared tools (copies in this repo's `tools/`): `Desktop\Bible Studio\_tools\` (f
 | Bible Director Studio | https://biblestudio.nachamtns.com | projects, exegesis, storyboard, uploads (bridge `/bds-bridge.js`) | never press paid AI buttons |
 | ChatGPT (Plus) | project **"Ai Bible Imagery"** https://chatgpt.com/g/g-p-6a7336d84f948191ba98f1852cc326d1/project | portraits + shot images | image cap per ~5–7 h; never use project "Can You Behold Him" (thumbnails) |
 | Google Vids | https://docs.google.com/videos | voiceover (voice **Paz**), AI video clips (default, free) | AI-video quota per account; TTS fails on scripts > ~900 chars |
-| Google Flow | https://flow.google.com | video clips only when user says "using Flow" | Omni 1.2 Flash: 3 credits/s @720p, 1/s @360p |
+| Google Flow | https://flow.google.com | video clips only when user says "using Flow" | **Use Omni Flash 1.1 (user rule 2026-11-07, cheaper)**; 1.2 Flash = 3 credits/s @720p |
 | Google Flow Music | https://www.flowmusic.app | instrumental score | download via clip `wav_url` |
 
 Browser-pane sites approved for the pane: biblestudio.nachamtns.com, chatgpt.com, labs.google, flow.google.com, docs.google.com, accounts.google.com, flowmusic.app.
