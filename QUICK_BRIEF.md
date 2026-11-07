@@ -35,8 +35,8 @@ Legend: ✅ done · 🟡 partial · ⬜ not started · ❔ made before this repo
 | 22 | ✅ 22 shots | 🟡 16/22 (in app; not in the transfer) | ✅ 3:30 | ✅ 2 takes | ⬜ | ⬜ | images missing v18–24 |
 | 23 | ✅ 20 shots | ⬜ 0/20 | ✅ 2:44 | ✅ 1 take | ⬜ | ⬜ | portrait needed: Ephron |
 | 24 | ✅ 40 shots | ⬜ 0/40 | ✅ 9:14 | ✅ 2 takes | ⬜ | ⬜ | portraits: Servant, Rebekah, Laban, Bethuel, Isaac(Adult); set Abraham stage=Elder |
-| 25 | ✅ 24 shots | ⬜ 0/24 | ✅ 4:07 mp4 OK; .wav 6 s short, redo | ✅ 2 takes | ⬜ | ⬜ | portraits: Keturah, Rebekah(Adult), Esau, Jacob; set Abraham stage=Elder |
-| 26 | ✅ 22 shots | ⬜ 0/22 | ✅ 4:37 (wav copy broken, redo) | ⬜ | ⬜ | ⬜ | portraits: Isaac(Adult), Rebekah(Adult) |
+| 25 | ✅ 24 shots | ⬜ 0/24 | ✅ 4:07 | ✅ 2 takes | ⬜ | ⬜ | portraits: Keturah, Rebekah(Adult), Esau, Jacob; set Abraham stage=Elder |
+| 26 | ✅ 22 shots | ⬜ 0/22 | ✅ 4:37 | ⬜ | ⬜ | ⬜ | portraits: Isaac(Adult), Rebekah(Adult) |
 | 27 | ✅ 26 shots | ⬜ 0/26 | 🟡 v21–46 inserted, v1–20 + export to do | ⬜ | ⬜ | ⬜ | remove wrong "Haran" (person) entity; Vids scene 5 may be doubled |
 | 28 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | next |
 | 29–50 | ⬜ | | | | | | |
@@ -52,7 +52,7 @@ Legend: ✅ done · 🟡 partial · ⬜ not started · ❔ made before this repo
 ## Review 2026-11-07 night (files on PC `C:\Users\USER\Bible Studio`)
 - Chapter folders on this PC are `C:\Users\USER\Bible Studio\Genesis NN` (not Desktop). Genesis 28 has no folder yet.
 - Genesis 20–27 was made on the other PC (revivalist-hp) and transferred here by the user on 2026-11-07. Genesis 20–22 pictures were not in the transfer (images folders empty) — they are in the app shot slots; download from there.
-- Genesis 25 .wav 4:00 vs mp4 4:07; Genesis 26 .wav 1:58 vs mp4 4:37 → rebuild both .wav files from the mp4.
+- Genesis 25 + 26 .wav rebuilt from the mp4 (full length now). Genesis 28 folder created.
 - Genesis 27 folder is empty (voiceover not exported, no music).
 
 ## Current decisions / blockers (2026-11-07)
@@ -60,6 +60,7 @@ Legend: ✅ done · 🟡 partial · ⬜ not started · ❔ made before this repo
 - **Google Vids AI-video quota used up** (durations locked at 3 s). Wait for reset; don't use Flow unless user says.
 - **Flow price changed:** Omni 1.2 Flash = 3 credits/s at 720p (1/s at 360p). Old skill figure (~1.5/s) is wrong. Genesis 20+21 clips ≈ 750 credits at 720p — user has NOT approved.
 - **ChatGPT image limit** resets ~5–7 h after it hits; it hit at ~04:00 and ~? on 2026-11-07. Images resume after reset.
+- **Working rules:** max 3 chapters at once (lead + 2 agents); cycle the user's 5–7 Google accounts for Vids/Flow (see `docs/ENVIRONMENT.md`).
 - **Claude 5-hour usage limit** stops background agents; max 3 agents at once (user rule).
 - PC (`revivalist-hp`) keeps going offline — ask user to keep it plugged in and awake.
 

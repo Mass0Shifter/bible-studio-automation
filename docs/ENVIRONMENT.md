@@ -30,6 +30,8 @@ Browser-pane sites approved for the pane: biblestudio.nachamtns.com, chatgpt.com
 
 ## Running agents
 - User rule: at most **3** background agents at once.
+- User rule (2026-11-07): work on **at most 3 chapters at once** — the lead Claude works one chapter itself and runs **2 extra agents**, one chapter each.
+- Google accounts (2026-11-07): the user signs **5–7 Gmail accounts** into the built-in browser pane. Check each one's Vids AI-video quota and Flow credits, keep a credit table here (as "Google account A, B, C…", never the address), and switch to the next account when one runs out. Spending Flow credits still needs the user's yes.
 - Agents sharing the one browser pane collide: each must open its own fresh tabs and only use its own tabIds; pane has a tab limit — close tabs when done.
 - Claude plan has a 5-hour usage limit; agents stop with a 429 and must be resumed after the reset.
 

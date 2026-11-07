@@ -287,7 +287,7 @@
       "status": "done",
       "length": "4:06.7",
       "vids": "https://docs.google.com/videos/d/19Mn8lpuJXWUzpNPqG_yCajIUnR8TYl5nA2pzRSgeTh0/edit",
-      "note": "mp4 copy in audio\\ OK (4:06.7); Genesis_25_voiceover.wav is 4:00.3 — ~6 s short, regenerate from the mp4"
+      "note": "Genesis_25_voiceover.wav rebuilt from the mp4 on 2026-11-07 (4:06.7); old short copy kept as .short.wav"
      },
      "music": {
       "status": "done",
@@ -321,7 +321,7 @@
       "status": "done",
       "length": "4:37.3",
       "vids": "https://docs.google.com/videos/d/1YM-NvjC_scl2qyJ9jL0hlew0_iNP6UkZFR5FDCmsGSE/edit",
-      "note": "Genesis_26_voiceover.wav confirmed broken (1:58.5 of 4:37.3) — regenerate from the mp4"
+      "note": "Genesis_26_voiceover.wav rebuilt from the mp4 on 2026-11-07 (4:37.3); old broken copy kept as .short.wav"
      },
      "music": {
       "status": "todo"
@@ -360,7 +360,8 @@
      "pc_files": "folder on C:\\Users\\USER\\Bible Studio has empty subfolders only — no voiceover/music yet"
     },
     "28": {
-     "status": "not_started"
+     "status": "not_started",
+     "pc_folder": "C:\\Users\\USER\\Bible Studio\\Genesis 28 (empty subfolders created 2026-11-07)"
     }
    }
   },
