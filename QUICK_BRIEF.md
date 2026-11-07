@@ -33,7 +33,7 @@ Legend: ✅ done · 🟡 partial · ⬜ not started · ❔ made before this repo
 | 20 | ✅ 18 shots | 🟡 13/18 (in app; not in the transfer) | ✅ 2:44 | ✅ 2 takes | ⬜ | ⬜ | images missing v14–18 |
 | 21 | ✅ 21 shots | 🟡 15/21 (in app; not in the transfer) | ✅ 4:07 | ✅ 2 takes | ⬜ | ⬜ | images missing v22–34; Ishmael has no portrait (stored as "symbol") |
 | 22 | ✅ 22 shots | 🟡 16/22 (in app; not in the transfer) | ✅ 3:30 | ✅ 2 takes | ⬜ | ⬜ | images missing v18–24 |
-| 23 | ✅ 20 shots | ⬜ 0/20 | ✅ 2:44 | ✅ 1 take | ⬜ | ⬜ | portrait needed: Ephron |
+| 23 | ✅ 20 shots | ✅ 20/20 | ✅ 2:44 | ✅ 1 take | ⬜ | ⬜ | Ephron portrait done |
 | 24 | ✅ 40 shots | ⬜ 0/40 | ✅ 9:14 | ✅ 2 takes | ⬜ | ⬜ | portraits: Servant, Rebekah, Laban, Bethuel, Isaac(Adult); set Abraham stage=Elder |
 | 25 | ✅ 24 shots | ⬜ 0/24 | ✅ 4:07 | ✅ 2 takes | ⬜ | ⬜ | portraits: Keturah, Rebekah(Adult), Esau, Jacob; set Abraham stage=Elder |
 | 26 | ✅ 22 shots | ⬜ 0/22 | ✅ 4:37 | ⬜ | ⬜ | ⬜ | portraits: Isaac(Adult), Rebekah(Adult) |

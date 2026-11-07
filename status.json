@@ -241,7 +241,7 @@
      "project_id": "01a1b3f9-5dcb-70a9-ab18-91d53526cbd9",
      "verses": "1-20",
      "storyboard_shots": 20,
-     "images": "0/20",
+     "images": "20/20 in the app + on PC (Genesis 23\\images\\*.jpg); contact sheet _check\\g23_sheet.jpg checked",
      "voiceover": {
       "status": "done",
       "length": "2:43.5"
@@ -254,8 +254,8 @@
      },
      "clips": "none",
      "final": "none",
-     "portraits_needed": [
-      "Ephron (Adult)"
+     "portraits_made": [
+      "Ephron (Adult) — uploaded to Character Library 2026-11-08; copy references\\Ephron_Adult.jpg"
      ]
     },
     "24": {

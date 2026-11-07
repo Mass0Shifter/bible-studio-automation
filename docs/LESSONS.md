@@ -27,3 +27,5 @@ Newest first. When a lesson is merged into the skill, delete it here.
 - Busy = a visible "Cancel" button in the AI video panel. A 13 s clip took ~1.5 min.
 - **Verse windows without a transcriber:** `Genesis 19/plans/g19_windows.py` places verse ends by reading speed and snaps to the nearest pause; check chars/second per verse (≈15–18) to spot bad boundaries.
 - Google accounts signed in (2026-11-08): 5 (A = u/0 … E = u/4). Account A had Vids AI-video allowance on 8 Nov.
+
+- **Upload from ChatGPT without leaving the chat (2026-11-08):** append a hidden `<iframe src="/robots.txt">` to the ChatGPT page; build the form + target iframe inside that frame's document and submit — works while the ChatGPT queue keeps running in the same tab.
