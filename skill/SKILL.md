@@ -116,8 +116,8 @@ File → Download → MP4. Downloading needs the user's OK (state the file name 
 
 ## 9. Video clips — which engine (user rule, 2026-10-22)
 
-- **Default = Google Vids AI video** (free, Omni, 1080p). "Generate Genesis 11" / "make the videos for chapter 11" → Vids (9V below).
-- **Google Flow only when the user says so** ("… using Flow", "with Flow") → 9a–9c below (costs Flow credits; get the yes on the total first).
+- **Order (user rule, 2026-11-07): Google Vids → Google Flow → Grok Imagine.** Use Vids AI video first (free, Omni, 1080p; 9V). When Vids can't (quota used up on every signed-in Google account, or it refuses), use Google Flow with **Omni Flash 1.1** (9F; tell the user the credit total first). Only when Omni Flash rejects the prompt/start image, use Grok Imagine (see "Fallback tools").
+- Cycle the user's signed-in Google accounts (5–7) for Vids quota and Flow credits before moving down the order; keep the per-account table in `docs/ENVIRONMENT.md`.
 - 9a (measuring the verses) and 9d (fitting the clips) are the same for both engines. Character-speech, death-scene and unclothed-figure rules apply to both.
 
 **9V. Generate in Google Vids (default, no credits).** Tested 2026-10-22 on Genesis 10 shots.
@@ -234,7 +234,7 @@ Examples: `chapter-intro-example-ruth-2.jpg`, `book-intro-example-ruth.jpg`. **P
 
 Use these **only when the normal tool fails** and the user's subscription for them is signed in (check in the browser pane; if it isn't, tell the user — never type passwords).
 
-**Video: Grok Imagine** (`https://grok.com/imagine`) — for a shot whose clip **Omni Flash rejects** (Vids or Flow refuses the prompt / start image, even after one softened retry). Don't use it for shots that work in Vids/Flow.
+**Video: Grok Imagine** (`https://grok.com/imagine`) — third choice after Vids and Flow, for a shot whose clip **Omni Flash rejects** (Vids or Flow refuses the prompt / start image, even after one softened retry). Don't use it for shots that work in Vids/Flow.
 - Same inputs as 9V/9F: the shot picture as the start image + the motion prompt + the audio rule (no narration; character speech only as the exact quoted KJV words).
 - Download the clip, name it `video\<Book>_<Ch>_S<scene>_SH<shot>.mp4` like the others, and note in the chapter log which shots came from Grok (they have their own look and possibly a watermark — check the corners and cover with the badge if needed).
 - Flow default model is **Omni Flash 1.1** (cheaper) — user rule 2026-11-07.

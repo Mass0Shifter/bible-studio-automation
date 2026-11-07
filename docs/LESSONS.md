@@ -15,3 +15,8 @@ Newest first. When a lesson is merged into the skill, delete it here.
 - **Unnamed main actors** (Abraham's servant, Gen 24) are skipped by the "named only" rule — add them anyway and give a portrait.
 - **Music** tracks are ~2:40–3:00; chapters over 3 min need a crossfaded repeat at assembly.
 - **Shared browser pane:** `preview_start` can hand out a tabId another agent is using. Each agent: fresh tabs, check `tabs_context`, never navigate others' tabs.
+
+## 2026-11-07 (night)
+- **Upload from the PC straight into the app:** get `BDS.uploadLink(kind,id)` in the Bible Studio tab, then on the PC `curl -F "file=@<png>;filename=<fileStem>.png;type=image/png" "<link>"` → `{"success":true}`. Keep each device_bash call to ≤5 uploads (3-min limit); background jobs on the PC get killed.
+- **Browser pane tabs:** `preview_start` can re-use an existing tab (it hijacked tab-1); the pane caps at ~9 tabs. Agents must use `tabs_create` + their own tabIds.
+- **CrossTalk hub** (user asked to join channel on the railway hub): blocked — cloud workspace and PC proxy return 403, and the hub refuses browser origins. Needs the hub domain allowed in the org's network settings.
