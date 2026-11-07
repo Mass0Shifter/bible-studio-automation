@@ -145,12 +145,13 @@
     "19": {
      "project_id": "01a19109-42f6-7246-a17c-fe8690126345",
      "status": "paused",
-     "images": "31/41 on PC disk (v01–v28, v02b, v14b, v14c) — missing v29–v38; v22–v28 + v12 made 2026-11-06, not yet confirmed uploaded to app shot slots",
-     "voiceover": "partial: intro, v1–3, v6–7 (b2), v9 (c2), v10 (c3), v14–16 recorded (each export is a 53 s Vids scene, trim silence). Still missing: v4–5, v8, v11–13, v17–38",
+     "images": "38/38 main shots in the app + on PC (v32–v38 saved as .jpg); extras v02b/v14b/v14c on PC only. Contact sheet _check/g19_sheet3.jpg (v29–v38)",
+     "voiceover": "to be re-recorded in ElevenLabs (user decision 2026-11-07); sample of v1 made with library voice 'Ralph - Slow, Protective, Wise' — waiting for the user's OK. Old Vids parts kept in audio\\",
      "music": "2 takes (~3 min), extend at assembly",
      "intro": "card + 6 s Flow animation done",
      "clips": "prompts ready (plans/clips19.json), none generated",
-     "detail": "productions/genesis/19.md"
+     "detail": "productions/genesis/19.md",
+     "lot_portrait": "Lot (Elder) portrait uploaded to the Character Library 2026-11-07"
     },
     "20": {
      "project_id": "01a1b04c-8081-7349-8086-00b5ed636c55",

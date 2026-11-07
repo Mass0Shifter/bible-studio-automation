@@ -29,7 +29,7 @@ Legend: ✅ done · 🟡 partial · ⬜ not started · ❔ made before this repo
 |---|---|---|---|---|---|---|---|
 | 1–3 | ❔ | ❔ | ❔ | ❔ | ❔ | ❔ | not on the Oct–Nov PC — audit with `BDS.project(id)` |
 | 4–18 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | final + clean films on the Oct–Nov PC (`C:\Users\USER\Bible Studio`); 7–18 passed the speech check 3–4 Nov |
-| 19 | ✅ 38 shots | 🟡 31/41 (v29–38 missing) | 🟡 intro, v1–3, v6–7, v9, v10, v14–16 | ✅ 2 takes | ⬜ (prompts ready) | ⬜ | v4–5 + v8 still refused/missing; v11–13, v17–38 not recorded; intro card + Flow intro done |
+| 19 | ✅ 38 shots | ✅ 38/38 | 🟡 intro, v1–3, v6–7, v9, v10, v14–16 | ✅ 2 takes | ⬜ (prompts ready) | ⬜ | v4–5 + v8 still refused/missing; v11–13, v17–38 not recorded; intro card + Flow intro done |
 | 20 | ✅ 18 shots | 🟡 13/18 (in app; not in the transfer) | ✅ 2:44 | ✅ 2 takes | ⬜ | ⬜ | images missing v14–18 |
 | 21 | ✅ 21 shots | 🟡 15/21 (in app; not in the transfer) | ✅ 4:07 | ✅ 2 takes | ⬜ | ⬜ | images missing v22–34; Ishmael has no portrait (stored as "symbol") |
 | 22 | ✅ 22 shots | 🟡 16/22 (in app; not in the transfer) | ✅ 3:30 | ✅ 2 takes | ⬜ | ⬜ | images missing v18–24 |
