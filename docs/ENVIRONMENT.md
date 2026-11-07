@@ -11,7 +11,7 @@ Downloads land in `C:\Users\ebubz\Downloads` (often as `<uuid>.tmp`), then get c
 
 ## Chapter folder layout
 `Desktop\Bible Studio\<Book> <Ch>\` → `audio\` `images\` `video\` `music\` `plans\` `final\`
-Shared tools: `Desktop\Bible Studio\_tools\` (finish.py, fit_edit.py, overlay.py, fonts\, references\ incl. logo, lower-third, badge, intro template, PROMPTS.md).
+Shared tools (copies in this repo's `tools/`): `Desktop\Bible Studio\_tools\` (finish.py, fit_edit.py, overlay.py, fonts\, references\ incl. logo, lower-third, badge, intro template, PROMPTS.md).
 
 ## Web tools (all in the Claude desktop **built-in browser pane**; user signs in himself)
 | Tool | URL | Used for | Limits / cost |
@@ -26,9 +26,12 @@ Browser-pane sites approved for the pane: biblestudio.nachamtns.com, chatgpt.com
 
 ## GitHub
 - App repo: `Mass0Shifter/bible-director-studio` (private). Push to `main` deploys the live site — ask the user first.
-- This repo: `Mass0Shifter/bible-studio-automation` (private).
+- This repo: `Mass0Shifter/bible-studio-automation` — **public** on GitHub, so never put e-mail addresses, passwords, signed upload links or API keys here. Google accounts are written as "Google account A/B/C/D" (the user knows which is which).
 
 ## Running agents
 - User rule: at most **3** background agents at once.
 - Agents sharing the one browser pane collide: each must open its own fresh tabs and only use its own tabIds; pane has a tab limit — close tabs when done.
 - Claude plan has a 5-hour usage limit; agents stop with a 429 and must be resumed after the reset.
+
+## Rendering on Windows (Oct–Nov PC)
+The PC (i7-11800H, 16 threads, 16 GB, NVIDIA GPU) renders natively: `_tools\win\watcher.bat` watches `_tools\win\queue\*.job` and runs the whole render + checks; `winrun.py` wraps CapCut's ffmpeg (`AppData\Local\CapCut\Apps\<ver>\ffmpeg.exe`, no ffprobe/libx264 → emulated / h264_nvenc). The Linux VM shell (2 cores) is only for small jobs.

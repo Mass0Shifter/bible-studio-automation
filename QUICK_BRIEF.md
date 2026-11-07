@@ -1,6 +1,6 @@
 # QUICK BRIEF — read this first, then only the files it points to
 
-_Last updated: 2026-11-07 14:30 (Africa/Lagos) by Claude coordinator session._
+_Last updated: 2026-11-07 15:50 (Africa/Lagos) — synced the Oct–Nov PC's logs, skill and tools._
 Keep this file under ~150 lines. Update it at the end of every work session (and after each finished stage).
 
 ## What this repo is
@@ -12,6 +12,8 @@ Progress tracker + automation notes for **Bible Director Studio** chapter films 
 | Machine-readable status of every chapter | `status.json` |
 | Full detail on one chapter (links, ids, decisions, problems) | `productions/<book>/<NN>.md` |
 | How to produce a chapter (the skill) | `skill/SKILL.md` (+ `skill/PROMPTS.md`) |
+| Whole-book "Prophetic Implication" film | `skill/prophetic-implication/SKILL.md` |
+| Helper scripts (copies) | `tools/` |
 | Lessons learned that are NOT yet in the skill | `docs/LESSONS.md` |
 | PC, folders, accounts, browser tabs, limits | `docs/ENVIRONMENT.md` |
 
@@ -24,7 +26,9 @@ Legend: ✅ done · 🟡 partial · ⬜ not started · ❔ made before this repo
 ### Genesis (workspace "The Book Genesis")
 | Ch | Story | Images | Voice | Music | Clips | Final | Note |
 |---|---|---|---|---|---|---|---|
-| 1–19 | ❔ | ❔ | ❔ | ❔ | ❔ | ❔ | Produced Oct 2026. Genesis 6 known finished. Audit with `BDS.project(id)` — ids in status.json |
+| 1–3 | ❔ | ❔ | ❔ | ❔ | ❔ | ❔ | not on the Oct–Nov PC — audit with `BDS.project(id)` |
+| 4–18 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | final + clean films on the Oct–Nov PC (`C:\Users\USER\Bible Studio`); 7–18 passed the speech check 3–4 Nov |
+| 19 | ✅ 38 shots | 🟡 22/41 | 🟡 intro, v1–3, v14–16 | ✅ 2 takes | ⬜ (prompts ready) | ⬜ | paused 4 Nov; Vids refused v4–7 + v8–10 — user to decide; intro card + Flow intro done |
 | 20 | ✅ 18 shots | 🟡 13/18 | ✅ 2:44 | ✅ 2 takes | ⬜ | ⬜ | images missing v14–18 |
 | 21 | ✅ 21 shots | 🟡 15/21 | ✅ 4:07 | ✅ 2 takes | ⬜ | ⬜ | images missing v22–34; Ishmael has no portrait (stored as "symbol") |
 | 22 | ✅ 22 shots | 🟡 16/22 | ✅ 3:30 | ✅ 2 takes | ⬜ | ⬜ | images missing v18–24 |
@@ -41,7 +45,7 @@ Legend: ✅ done · 🟡 partial · ⬜ not started · ❔ made before this repo
 |---|---|---|
 | Ruth | 1–4 (+ whole-book project) | ❔ produced earlier — audit |
 | Jonah | 1–4 (+ whole-book project) | ❔ produced earlier — audit |
-| Esther | 1–10 projects exist | ❔ audit |
+| Esther | 1–10 projects exist | ch 9 ✅ final + clean (5:41); others ❔ audit |
 | Everything else | — | ⬜ |
 
 ## Current decisions / blockers (2026-11-07)
@@ -57,5 +61,6 @@ Legend: ✅ done · 🟡 partial · ⬜ not started · ❔ made before this repo
 2. Genesis 26: music; redo voiceover .wav.
 3. Genesis 28: full storyboard + voiceover + music.
 4. All missing portraits + shot images (Genesis 20–28) in ChatGPT project "Ai Bible Imagery".
-5. Audit Genesis 1–19, Ruth, Jonah, Esther and fill this table.
+5. Audit Genesis 1–3, Ruth, Jonah, Esther (except 9) and fill this table. Genesis 19: finish (see `productions/genesis/19.md`).
+7. Prophetic Implication: test the new skill (`skill/prophetic-implication/SKILL.md`) on a book the user picks.
 6. Video clips only when user says (Vids default).

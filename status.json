@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T14:30+01:00",
+ "updated": "2026-11-07T15:45+01:00",
  "books": {
   "Genesis": {
    "workspace": "The Book Genesis",
@@ -9,98 +9,148 @@
     "1": {
      "project_id": "01a0199f-8987-73ea-99c1-6350cd155da9",
      "status": "unaudited",
-     "note": "produced before this repo; audit with BDS.project(id)",
+     "note": "no folder on the Oct–Nov PC (C:\\Users\\USER\\Bible Studio); produced elsewhere — audit with BDS.project(id)",
      "also": "Re-Genesis Chapter 1 project 01a0ed38-8399-728f-ac49-f6360f7e7198"
     },
     "2": {
      "project_id": "01a01bd2-2083-70e8-ae8b-fce438820fca",
      "status": "unaudited",
-     "note": "produced before this repo; audit with BDS.project(id)"
+     "note": "no folder on the Oct–Nov PC (C:\\Users\\USER\\Bible Studio); produced elsewhere — audit with BDS.project(id)"
     },
     "3": {
      "project_id": "01a023c4-35e7-705a-9789-7a25f2cd98d0",
      "status": "unaudited",
-     "note": "produced before this repo; audit with BDS.project(id)"
+     "note": "no folder on the Oct–Nov PC (C:\\Users\\USER\\Bible Studio); produced elsewhere — audit with BDS.project(id)"
     },
     "4": {
      "project_id": "01a02405-2f3a-73b9-971d-9bc5b3edf87a",
-     "status": "unaudited",
-     "note": "produced before this repo; audit with BDS.project(id)"
+     "status": "final",
+     "final": "Genesis_4_final.mp4 4:06.5",
+     "clean": "Genesis_4_clean.mp4 4:01.5",
+     "rendered": "2026-10-19",
+     "detail": "productions/genesis/04.md"
     },
     "5": {
      "project_id": "01a02408-646c-70ea-a70d-c90aceb0e3ed",
-     "status": "unaudited",
-     "note": "produced before this repo; audit with BDS.project(id)"
+     "status": "final",
+     "final": "Genesis_5_final.mp4 3:33.6",
+     "clean": "Genesis_5_clean.mp4 3:28.7",
+     "rendered": "2026-10-21",
+     "detail": "productions/genesis/05.md"
     },
     "6": {
      "project_id": "01a0240c-eb1a-7272-a67d-6ba257e6a56c",
-     "status": "unaudited",
-     "note": "produced before this repo; audit with BDS.project(id)"
+     "status": "final",
+     "final": "Genesis_6_final.mp4 3:13.5",
+     "clean": "Genesis_6_clean.mp4 3:08.5",
+     "rendered": "2026-10-16",
+     "detail": "productions/genesis/06.md"
     },
     "7": {
      "project_id": "01a02411-f474-72fd-922c-8f289d6e4c94",
-     "status": "unaudited",
-     "note": "produced before this repo; audit with BDS.project(id)"
+     "status": "final",
+     "final": "Genesis_7_final.mp4 3:21.4",
+     "clean": "Genesis_7_clean.mp4 3:16.4",
+     "rendered": "2026-11-04",
+     "detail": "productions/genesis/07.md"
     },
     "8": {
      "project_id": "01a0243e-6bc3-727e-99d9-93953f1a9dad",
-     "status": "unaudited",
-     "note": "produced before this repo; audit with BDS.project(id)"
+     "status": "final",
+     "final": "Genesis_8_final.mp4 3:13.2",
+     "clean": "Genesis_8_clean.mp4 3:08.2",
+     "rendered": "2026-11-04",
+     "detail": "productions/genesis/08.md"
     },
     "9": {
      "project_id": "01a02441-1b59-71ea-a700-cfe4a0832cc8",
-     "status": "unaudited",
-     "note": "produced before this repo; audit with BDS.project(id)"
+     "status": "final",
+     "final": "Genesis_9_final.mp4 3:52.8",
+     "clean": "Genesis_9_clean.mp4 3:47.8",
+     "rendered": "2026-10-29",
+     "detail": "productions/genesis/09.md"
     },
     "10": {
      "project_id": "01a02443-41a7-732b-9922-56d9ead7d188",
-     "status": "unaudited",
-     "note": "produced before this repo; audit with BDS.project(id)"
+     "status": "final",
+     "final": "Genesis_10_final.mp4 3:34.9",
+     "clean": "Genesis_10_clean.mp4 3:29.9",
+     "rendered": "2026-10-29",
+     "detail": "productions/genesis/10.md"
     },
     "11": {
      "project_id": "01a0244a-a052-719f-8426-c0caf13813cf",
-     "status": "unaudited",
-     "note": "produced before this repo; audit with BDS.project(id)"
+     "status": "final",
+     "final": "Genesis_11_final.mp4 3:59.7",
+     "clean": "Genesis_11_clean.mp4 3:54.7",
+     "rendered": "2026-10-29",
+     "detail": "productions/genesis/11.md"
     },
     "12": {
      "project_id": "01a0244f-02d1-7252-8d6d-63e1ae543190",
-     "status": "unaudited",
-     "note": "produced before this repo; audit with BDS.project(id)"
+     "status": "final",
+     "final": "Genesis_12_final.mp4 3:25.0",
+     "clean": "Genesis_12_clean.mp4 3:20.0",
+     "rendered": "2026-11-03",
+     "detail": "productions/genesis/12.md"
     },
     "13": {
      "project_id": "01a180ae-208d-7284-97cc-c9b9488a7e4b",
-     "status": "unaudited",
-     "note": "produced before this repo; audit with BDS.project(id)"
+     "status": "final",
+     "final": "Genesis_13_final.mp4 2:43.8",
+     "clean": "Genesis_13_clean.mp4 2:38.8",
+     "rendered": "2026-11-03",
+     "detail": "productions/genesis/13.md"
     },
     "14": {
      "project_id": "01a182cf-4e3e-70d3-b2db-8a5470d15cb4",
-     "status": "unaudited",
-     "note": "produced before this repo; audit with BDS.project(id)"
+     "status": "final",
+     "final": "Genesis_14_final.mp4 3:59.2",
+     "clean": "Genesis_14_clean.mp4 3:54.2",
+     "rendered": "2026-11-03",
+     "detail": "productions/genesis/14.md"
     },
     "15": {
      "project_id": "01a186d7-0e25-704d-a6d8-4019333fb3eb",
-     "status": "unaudited",
-     "note": "produced before this repo; audit with BDS.project(id)"
+     "status": "final",
+     "final": "Genesis_15_final.mp4 2:52.9",
+     "clean": "Genesis_15_clean.mp4 2:47.9",
+     "rendered": "2026-11-03",
+     "detail": "productions/genesis/15.md"
     },
     "16": {
      "project_id": "01a18afe-bcba-7148-b18a-8ca3f245afef",
-     "status": "unaudited",
-     "note": "produced before this repo; audit with BDS.project(id)"
+     "status": "final",
+     "final": "Genesis_16_final.mp4 2:51.2",
+     "clean": "Genesis_16_clean.mp4 2:46.2",
+     "rendered": "2026-11-03",
+     "detail": "productions/genesis/16.md"
     },
     "17": {
      "project_id": "01a18c1b-346a-72be-81f3-f354d90c471c",
-     "status": "unaudited",
-     "note": "produced before this repo; audit with BDS.project(id)"
+     "status": "final",
+     "final": "Genesis_17_final.mp4 3:45.2",
+     "clean": "Genesis_17_clean.mp4 3:40.3",
+     "rendered": "2026-11-04",
+     "detail": "productions/genesis/17.md"
     },
     "18": {
      "project_id": "01a18e7d-f0ef-72b7-8da3-1c40209be55c",
-     "status": "unaudited",
-     "note": "produced before this repo; audit with BDS.project(id)"
+     "status": "final",
+     "final": "Genesis_18_final.mp4 5:17.8",
+     "clean": "Genesis_18_clean.mp4 5:13.0",
+     "rendered": "2026-11-03",
+     "detail": "productions/genesis/18.md"
     },
     "19": {
      "project_id": "01a19109-42f6-7246-a17c-fe8690126345",
-     "status": "unaudited",
-     "note": "produced before this repo; audit with BDS.project(id)"
+     "status": "paused",
+     "images": "22/41 (v01–v11, v02b, v13–v21, v14b, v14c)",
+     "voiceover": "partial: intro, v1–3, v14–16 recorded; Vids refused v4–7 and v8–10 — waiting for user decision",
+     "music": "2 takes (~3 min), extend at assembly",
+     "intro": "card + 6 s Flow animation done",
+     "clips": "prompts ready (plans/clips19.json), none generated",
+     "detail": "productions/genesis/19.md"
     },
     "20": {
      "project_id": "01a1b04c-8081-7349-8086-00b5ed636c55",
@@ -351,6 +401,14 @@
     "8": "01a0a2ca-c4af-7279-a131-5b698bba14e1",
     "9": "01a0a2cb-96f7-7299-814d-5b8d4c1e68a4",
     "10": "01a0a2cc-19eb-71de-b63a-9e5fc2df2034"
+   },
+   "chapters": {
+    "9": {
+     "status": "final",
+     "final": "Esther_9_final.mp4 5:40.8",
+     "clean": "Esther_9_clean.mp4 5:35.8",
+     "detail": "productions/esther/09.md"
+    }
    }
   }
  }

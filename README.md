@@ -9,6 +9,8 @@ Progress tracker and production playbook for Nâcham Media's KJV Bible chapter f
 - `status.json` — every book/chapter: project ids, stage status, file lengths, todos
 - `productions/<book>/<NN>.md` — detail per chapter (links, decisions, problems)
 - `skill/SKILL.md` — the production skill ("Create Genesis Chapter 6"), `skill/PROMPTS.md`
+- `skill/prophetic-implication/SKILL.md` — the whole-book "Prophetic Implication" film (script → storyboard → titles, thumbnails, tags, description)
+- `tools/` — copies of the PC's helper scripts (fit_edit, finish, speech checks, ChatGPT/Flow queues, Windows render watcher)
 - `docs/ENVIRONMENT.md` — PCs, folders, accounts, browser tools, limits
 - `docs/LESSONS.md` — new lessons not yet merged into the skill
 
