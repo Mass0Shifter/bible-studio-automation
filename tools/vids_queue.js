@@ -3,6 +3,10 @@
 // Load:   window.__vq = [{key:'v01', img:'<image url readable from docs.google.com>', len:8, prompt:'...', name:'Genesis_19_v01.mp4'}, ...]
 // Run:    __vqueue.run()           (skips keys already 'ok' in localStorage.__vq_state_<tag>)
 // Status: __vqueue.status()
+// Switching Google account: open docs.google.com/videos/u/<N>/create, AI Video → Animate, then
+//   eval(localStorage.__vqsrc); window.__vqtag='g19'; window.__vq=JSON.parse(localStorage.__vq_items_g19); __vqueue.run()
+// (load the source once: localStorage.__vqsrc = await (await fetch('https://raw.githubusercontent.com/Mass0Shifter/bible-studio-automation/main/tools/vids_queue.js')).text())
+// When an account's Vids allowance runs out the length can't be set ('Exceeds your remaining quota') and the run stops.
 // Each finished clip is downloaded to the PC's Downloads folder under its name (move it into <Book> <Ch>\video\).
 (() => {
 const sl = ms => new Promise(r => setTimeout(r, ms));
