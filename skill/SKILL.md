@@ -230,6 +230,20 @@ Examples: `chapter-intro-example-ruth-2.jpg`, `book-intro-example-ruth.jpg`. **P
 
 **11g. Logo.** `logo-can-you-behold-him.png` top-right (≈ 270 px wide, ≈ 25 px from the top and right edges) at **40 % opacity**, over the whole chapter film.
 
+## Fallback tools — Grok video and ElevenLabs voice (user rule, 2026-11-07)
+
+Use these **only when the normal tool fails** and the user's subscription for them is signed in (check in the browser pane; if it isn't, tell the user — never type passwords).
+
+**Video: Grok Imagine** (`https://grok.com/imagine`) — for a shot whose clip **Omni Flash rejects** (Vids or Flow refuses the prompt / start image, even after one softened retry). Don't use it for shots that work in Vids/Flow.
+- Same inputs as 9V/9F: the shot picture as the start image + the motion prompt + the audio rule (no narration; character speech only as the exact quoted KJV words).
+- Download the clip, name it `video\<Book>_<Ch>_S<scene>_SH<shot>.mp4` like the others, and note in the chapter log which shots came from Grok (they have their own look and possibly a watermark — check the corners and cover with the badge if needed).
+- Flow default model is **Omni Flash 1.1** (cheaper) — user rule 2026-11-07.
+
+**Voice: ElevenLabs** (subscription) — when Google Vids refuses narration text (e.g. Genesis 19 v4–5, v8) or cannot record a chapter, or when the user asks for it. Genesis 19 is being voiced with ElevenLabs (user decision 2026-11-07).
+- Use one voice for the WHOLE chapter (don't mix Paz and ElevenLabs inside one chapter). Note the voice name + settings in the chapter log so later chapters can match.
+- Exact KJV text, no verse numbers; record in parts of a few verses, download each as MP3/WAV into `audio\`, join into `audio\<Book>_<Ch>_voiceover.wav`, then measure verse windows (9a) as usual. God's and angels' lines still get `divine_voice.py` afterwards.
+- Watch the subscription's character quota; tell the user before a chapter would run it out.
+
 ## Pipeline state at a glance
 `await BDS.project(id)` → hasExegesis, entities (hasReference), scenes, shots, shotsWithImage, shotsWithVideo. Use it to resume a half-finished production: skip any stage already done.
 
