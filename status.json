@@ -1,0 +1,357 @@
+{
+ "updated": "2026-11-07T14:30+01:00",
+ "books": {
+  "Genesis": {
+   "workspace": "The Book Genesis",
+   "workspace_id": "01a01986-ae25-7135-9a0a-0a6946d05452",
+   "total_chapters": 50,
+   "chapters": {
+    "1": {
+     "project_id": "01a0199f-8987-73ea-99c1-6350cd155da9",
+     "status": "unaudited",
+     "note": "produced before this repo; audit with BDS.project(id)",
+     "also": "Re-Genesis Chapter 1 project 01a0ed38-8399-728f-ac49-f6360f7e7198"
+    },
+    "2": {
+     "project_id": "01a01bd2-2083-70e8-ae8b-fce438820fca",
+     "status": "unaudited",
+     "note": "produced before this repo; audit with BDS.project(id)"
+    },
+    "3": {
+     "project_id": "01a023c4-35e7-705a-9789-7a25f2cd98d0",
+     "status": "unaudited",
+     "note": "produced before this repo; audit with BDS.project(id)"
+    },
+    "4": {
+     "project_id": "01a02405-2f3a-73b9-971d-9bc5b3edf87a",
+     "status": "unaudited",
+     "note": "produced before this repo; audit with BDS.project(id)"
+    },
+    "5": {
+     "project_id": "01a02408-646c-70ea-a70d-c90aceb0e3ed",
+     "status": "unaudited",
+     "note": "produced before this repo; audit with BDS.project(id)"
+    },
+    "6": {
+     "project_id": "01a0240c-eb1a-7272-a67d-6ba257e6a56c",
+     "status": "unaudited",
+     "note": "produced before this repo; audit with BDS.project(id)"
+    },
+    "7": {
+     "project_id": "01a02411-f474-72fd-922c-8f289d6e4c94",
+     "status": "unaudited",
+     "note": "produced before this repo; audit with BDS.project(id)"
+    },
+    "8": {
+     "project_id": "01a0243e-6bc3-727e-99d9-93953f1a9dad",
+     "status": "unaudited",
+     "note": "produced before this repo; audit with BDS.project(id)"
+    },
+    "9": {
+     "project_id": "01a02441-1b59-71ea-a700-cfe4a0832cc8",
+     "status": "unaudited",
+     "note": "produced before this repo; audit with BDS.project(id)"
+    },
+    "10": {
+     "project_id": "01a02443-41a7-732b-9922-56d9ead7d188",
+     "status": "unaudited",
+     "note": "produced before this repo; audit with BDS.project(id)"
+    },
+    "11": {
+     "project_id": "01a0244a-a052-719f-8426-c0caf13813cf",
+     "status": "unaudited",
+     "note": "produced before this repo; audit with BDS.project(id)"
+    },
+    "12": {
+     "project_id": "01a0244f-02d1-7252-8d6d-63e1ae543190",
+     "status": "unaudited",
+     "note": "produced before this repo; audit with BDS.project(id)"
+    },
+    "13": {
+     "project_id": "01a180ae-208d-7284-97cc-c9b9488a7e4b",
+     "status": "unaudited",
+     "note": "produced before this repo; audit with BDS.project(id)"
+    },
+    "14": {
+     "project_id": "01a182cf-4e3e-70d3-b2db-8a5470d15cb4",
+     "status": "unaudited",
+     "note": "produced before this repo; audit with BDS.project(id)"
+    },
+    "15": {
+     "project_id": "01a186d7-0e25-704d-a6d8-4019333fb3eb",
+     "status": "unaudited",
+     "note": "produced before this repo; audit with BDS.project(id)"
+    },
+    "16": {
+     "project_id": "01a18afe-bcba-7148-b18a-8ca3f245afef",
+     "status": "unaudited",
+     "note": "produced before this repo; audit with BDS.project(id)"
+    },
+    "17": {
+     "project_id": "01a18c1b-346a-72be-81f3-f354d90c471c",
+     "status": "unaudited",
+     "note": "produced before this repo; audit with BDS.project(id)"
+    },
+    "18": {
+     "project_id": "01a18e7d-f0ef-72b7-8da3-1c40209be55c",
+     "status": "unaudited",
+     "note": "produced before this repo; audit with BDS.project(id)"
+    },
+    "19": {
+     "project_id": "01a19109-42f6-7246-a17c-fe8690126345",
+     "status": "unaudited",
+     "note": "produced before this repo; audit with BDS.project(id)"
+    },
+    "20": {
+     "project_id": "01a1b04c-8081-7349-8086-00b5ed636c55",
+     "verses": "1-18",
+     "storyboard_shots": 18,
+     "images": "13/18 (missing v14-18)",
+     "voiceover": {
+      "status": "done",
+      "length": "2:43.6",
+      "vids": "https://docs.google.com/videos/d/(Genesis Chapter 20)"
+     },
+     "music": {
+      "status": "done",
+      "files": [
+       "Genesis_20_music.wav 2:49",
+       "Genesis_20_music_take2.wav 2:51"
+      ]
+     },
+     "clips": "none — prep: plans/verse_windows.json; Vids doc 'Genesis 20 Clips' https://docs.google.com/videos/d/1tTnFXe5JvagzAx6KR4wmVyRUxjObQ8sGWbNHYgj-psw/edit; Flow project 'Genesis 20' https://flow.google.com/project/57bc226e-e008-44ed-a11b-0f5c923f4b86 (13 images uploaded)",
+     "final": "none",
+     "chatgpt_scene4": "https://chatgpt.com/c/6aee9537-2e1c-83e9-b7ec-f68655f93f90"
+    },
+    "21": {
+     "project_id": "01a1b3e0-15d7-71a3-8653-2588e9bf5220",
+     "verses": "1-34",
+     "storyboard_shots": 21,
+     "images": "15/21 (missing scene5 v22-32, scene6 v33-34)",
+     "voiceover": {
+      "status": "done",
+      "length": "4:06.7"
+     },
+     "music": {
+      "status": "done",
+      "files": [
+       "Genesis_21_music.wav 2:41",
+       "Genesis_21_music_take2.wav 2:59"
+      ]
+     },
+     "clips": "none — prep: plans/genesis21_windows.json; Vids doc 'Genesis 21 Clips' https://docs.google.com/videos/d/1Lkq_9o3P6BM8eufa267I3itkjt9dmnQOJvrIzAfpjKU/edit",
+     "final": "none",
+     "portraits_made": [
+      "Hagar (Adult)",
+      "Isaac (Infant)",
+      "Phichol (Adult)"
+     ],
+     "issues": [
+      "Ishmael stored as 'symbol' — no portrait"
+     ]
+    },
+    "22": {
+     "project_id": "01a1b3e0-4126-703d-821c-a3d60dd1e626",
+     "verses": "1-24",
+     "storyboard_shots": 22,
+     "images": "16/22 (missing v18,v19,v20,v21-22,v23,v24)",
+     "voiceover": {
+      "status": "done",
+      "length": "3:30",
+      "note": "v2 voiced in two halves split at 'Moriah;'"
+     },
+     "music": {
+      "status": "done",
+      "files": [
+       "Genesis_22_music.wav 2:55",
+       "Genesis_22_music_take2.wav 2:54"
+      ]
+     },
+     "clips": "none — prep: plans/windows.json, verses.json; Vids doc 'Genesis 22 Clips'",
+     "final": "none",
+     "portraits_made": [
+      "Isaac (Young Adult)"
+     ],
+     "chatgpt_scene4": "https://chatgpt.com/c/6aee94a1-a7d0-83e9-8be3-becc8123c705"
+    },
+    "23": {
+     "project_id": "01a1b3f9-5dcb-70a9-ab18-91d53526cbd9",
+     "verses": "1-20",
+     "storyboard_shots": 20,
+     "images": "0/20",
+     "voiceover": {
+      "status": "done",
+      "length": "2:43.5"
+     },
+     "music": {
+      "status": "done",
+      "files": [
+       "Genesis_23_music.wav 2:47"
+      ]
+     },
+     "clips": "none",
+     "final": "none",
+     "portraits_needed": [
+      "Ephron (Adult)"
+     ]
+    },
+    "24": {
+     "project_id": "01a1b401-17d9-72a7-8794-12486f23f96f",
+     "verses": "1-67",
+     "storyboard_shots": 40,
+     "images": "0/40",
+     "voiceover": {
+      "status": "done",
+      "length": "9:14",
+      "note": "13 Vids scenes ~5 verses"
+     },
+     "music": {
+      "status": "done",
+      "files": [
+       "Genesis_24_music.wav 2:53",
+       "Genesis_24_music_take2.wav 2:39"
+      ]
+     },
+     "clips": "none",
+     "final": "none",
+     "portraits_needed": [
+      "Abraham's Eldest Servant",
+      "Rebekah (Young Adult)",
+      "Laban",
+      "Bethuel",
+      "Isaac (Adult)"
+     ],
+     "user_todo": [
+      "Set Abraham life stage = Elder on Continuity tab"
+     ]
+    },
+    "25": {
+     "project_id": "01a1b50b-2cd8-72fb-ba8a-8e083f139d32",
+     "verses": "1-34",
+     "storyboard_shots": 24,
+     "images": "0/24",
+     "voiceover": {
+      "status": "done",
+      "length": "4:06.7",
+      "vids": "https://docs.google.com/videos/d/19Mn8lpuJXWUzpNPqG_yCajIUnR8TYl5nA2pzRSgeTh0/edit",
+      "note": "verify copy in audio folder (original in Downloads as 'Genesis Chapter 25.mp4')"
+     },
+     "music": {
+      "status": "done",
+      "files": [
+       "Genesis_25_music.wav 2:59",
+       "Genesis_25_music_take2.wav 2:57"
+      ]
+     },
+     "clips": "none",
+     "final": "none",
+     "portraits_needed": [
+      "Keturah",
+      "Rebekah (Adult)",
+      "Esau",
+      "Jacob",
+      "Isaac (Adult) unless done for 24"
+     ],
+     "user_todo": [
+      "Set Abraham life stage = Elder"
+     ],
+     "issues": [
+      "Ishmael stored as 'symbol'"
+     ]
+    },
+    "26": {
+     "project_id": "01a1b50b-4f7a-71ff-a444-8bf22eed557a",
+     "verses": "1-35",
+     "storyboard_shots": 22,
+     "images": "0/22",
+     "voiceover": {
+      "status": "done",
+      "length": "4:37.3",
+      "vids": "https://docs.google.com/videos/d/1YM-NvjC_scl2qyJ9jL0hlew0_iNP6UkZFR5FDCmsGSE/edit",
+      "note": "Genesis_26_voiceover.wav incomplete (118 s) — regenerate from mp4"
+     },
+     "music": {
+      "status": "todo"
+     },
+     "clips": "none",
+     "final": "none",
+     "portraits_needed": [
+      "Isaac (Adult)",
+      "Rebekah (Adult)"
+     ]
+    },
+    "27": {
+     "project_id": "01a1b50b-365e-73a3-a4c0-6da8a58f9f9f",
+     "verses": "1-46",
+     "storyboard_shots": 26,
+     "images": "0/26",
+     "voiceover": {
+      "status": "partial",
+      "vids": "https://docs.google.com/videos/d/1zbJxz80g5BoTDZQ6YDPqxPoovWz6-br8B-RyhaEkUWY/edit",
+      "note": "Vids scenes 11..5 (v21-46) inserted; scene 4 (v16-20) unconfirmed; scenes 3..1 (v1-15) todo; scene 5 may have duplicate clip; export todo"
+     },
+     "music": {
+      "status": "todo"
+     },
+     "clips": "none",
+     "final": "none",
+     "portraits_needed": [
+      "Isaac (Elder)",
+      "Jacob (Adult)",
+      "Rebekah (Elder)",
+      "Esau (Adult)"
+     ],
+     "issues": [
+      "Remove wrongly linked 'Haran' (person) entity — it is the town"
+     ]
+    },
+    "28": {
+     "status": "not_started"
+    }
+   }
+  },
+  "Ruth": {
+   "workspace": "The Book of Ruth and Jonah",
+   "workspace_id": "019fd1fc-fde3-70aa-9527-0aa916a4b56b",
+   "total_chapters": 4,
+   "status": "unaudited",
+   "projects": {
+    "1": "019fd207-992a-73a6-b14b-9656745755e4",
+    "2": "019fe92e-4fbc-71c1-85ac-8b9c1dfc7276",
+    "3": "019fdc26-ef21-70a0-9fa3-010d59520d5c",
+    "4": "019fdc27-7187-7287-bce3-4d8c965cf6fa",
+    "whole_book": "01a01e8b-ff98-716a-ab9a-540d8f92b9e4"
+   }
+  },
+  "Jonah": {
+   "workspace": "The Book of Ruth and Jonah",
+   "total_chapters": 4,
+   "status": "unaudited",
+   "projects": {
+    "1": "019fefad-482e-70c0-8a35-8ac62b7b2864",
+    "2": "019fefb3-5818-72e5-a464-63a7a71c71fd",
+    "3": "019fefb8-f472-70fa-b2db-a524f9d03910",
+    "4": "019fefbc-97d9-70fa-882d-8dd25f6f0b88",
+    "whole_book": "01a07cbf-fd99-70cc-a0c7-a05b7c63cc4c"
+   }
+  },
+  "Esther": {
+   "workspace": "The Book of Esther",
+   "workspace_id": "01a0a2bd-d0f0-70f0-81d8-ec511431f500",
+   "total_chapters": 10,
+   "status": "unaudited",
+   "projects": {
+    "1": "01a0a2bf-7600-72dd-8f96-0c65c0fe6844",
+    "2": "01a0a2c3-88cb-7281-93a2-8a261625e516",
+    "3": "01a0a2c4-277a-7313-818b-88be062be5a1",
+    "4": "01a0a2c4-f81c-72f6-a3b1-0602f3ae79c7",
+    "5": "01a0a2c5-f5d2-7271-89f8-c78310534b34",
+    "6": "01a0a2c8-453e-726a-9c59-2f6dd5f3b831",
+    "7": "01a0a2c9-8f3a-71d4-be2b-51053f0f88b4",
+    "8": "01a0a2ca-c4af-7279-a131-5b698bba14e1",
+    "9": "01a0a2cb-96f7-7299-814d-5b8d4c1e68a4",
+    "10": "01a0a2cc-19eb-71de-b63a-9e5fc2df2034"
+   }
+  }
+ }
+}
