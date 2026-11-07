@@ -81,14 +81,19 @@ async function one(it) {
 }
 async function run(only) {
   if (window.__vqrunning) return 'already running';
-  window.__vqrunning = true; window.__vqstop = false;
+  window.__vqrunning = true; window.__vqstop = false; let fails = 0;
   try {
     for (const it of window.__vq) {
       if (window.__vqstop) break;
       if (only && !only.includes(it.key)) continue;
       if (st()[it.key] === 'ok') continue;
-      try { const sz = await one(it); setSt(it.key, 'ok'); log('ok ' + it.key + ' ' + sz); }
-      catch (e) { setSt(it.key, 'error: ' + e); log('error ' + it.key + ' ' + e); if (/limit|quota/i.test(String(e))) break; }
+      try { const sz = await one(it); setSt(it.key, 'ok'); log('ok ' + it.key + ' ' + sz); fails = 0; }
+      catch (e) {
+        log('error ' + it.key + ' ' + e);
+        if (/length not set/.test(String(e))) { log('quota used up on this account - stopping'); break; }   // leave key un-done for the next account
+        setSt(it.key, 'error: ' + e);
+        if (/limit|quota/i.test(String(e)) || ++fails >= 3) break;
+      }
       await sl(3000);
     }
   } finally { window.__vqrunning = false; log('done'); }
