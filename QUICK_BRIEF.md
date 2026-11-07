@@ -15,6 +15,8 @@ Progress tracker + automation notes for **Bible Director Studio** chapter films 
 | Whole-book "Prophetic Implication" film | `skill/prophetic-implication/SKILL.md` |
 | Helper scripts (copies) | `tools/` |
 | Lessons learned that are NOT yet in the skill | `docs/LESSONS.md` |
+| Assembly scripts (fit_edit, finish, overlay), fonts, references | `tools/` (see `tools/README.md`) |
+| Genesis 6 full production log (reference example) | `productions/genesis/06.md` |
 | PC, folders, accounts, browser tabs, limits | `docs/ENVIRONMENT.md` |
 
 ## Pipeline stages (per chapter)
