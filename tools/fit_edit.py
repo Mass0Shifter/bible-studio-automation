@@ -60,7 +60,7 @@ def again(msg):
 def slow_cache(clip, k, work):
     """Motion-interpolated slow-down of a clip, rendered in 2.5 s chunks, two at a time; resumable."""
     import concurrent.futures as cf
-    cache = os.path.join(work, f"{os.path.splitext(os.path.basename(clip))[0]}.slow{int(round(k*1000))}.mp4")
+    cache = os.path.join(work, f"{os.path.splitext(os.path.basename(clip))[0]}.{int(os.path.getmtime(clip))}.slow{int(round(k*1000))}.mp4")  # mtime in the name: a replaced clip (e.g. 720p -> 1080p) is re-slowed
     if os.path.exists(cache): return cache
     C = dur(clip); n = math.ceil(C / CHUNK)
     parts = [f"{cache}.p{j:02d}.mp4" for j in range(n)]
@@ -107,18 +107,24 @@ def main(plan_path):
     has_b = lambda i: bool(B) and shots[i].get("badge", True)
 
     # ---- plan each shot
+    # frame-exact timeline (2026-10-28): every boundary is a whole frame, so picture and sound never drift apart
+    D = int(round(d * FPS)); d = D / FPS; TF = int(round(tail * FPS))
+    t0_ = shots[0]["start"]
+    FB = [int(round((s["start"] - t0_) * FPS)) for s in shots] + [int(round((shots[-1]["end"] - t0_) * FPS))]
     S = []
     for i, s in enumerate(shots):
-        clip = p(s["clip"]); C = dur(clip); w = s["end"] - s["start"]
-        need = w + (d if i < n - 1 else tail)
+        clip = p(s["clip"]); C = dur(clip); wf = FB[i + 1] - FB[i]; w = wf / FPS
+        need = (wf + (D if i < n - 1 else TF)) / FPS
         m = s.get("method", "auto")
+        if m == "auto" and "clip_gain" in s:
+            m = "trim"   # a speaking clip is NEVER slowed (lip-sync and voice pitch): play it at 1x, hold its last frame if the window is longer
         if m == "auto":
             if i == n - 1 and outro:   # the ending: stretch the end of the last clip, never a still lead-in
                 m = "trim" if C >= need - 0.15 else "slow"
             else:
                 m = "trim" if C >= need - 0.15 else ("slow" if need / C <= 1.25 else "lead")
         k = min(need / C, 1.4) if m == "slow" else 1.0   # beyond 1.4x the last frame is simply held
-        S.append(dict(clip=clip, C=C, w=w, need=need, m=m, k=k, lead=max(need - C, 0) if m == "lead" else 0))
+        S.append(dict(clip=clip, C=C, w=w, wf=wf, nf=wf + (D if i < n - 1 else TF), need=need, m=m, k=k, lead=max(need - C, 0) if m == "lead" else 0))
     for i, s in enumerate(S):
         note = {"trim": "trim", "slow": f"slow x{1/s['k']:.2f}", "lead": f"still lead-in {s['lead']:.2f}s"}[s["m"]]
         print(f"shot {i+1:2d}: window {s['w']:.2f}s, clip {s['C']:.1f}s -> {note}")
@@ -130,25 +136,25 @@ def main(plan_path):
         """filter text turning input #idx into the fitted shot i, labelled [lab]"""
         s = S[i]
         if s["m"] == "slow" and s["k"] > 1.06:
-            return f"[{idx}:v]{CONF},tpad=stop_mode=clone:stop_duration=1,trim=0:{s['need']:.3f},setpts=PTS-STARTPTS,fps={FPS},settb=1/{FPS}[{lab}]"
+            return f"[{idx}:v]{CONF},tpad=stop_mode=clone:stop_duration={s['need']:.3f},trim=0:{s['need']:.3f},setpts=PTS-STARTPTS,fps={FPS},settb=1/{FPS}[{lab}]"
         if s["m"] == "slow":
-            return f"[{idx}:v]{CONF},setpts={s['k']:.5f}*PTS,fps={FPS},tpad=stop_mode=clone:stop_duration=1,trim=0:{s['need']:.3f},setpts=PTS-STARTPTS,fps={FPS},settb=1/{FPS}[{lab}]"
+            return f"[{idx}:v]{CONF},setpts={s['k']:.5f}*PTS,fps={FPS},tpad=stop_mode=clone:stop_duration={s['need']:.3f},trim=0:{s['need']:.3f},setpts=PTS-STARTPTS,fps={FPS},settb=1/{FPS}[{lab}]"
         if s["m"] == "lead":
             fr = int(round(s["lead"] * FPS))
             return (f"[{idx}:v]{CONF},split[c{lab}][f{lab}];[f{lab}]trim=end_frame=1,loop=loop={fr}:size=1,setpts=N/{FPS}/TB,"
                     f"scale={W*2}:{H*2},zoompan=z='1.08-0.08*on/{max(fr-1,1)}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s={W}x{H}:fps={FPS},setsar=1[l{lab}];"
-                    f"[l{lab}][c{lab}]concat=n=2:v=1:a=0,tpad=stop_mode=clone:stop_duration=1,trim=0:{s['need']:.3f},setpts=PTS-STARTPTS,fps={FPS},settb=1/{FPS}[{lab}]")
-        return f"[{idx}:v]{CONF},tpad=stop_mode=clone:stop_duration=1,trim=0:{s['need']:.3f},setpts=PTS-STARTPTS,fps={FPS},settb=1/{FPS}[{lab}]"
+                    f"[l{lab}][c{lab}]concat=n=2:v=1:a=0,tpad=stop_mode=clone:stop_duration={s['need']:.3f},trim=0:{s['need']:.3f},setpts=PTS-STARTPTS,fps={FPS},settb=1/{FPS}[{lab}]")
+        return f"[{idx}:v]{CONF},tpad=stop_mode=clone:stop_duration={s['need']:.3f},trim=0:{s['need']:.3f},setpts=PTS-STARTPTS,fps={FPS},settb=1/{FPS}[{lab}]"
     def inp(i): return S[i].get("src", S[i]["clip"])
 
     # ---- video pieces: body_i, then dissolve_i (shot i -> i+1)
     pieces = []
     for i in range(n):
-        a = d if i > 0 else 0.0; b = S[i]["w"] if i < n - 1 else S[i]["need"]
+        a = D if i > 0 else 0; b = S[i]["wf"] if i < n - 1 else S[i]["nf"]   # frame numbers
         pieces.append(("body", i, a, b))
         if i < n - 1: pieces.append(("mix", i, None, None))
     def key(*parts):
-        return hashlib.md5(json.dumps([str(x) for x in parts]).encode()).hexdigest()[:10]
+        return hashlib.md5(json.dumps(["framefix1"] + [str(x) for x in parts]).encode()).hexdigest()[:10]
     def sig(i):
         s = S[i]; return (s["clip"], os.path.getmtime(s["clip"]), round(s["need"], 3), s["m"], round(s["k"], 4), round(s["lead"], 3))
     names = []
@@ -160,23 +166,23 @@ def main(plan_path):
         if kind == "body":
             fx = ""
             if i == 0: fx += ",fade=t=in:st=0:d=0.5"
-            if i == n - 1: fx += f",fade=t=out:st={b-a-end_fade:.3f}:d={end_fade}"
+            if i == n - 1: fx += f",fade=t=out:st={(b-a)/FPS-end_fade:.3f}:d={end_fade}"
             if has_b(i):
-                g = vsrc(i, 0, "F") + f";[F]trim={a:.3f}:{b:.3f},setpts=PTS-STARTPTS,fps={FPS},settb=1/{FPS}[pre];[pre][1:v]overlay={BX}:{BY}:shortest=1{fx}[v]"
-                ff(["-i", inp(i), "-loop", "1", "-i", bpng, "-filter_complex", g, "-map", "[v]"] + VENC + [out + ".tmp.mp4"])
+                g = vsrc(i, 0, "F") + f";[F]trim=start_frame={a}:end_frame={b},setpts=PTS-STARTPTS,fps={FPS},settb=1/{FPS}[pre];[pre][1:v]overlay={BX}:{BY}:shortest=1{fx}[v]"
+                ff(["-i", inp(i), "-loop", "1", "-i", bpng, "-filter_complex", g, "-map", "[v]", "-frames:v", str(b - a)] + VENC + [out + ".tmp.mp4"])
             else:
-                g = vsrc(i, 0, "F") + f";[F]trim={a:.3f}:{b:.3f},setpts=PTS-STARTPTS,fps={FPS},settb=1/{FPS}{fx}[v]"
-                ff(["-i", inp(i), "-filter_complex", g, "-map", "[v]"] + VENC + [out + ".tmp.mp4"])
+                g = vsrc(i, 0, "F") + f";[F]trim=start_frame={a}:end_frame={b},setpts=PTS-STARTPTS,fps={FPS},settb=1/{FPS}{fx}[v]"
+                ff(["-i", inp(i), "-filter_complex", g, "-map", "[v]", "-frames:v", str(b - a)] + VENC + [out + ".tmp.mp4"])
         else:
             g = (vsrc(i, 0, "A") + ";" + vsrc(i + 1, 1, "B") +
-                 f";[A]trim={S[i]['w']:.3f}:{S[i]['w']+d:.3f},setpts=PTS-STARTPTS,fps={FPS},settb=1/{FPS}[x];"
-                 f"[B]trim=0:{d:.3f},setpts=PTS-STARTPTS,fps={FPS},settb=1/{FPS}[y];"
+                 f";[A]trim=start_frame={S[i]['wf']}:end_frame={S[i]['wf']+D},setpts=PTS-STARTPTS,fps={FPS},settb=1/{FPS}[x];"
+                 f"[B]trim=start_frame=0:end_frame={D},setpts=PTS-STARTPTS,fps={FPS},settb=1/{FPS}[y];"
                  f"[x][y]xfade=transition=fade:duration={d}:offset=0" + (f"[m];[m][2:v]overlay={BX}:{BY}:shortest=1[v]" if has_b(i) or has_b(i + 1) else "[v]"))
-            ff(["-i", inp(i), "-i", inp(i + 1)] + (["-loop", "1", "-i", bpng] if has_b(i) or has_b(i + 1) else []) + ["-filter_complex", g, "-map", "[v]"] + VENC + [out + ".tmp.mp4"])
+            ff(["-i", inp(i), "-i", inp(i + 1)] + (["-loop", "1", "-i", bpng] if has_b(i) or has_b(i + 1) else []) + ["-filter_complex", g, "-map", "[v]", "-frames:v", str(D)] + VENC + [out + ".tmp.mp4"])
         os.replace(out + ".tmp.mp4", out)
 
     # ---- audio: narration + music bed + clips' ambience
-    total = sum(s["w"] for s in S) + tail
+    total = (FB[n] - FB[0] + TF) / FPS
     t0 = shots[0]["start"]
     audio = os.path.join(work, "audio_" + key(json.dumps(P, sort_keys=True), [sig(i) for i in range(n)]) + ".m4a")
     if not os.path.exists(audio):

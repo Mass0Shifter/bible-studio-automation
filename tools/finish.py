@@ -26,7 +26,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import overlay
 
 FPS = 24
-BUDGET = 110
+BUDGET = int(os.environ.get("FIN_BUDGET", 110))
 T0 = time.time()
 VENC = ["-c:v", "libx264", "-preset", "medium", "-crf", "18", "-pix_fmt", "yuv420p", "-r", str(FPS), "-g", "48",
         "-video_track_timescale", "12288", "-an"]
@@ -43,9 +43,27 @@ def silences(audio):
     out = subprocess.run(["ffmpeg", "-hide_banner", "-nostats", "-i", audio, "-af", "silencedetect=noise=-38dB:d=0.25", "-f", "null", "-"],
                          capture_output=True, text=True).stderr
     st, res = None, []
-    for ln in out.splitlines():
-        if "silence_start:" in ln: st = float(ln.split("silence_start:")[1].split()[0])
-        if "silence_end:" in ln and st is not None: res.append((st + float(ln.split("silence_end:")[1].split()[0])) / 2); st = None
+    try:
+        for ln in out.splitlines():
+            if "silence_start:" in ln: st = float(ln.split("silence_start:")[1].split()[0])
+            if "silence_end:" in ln and st is not None: res.append((st + float(ln.split("silence_end:")[1].split()[0])) / 2); st = None
+        return res
+    except ValueError:   # some ffmpeg builds (CapCut's on Windows) print "invalid" timestamps: measure the pauses ourselves
+        return silences_pcm(audio)
+
+def silences_pcm(audio, noise_db=-38.0, min_len=0.25):
+    import numpy as np
+    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", audio, "-vn", "-ac", "1", "-ar", "16000", "-f", "s16le", "-"], capture_output=True).stdout
+    x = np.abs(np.frombuffer(raw, np.int16).astype(float) / 32768)
+    n = 160; k = len(x) // n; peak = x[:k * n].reshape(k, n).max(1)      # 10 ms blocks, loudest sample (as silencedetect)
+    quiet = peak < 10 ** (noise_db / 20); res, i = [], 0
+    while i < k:
+        if quiet[i]:
+            j = i
+            while j < k and quiet[j]: j += 1
+            if (j - i) * 0.01 >= min_len: res.append((i + j) * 0.005)
+            i = j
+        else: i += 1
     return res
 
 def main(path):
