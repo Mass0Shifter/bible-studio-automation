@@ -166,7 +166,7 @@
      "project_id": "01a1b04c-8081-7349-8086-00b5ed636c55",
      "verses": "1-18",
      "storyboard_shots": 18,
-     "images": "13/18 (missing v14-18)",
+     "images": "18/18 in the app + on PC (Genesis 20\\images\\*.jpg); contact sheet _check\\g20_sheet.jpg checked",
      "voiceover": {
       "status": "done",
       "length": "2:43.6",
@@ -181,8 +181,7 @@
      },
      "clips": "none — prep: plans/verse_windows.json; Vids doc 'Genesis 20 Clips' https://docs.google.com/videos/d/1tTnFXe5JvagzAx6KR4wmVyRUxjObQ8sGWbNHYgj-psw/edit; Flow project 'Genesis 20' https://flow.google.com/project/57bc226e-e008-44ed-a11b-0f5c923f4b86 (13 images uploaded)",
      "final": "none",
-     "chatgpt_scene4": "https://chatgpt.com/c/6aee9537-2e1c-83e9-b7ec-f68655f93f90",
-     "images_on_pc": "none — images folder on C:\\Users\\USER\\Bible Studio is empty; not included when the 21–27 work was transferred from the other PC (revivalist-hp); pictures are in the app shot slots and maybe on that PC. Download copies from the app before editing."
+     "chatgpt_scene4": "https://chatgpt.com/c/6aee9537-2e1c-83e9-b7ec-f68655f93f90"
     },
     "21": {
      "project_id": "01a1b3e0-15d7-71a3-8653-2588e9bf5220",
