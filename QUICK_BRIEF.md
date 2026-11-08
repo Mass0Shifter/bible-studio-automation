@@ -1,6 +1,6 @@
 # QUICK BRIEF — read this first, then only the files it points to
 
-_Last updated: 2026-11-07 23:10 (Africa/Lagos) — reviewed Genesis 19–28 against the files on PC `C:\Users\USER\Bible Studio`._
+_Last updated: 2026-11-08 11:35 (Africa/Lagos) — Genesis 19 finished; pictures 20–23 done._
 Keep this file under ~150 lines. Update it at the end of every work session (and after each finished stage).
 
 ## What this repo is
@@ -29,7 +29,7 @@ Legend: ✅ done · 🟡 partial · ⬜ not started · ❔ made before this repo
 |---|---|---|---|---|---|---|---|
 | 1–3 | ❔ | ❔ | ❔ | ❔ | ❔ | ❔ | not on the Oct–Nov PC — audit with `BDS.project(id)` |
 | 4–18 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | final + clean films on the Oct–Nov PC (`C:\Users\USER\Bible Studio`); 7–18 passed the speech check 3–4 Nov |
-| 19 | ✅ 38 shots | ✅ 38/38 | ✅ 5:48 ElevenLabs (Ralph) | ✅ 2 takes | ⬜ (prompts ready) | ⬜ | re-voiced with ElevenLabs; music to extend; clips next |
+| 19 | ✅ 38 shots | ✅ 38/38 | ✅ 5:48 ElevenLabs (Ralph) | ✅ 6:02 (take 2 extended) | ✅ 43 Vids | ✅ 6:05 | DONE 8 Nov — final + clean films in `Genesis 19inal` |
 | 20 | ✅ 18 shots | ✅ 18/18 | ✅ 2:44 | ✅ 2 takes | ⬜ | ⬜ | pictures done |
 | 21 | ✅ 21 shots | ✅ 21/21 | ✅ 4:07 | ✅ 2 takes | ⬜ | ⬜ | pictures done; Ishmael has no portrait (stored as "symbol") |
 | 22 | ✅ 22 shots | ✅ 22/22 | ✅ 3:30 | ✅ 2 takes | ⬜ | ⬜ | pictures done |
