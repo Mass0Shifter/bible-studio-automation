@@ -31,7 +31,7 @@ Legend: ✅ done · 🟡 partial · ⬜ not started · ❔ made before this repo
 | 4–18 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | final + clean films on the Oct–Nov PC (`C:\Users\USER\Bible Studio`); 7–18 passed the speech check 3–4 Nov |
 | 19 | ✅ 38 shots | ✅ 38/38 | ✅ 5:48 ElevenLabs (Ralph) | ✅ 2 takes | ⬜ (prompts ready) | ⬜ | re-voiced with ElevenLabs; music to extend; clips next |
 | 20 | ✅ 18 shots | ✅ 18/18 | ✅ 2:44 | ✅ 2 takes | ⬜ | ⬜ | pictures done |
-| 21 | ✅ 21 shots | 🟡 15/21 (in app; not in the transfer) | ✅ 4:07 | ✅ 2 takes | ⬜ | ⬜ | images missing v22–34; Ishmael has no portrait (stored as "symbol") |
+| 21 | ✅ 21 shots | ✅ 21/21 | ✅ 4:07 | ✅ 2 takes | ⬜ | ⬜ | pictures done; Ishmael has no portrait (stored as "symbol") |
 | 22 | ✅ 22 shots | 🟡 16/22 (in app; not in the transfer) | ✅ 3:30 | ✅ 2 takes | ⬜ | ⬜ | images missing v18–24 |
 | 23 | ✅ 20 shots | ✅ 20/20 | ✅ 2:44 | ✅ 1 take | ⬜ | ⬜ | Ephron portrait done |
 | 24 | ✅ 40 shots | ⬜ 0/40 | ✅ 9:14 | ✅ 2 takes | ⬜ | ⬜ | portraits: Servant, Rebekah, Laban, Bethuel, Isaac(Adult); set Abraham stage=Elder |
