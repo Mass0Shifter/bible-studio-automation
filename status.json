@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T23:10+01:00",
+ "updated": "2026-11-08T01:18+01:00",
  "books": {
   "Genesis": {
    "workspace": "The Book Genesis",
@@ -214,7 +214,7 @@
      "project_id": "01a1b3e0-4126-703d-821c-a3d60dd1e626",
      "verses": "1-24",
      "storyboard_shots": 22,
-     "images": "16/22 (missing v18,v19,v20,v21-22,v23,v24)",
+     "images": "22/22 in the app + on PC (Genesis 22\\images\\*); new ones checked on _check\\g22_new_sheet.jpg",
      "voiceover": {
       "status": "done",
       "length": "3:30",
@@ -232,8 +232,7 @@
      "portraits_made": [
       "Isaac (Young Adult)"
      ],
-     "chatgpt_scene4": "https://chatgpt.com/c/6aee94a1-a7d0-83e9-8be3-becc8123c705",
-     "images_on_pc": "none — images folder on C:\\Users\\USER\\Bible Studio is empty; not included when the 21–27 work was transferred from the other PC (revivalist-hp); pictures are in the app shot slots and maybe on that PC. Download copies from the app before editing."
+     "chatgpt_scene4": "https://chatgpt.com/c/6aee94a1-a7d0-83e9-8be3-becc8123c705"
     },
     "23": {
      "project_id": "01a1b3f9-5dcb-70a9-ab18-91d53526cbd9",

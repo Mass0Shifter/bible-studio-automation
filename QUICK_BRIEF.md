@@ -32,7 +32,7 @@ Legend: ✅ done · 🟡 partial · ⬜ not started · ❔ made before this repo
 | 19 | ✅ 38 shots | ✅ 38/38 | ✅ 5:48 ElevenLabs (Ralph) | ✅ 2 takes | ⬜ (prompts ready) | ⬜ | re-voiced with ElevenLabs; music to extend; clips next |
 | 20 | ✅ 18 shots | ✅ 18/18 | ✅ 2:44 | ✅ 2 takes | ⬜ | ⬜ | pictures done |
 | 21 | ✅ 21 shots | ✅ 21/21 | ✅ 4:07 | ✅ 2 takes | ⬜ | ⬜ | pictures done; Ishmael has no portrait (stored as "symbol") |
-| 22 | ✅ 22 shots | 🟡 16/22 (in app; not in the transfer) | ✅ 3:30 | ✅ 2 takes | ⬜ | ⬜ | images missing v18–24 |
+| 22 | ✅ 22 shots | ✅ 22/22 | ✅ 3:30 | ✅ 2 takes | ⬜ | ⬜ | pictures done |
 | 23 | ✅ 20 shots | ✅ 20/20 | ✅ 2:44 | ✅ 1 take | ⬜ | ⬜ | Ephron portrait done |
 | 24 | ✅ 40 shots | ⬜ 0/40 | ✅ 9:14 | ✅ 2 takes | ⬜ | ⬜ | portraits: Servant, Rebekah, Laban, Bethuel, Isaac(Adult); set Abraham stage=Elder |
 | 25 | ✅ 24 shots | ⬜ 0/24 | ✅ 4:07 | ✅ 2 takes | ⬜ | ⬜ | portraits: Keturah, Rebekah(Adult), Esau, Jacob; set Abraham stage=Elder |
@@ -51,7 +51,7 @@ Legend: ✅ done · 🟡 partial · ⬜ not started · ❔ made before this repo
 
 ## Review 2026-11-07 night (files on PC `C:\Users\USER\Bible Studio`)
 - Chapter folders on this PC are `C:\Users\USER\Bible Studio\Genesis NN` (not Desktop). Genesis 28 has no folder yet.
-- Genesis 20–27 was made on the other PC (revivalist-hp) and transferred here by the user on 2026-11-07. Genesis 20–22 pictures were not in the transfer (images folders empty) — they are in the app shot slots; download from there.
+- Genesis 20–27 was made on the other PC (revivalist-hp) and transferred here by the user on 2026-11-07. Pictures for 20–23 are now complete in the app AND saved on this PC (2026-11-08).
 - Genesis 25 + 26 .wav rebuilt from the mp4 (full length now). Genesis 28 folder created.
 - Genesis 27 folder is empty (voiceover not exported, no music).
 
