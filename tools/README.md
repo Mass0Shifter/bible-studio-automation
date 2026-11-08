@@ -16,3 +16,6 @@ Synced 2026-11-07 from `C:\Users\USER\Bible Studio\_tools\` (Oct–Nov PC). The 
 | `win/winrun.py`, `win/watcher.bat`, `win/run_chapter2.bat` | Render natively on Windows with CapCut's ffmpeg + the NVIDIA encoder: drop a job file `"<n> <plan base>"` into `win\queue\`; the watcher runs speech_fit → fit_edit → finish → speech_check → film_check. |
 
 Also here (added from the revivalist-hp PC, 2026-11-07): `grab.sh` (copies downloads into a chapter folder) and `fonts/` (Cormorant Garamond for subtitles). Note: the revivalist-hp PC's `Desktop\Bible Studio\_tools\` still has OLDER copies of fit_edit.py / finish.py — refresh them from this folder before rendering there.
+
+| `stt_align.py` | Exact verse windows + quote start/end times from an ElevenLabs Speech-to-Text JSON export (narration passed to STT by link: upload it as a black-picture mp4 into a shot's video slot, read the r2 link from the project page). `python3 stt_align.py stt.json verses.json narration.wav <dir>`; `from stt_align import find`. |
+| `grab_tmp_by_size.py` | Copies Vids clip downloads (`<uuid>.tmp` in Downloads) into the chapter's `video\` folder by matching exact byte sizes from the queue log. |
