@@ -42,8 +42,8 @@ The PC (i7-11800H, 16 threads, 16 GB, NVIDIA GPU) renders natively: `_tools\win\
 Accounts are A = docs.google.com/videos/u/0 … E = u/4 (the user knows which is which). Allowance is counted in **seconds of clip** and shown as "Exceeds your remaining quota" when the length slider can't be set.
 | Account | 2026-11-08 |
 |---|---|
-| A (u/0) | used ~156 s (Genesis 19 v01–v15, v18), then out |
-| B (u/1) | Genesis 19 from v16 on |
-| C (u/2) | not checked yet |
-| D (u/3) | not checked yet |
-| E (u/4) | not checked yet |
+| A (u/0) | used ~156 s (Genesis 19 v01–v15, v18), then out; still out at 10:45 next morning (not a daily reset) |
+| B (u/1) | Genesis 19 v16–v38 + extras (~240 s) |
+| C (u/2) | 8 Nov 10:39: only ~57 s (Genesis 20 v01–v05), then out |
+| D (u/3) | 8 Nov 10:48: already out (slider stuck at 3 s) |
+| E (u/4) | 8 Nov 10:50: full; Genesis 20 from v06 |
