@@ -187,10 +187,12 @@
      },
      "clips": "27/27 + intro in video\\ (Vids accounts C + E; v06 by Grok Imagine 720p 15 s after Vids and Flow refused it as 'prominent people' likeness)",
      "final": {
-      "clean": "final\\Genesis_20_clean.mp4 (3:18.2) DONE",
-      "final": "finish.py was at 13/18 subtitle pieces when the PC went offline (9 Nov 08:15) - re-run `python3 ../../_tools/finish.py finish.json` in Genesis 20\\plans until it prints 'wrote'; then film_check + frame sheet"
+      "clean": "final\\Genesis_20_clean.mp4 (3:18.2)",
+      "final": "final\\Genesis_20_final.mp4 (3:22.3 = intro 4.12 s + film)",
+      "checked": "film_check 0 FAIL (WARN loudness v04b +3.1 dB, v13 +4.2 dB vs narration before); mix -19.4 LUFS; frame sheet OK"
      },
-     "chatgpt_scene4": "https://chatgpt.com/c/6aee9537-2e1c-83e9-b7ec-f68655f93f90"
+     "chatgpt_scene4": "https://chatgpt.com/c/6aee9537-2e1c-83e9-b7ec-f68655f93f90",
+     "status": "DONE 2026-11-09"
     },
     "21": {
      "project_id": "01a1b3e0-15d7-71a3-8653-2588e9bf5220",
