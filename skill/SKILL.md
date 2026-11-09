@@ -230,6 +230,11 @@ Examples: `chapter-intro-example-ruth-2.jpg`, `book-intro-example-ruth.jpg`. **P
 
 **11g. Logo.** `logo-can-you-behold-him.png` top-right (≈ 270 px wide, ≈ 25 px from the top and right edges) at **40 % opacity**, over the whole chapter film.
 
+## Exact timings — speech-to-text (user tip 2026-11-09)
+Verse windows and the start/end of each quoted line come from a transcript **with word times**, aligned to the KJV text by `tools/stt_align.py` (`python3 stt_align.py stt.json verses.json narration.wav <dir>`; `from stt_align import find`).
+- **First choice: Gemini** (gemini.google.com) in one of the user's signed-in Google accounts — free, no ElevenLabs credits. Upload the narration audio and ask: "Transcribe this audio word by word. Return only JSON: {\"segments\":[{\"words\":[{\"text\":\"...\",\"start_time\":seconds,\"end_time\":seconds}]}]}". Check a few word times against pauses (`silencedetect`) before trusting them.
+- **Fallback: ElevenLabs Speech to Text** (very precise, costs plan credits): pass the narration by link — upload it as a black-picture mp4 into a shot's video slot (curl from the PC to `BDS.uploadLink('shot_video', shotId)`), read the r2 link from the project page, paste it under "URL", Transcribe, then Export → JSON (timestamps on) → Downloads.
+
 ## Fallback tools — Grok video and ElevenLabs voice (user rule, 2026-11-07)
 
 Use these **only when the normal tool fails** and the user's subscription for them is signed in (check in the browser pane; if it isn't, tell the user — never type passwords).
