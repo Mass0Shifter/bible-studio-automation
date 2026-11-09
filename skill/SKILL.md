@@ -233,6 +233,7 @@ Examples: `chapter-intro-example-ruth-2.jpg`, `book-intro-example-ruth.jpg`. **P
 ## Exact timings — speech-to-text (user tip 2026-11-09)
 Verse windows and the start/end of each quoted line come from a transcript **with word times**, aligned to the KJV text by `tools/stt_align.py` (`python3 stt_align.py stt.json verses.json narration.wav <dir>`; `from stt_align import find`).
 - **First choice: Gemini** (gemini.google.com) in one of the user's signed-in Google accounts — free, no ElevenLabs credits. Upload the narration audio and ask: "Transcribe this audio word by word. Return only JSON: {\"segments\":[{\"words\":[{\"text\":\"...\",\"start_time\":seconds,\"end_time\":seconds}]}]}". Check a few word times against pauses (`silencedetect`) before trusting them.
+- Gemini note (9 Nov): from the browser pane Gemini could not be given the file — its page blocks fetching r2 and it cannot read media links ("I encountered an error"). It works only if the user drags the audio into Gemini themselves.
 - **Fallback: ElevenLabs Speech to Text** (very precise, costs plan credits): pass the narration by link — upload it as a black-picture mp4 into a shot's video slot (curl from the PC to `BDS.uploadLink('shot_video', shotId)`), read the r2 link from the project page, paste it under "URL", Transcribe, then Export → JSON (timestamps on) → Downloads.
 
 ## Fallback tools — Grok video and ElevenLabs voice (user rule, 2026-11-07)
