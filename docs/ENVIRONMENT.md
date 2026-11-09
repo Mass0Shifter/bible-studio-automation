@@ -43,7 +43,7 @@ Accounts are A = docs.google.com/videos/u/0 … E = u/4 (the user knows which is
 | Account | 2026-11-08 |
 |---|---|
 | A (u/0) | used ~156 s (Genesis 19 v01–v15, v18), then out; still out at 10:45 next morning (not a daily reset) |
-| B (u/1) | Genesis 19 v16–v38 + extras (~240 s) |
+| B (u/1) | Genesis 19 v16–v38 + extras (~240 s); **full again 9 Nov 08:10** |
 | C (u/2) | 8 Nov 10:39: only ~57 s (Genesis 20 v01–v05), then out |
 | D (u/3) | 8 Nov 10:48: already out (slider stuck at 3 s) |
 | E (u/4) | 8 Nov 10:50: full; Genesis 20 from v06 |

@@ -185,8 +185,11 @@
        "Genesis_20_music_take2.wav 2:51"
       ]
      },
-     "clips": "none — prep: plans/verse_windows.json; Vids doc 'Genesis 20 Clips' https://docs.google.com/videos/d/1tTnFXe5JvagzAx6KR4wmVyRUxjObQ8sGWbNHYgj-psw/edit; Flow project 'Genesis 20' https://flow.google.com/project/57bc226e-e008-44ed-a11b-0f5c923f4b86 (13 images uploaded)",
-     "final": "none",
+     "clips": "27/27 + intro in video\\ (Vids accounts C + E; v06 by Grok Imagine 720p 15 s after Vids and Flow refused it as 'prominent people' likeness)",
+     "final": {
+      "clean": "final\\Genesis_20_clean.mp4 (3:18.2) DONE",
+      "final": "finish.py was at 13/18 subtitle pieces when the PC went offline (9 Nov 08:15) - re-run `python3 ../../_tools/finish.py finish.json` in Genesis 20\\plans until it prints 'wrote'; then film_check + frame sheet"
+     },
      "chatgpt_scene4": "https://chatgpt.com/c/6aee9537-2e1c-83e9-b7ec-f68655f93f90"
     },
     "21": {
