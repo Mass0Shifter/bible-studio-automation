@@ -38,6 +38,17 @@ SPK = {'v06b': ('Sarah', SAR, 's6'), 'v07b': ('Sarah', SAR, 's7'), 'v10b': ('Sar
 SPK = {k: (n, vo, Q[q]['text'].rstrip(',:;')) for k, (n, vo, q) in SPK.items()}
 wl = lambda t: len(t.split())
 SPLEN = {k: max(4, min(15, math.ceil(wl(v[2]) / 2.6 + 1.6))) for k, v in SPK.items()}
+
+# ---- split long speech shots into two Flow clips (max 10 s each) — split_speech_patch.py, 10 Nov 2026
+SPLIT_KEYS = ['v07b', 'v10b', 'v23', 'v23b', 'v26b', 'v30b']
+SPLIT = {}
+for _k in SPLIT_KEYS:
+    _who, _vo, _txt = SPK[_k]; _w = _txt.split(); _n = len(_w); _mid = _n / 2
+    _c = [i for i in range(3, _n - 2) if re.search(r"[,;:]$", _w[i - 1])]
+    _cut = min(_c, key=lambda i: abs(i - _mid)) if _c and min(abs(i - _mid) for i in _c) <= _n * 0.3 else (_n + 1) // 2
+    SPK[_k] = (_who, _vo, ' '.join(_w[:_cut])); SPK[_k + '_2'] = (_who, _vo, ' '.join(_w[_cut:])); SPLIT[_k] = _k + '_2'
+SPLEN = {k: max(4, min(10 if (k in SPLIT or k in SPLIT.values()) else 15, math.ceil(wl(v[2]) / 2.6 + 1.6))) for k, v in SPK.items()}
+
 LEAD = 0.6
 J = lambda a_, b_: (WIN[a_][0], WIN[b_][1])
 SEQ = [('v01', 1, 'o', J(1, 2), 1), ('v03', 3, 'o', J(3, 4), 3), ('v05', 5, 'o', WIN[5], 5),
@@ -51,6 +62,12 @@ SEQ = [('v01', 1, 'o', J(1, 2), 1), ('v03', 3, 'o', J(3, 4), 3), ('v05', 5, 'o',
        ('v26', 26, 'lead', (WIN[26][0], cut('a26')), 24), ('v26b', 26, 'sp', None, 24), ('v27', 27, 'o', J(27, 28), 27),
        ('v29', 29, 'lead', (WIN[29][0], cut('a29')), 29), ('v29b', 29, 'sp', None, 29), ('v30', 30, 'lead', (WIN[30][0], cut('b30')), 29), ('v30b', 30, 'sp', None, 29),
        ('v31', 31, 'o', J(31, 32), 31), ('v33', 33, 'o', (WIN[33][0], END), 33)]
+_seq = []
+for _e in SEQ:
+    _seq.append(_e)
+    if _e[0] in SPLIT: _seq.append((SPLIT[_e[0]],) + tuple(_e[1:]))
+SEQ = _seq
+
 out = []; t = 0.0; win = []
 def put(x):
     global t; out.append(x); t += len(x) / sr
@@ -127,6 +144,9 @@ ACT = {'v01': "Very slow push in. Inside the tent Sarah cradles her newborn son 
  'v30b': P + f"{AB}, hand on the lambs beside the well, answers Abimelech.",
  'v31': "Slow pull back. Abimelech and Phichol mount and ride away from Beer-sheba with their men; dust rises.",
  'v33': "Very slow push in. Sunset: Abraham kneels beside a young tamarisk tree he has planted, arms raised in worship; the camp behind."}
+for _k, _k2 in SPLIT.items():
+    ACT[_k2] = ACT[_k].replace('speaks', 'continues speaking')
+
 q = []
 for x in win:
     k = x['shot']

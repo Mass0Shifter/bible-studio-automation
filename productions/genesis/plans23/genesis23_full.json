@@ -77,7 +77,16 @@
    "verse": 8,
    "clip": "../video/Genesis_23_v08b.mp4",
    "start": 61.82,
-   "end": 73.32,
+   "end": 69.32,
+   "method": "auto",
+   "clip_gain": 1.3,
+   "note": "Abraham speaks his own words"
+  },
+  {
+   "verse": 8,
+   "clip": "../video/Genesis_23_v08b_2.mp4",
+   "start": 69.32,
+   "end": 75.82,
    "method": "auto",
    "clip_gain": 1.3,
    "note": "Abraham speaks his own words"
@@ -85,8 +94,8 @@
   {
    "verse": 9,
    "clip": "../video/Genesis_23_v09.mp4",
-   "start": 73.32,
-   "end": 82.82,
+   "start": 75.82,
+   "end": 85.32,
    "method": "auto",
    "clip_gain": 1.3,
    "note": "Abraham speaks his own words"
@@ -94,8 +103,8 @@
   {
    "verse": 9,
    "clip": "../video/Genesis_23_v09b.mp4",
-   "start": 82.82,
-   "end": 92.32,
+   "start": 85.32,
+   "end": 94.82,
    "method": "auto",
    "clip_gain": 1.3,
    "note": "Abraham speaks his own words"
@@ -103,15 +112,24 @@
   {
    "verse": 10,
    "clip": "../video/Genesis_23_v10.mp4",
-   "start": 92.32,
-   "end": 102.8,
+   "start": 94.82,
+   "end": 105.3,
    "method": "auto"
   },
   {
    "verse": 11,
    "clip": "../video/Genesis_23_v11.mp4",
-   "start": 102.8,
-   "end": 117.3,
+   "start": 105.3,
+   "end": 112.8,
+   "method": "auto",
+   "clip_gain": 1.3,
+   "note": "Ephron speaks his own words"
+  },
+  {
+   "verse": 11,
+   "clip": "../video/Genesis_23_v11_2.mp4",
+   "start": 112.8,
+   "end": 122.3,
    "method": "auto",
    "clip_gain": 1.3,
    "note": "Ephron speaks his own words"
@@ -119,22 +137,31 @@
   {
    "verse": 12,
    "clip": "../video/Genesis_23_v12.mp4",
-   "start": 117.3,
-   "end": 120.48,
+   "start": 122.3,
+   "end": 125.48,
    "method": "auto"
   },
   {
    "verse": 13,
    "clip": "../video/Genesis_23_v13.mp4",
-   "start": 120.48,
-   "end": 124.91,
+   "start": 125.48,
+   "end": 129.91,
    "method": "auto"
   },
   {
    "verse": 13,
    "clip": "../video/Genesis_23_v13b.mp4",
-   "start": 124.91,
-   "end": 138.41,
+   "start": 129.91,
+   "end": 135.41,
+   "method": "auto",
+   "clip_gain": 1.3,
+   "note": "Abraham speaks his own words"
+  },
+  {
+   "verse": 13,
+   "clip": "../video/Genesis_23_v13b_2.mp4",
+   "start": 135.41,
+   "end": 143.91,
    "method": "auto",
    "clip_gain": 1.3,
    "note": "Abraham speaks his own words"
@@ -142,15 +169,24 @@
   {
    "verse": 14,
    "clip": "../video/Genesis_23_v14.mp4",
-   "start": 138.41,
-   "end": 141.82,
+   "start": 143.91,
+   "end": 147.32,
    "method": "auto"
   },
   {
    "verse": 15,
    "clip": "../video/Genesis_23_v15.mp4",
-   "start": 141.82,
-   "end": 153.32,
+   "start": 147.32,
+   "end": 153.82,
+   "method": "auto",
+   "clip_gain": 1.3,
+   "note": "Ephron speaks his own words"
+  },
+  {
+   "verse": 15,
+   "clip": "../video/Genesis_23_v15_2.mp4",
+   "start": 153.82,
+   "end": 159.32,
    "method": "auto",
    "clip_gain": 1.3,
    "note": "Ephron speaks his own words"
@@ -158,36 +194,36 @@
   {
    "verse": 16,
    "clip": "../video/Genesis_23_v16.mp4",
-   "start": 153.32,
-   "end": 164.97,
+   "start": 159.32,
+   "end": 170.97,
    "method": "auto"
   },
   {
    "verse": 17,
    "clip": "../video/Genesis_23_v17.mp4",
-   "start": 164.97,
-   "end": 175.87,
+   "start": 170.97,
+   "end": 181.87,
    "method": "auto"
   },
   {
    "verse": 18,
    "clip": "../video/Genesis_23_v18.mp4",
-   "start": 175.87,
-   "end": 184.8,
+   "start": 181.87,
+   "end": 190.8,
    "method": "auto"
   },
   {
    "verse": 19,
    "clip": "../video/Genesis_23_v19.mp4",
-   "start": 184.8,
-   "end": 192.4,
+   "start": 190.8,
+   "end": 198.4,
    "method": "auto"
   },
   {
    "verse": 20,
    "clip": "../video/Genesis_23_v20.mp4",
-   "start": 192.4,
-   "end": 199.709,
+   "start": 198.4,
+   "end": 205.709,
    "method": "auto"
   }
  ]

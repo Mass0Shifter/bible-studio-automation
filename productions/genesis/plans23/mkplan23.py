@@ -30,6 +30,17 @@ SPK = {'v04': ('Abraham', ABR, V[4]), 'v06': ('the white-bearded elder of the so
        'v11': ('Ephron', EPH, V[11]), 'v13b': ('Abraham', ABR, q13), 'v15': ('Ephron', EPH, V[15])}
 wl = lambda t: len(t.split())
 SPLEN = {k: max(4, min(15, math.ceil(wl(v[2]) / 2.6 + 1.6))) for k, v in SPK.items()}
+
+# ---- split long speech shots into two Flow clips (max 10 s each) — split_speech_patch.py, 10 Nov 2026
+SPLIT_KEYS = ['v08b', 'v11', 'v13b', 'v15']
+SPLIT = {}
+for _k in SPLIT_KEYS:
+    _who, _vo, _txt = SPK[_k]; _w = _txt.split(); _n = len(_w); _mid = _n / 2
+    _c = [i for i in range(3, _n - 2) if re.search(r"[,;:]$", _w[i - 1])]
+    _cut = min(_c, key=lambda i: abs(i - _mid)) if _c and min(abs(i - _mid) for i in _c) <= _n * 0.3 else (_n + 1) // 2
+    SPK[_k] = (_who, _vo, ' '.join(_w[:_cut])); SPK[_k + '_2'] = (_who, _vo, ' '.join(_w[_cut:])); SPLIT[_k] = _k + '_2'
+SPLEN = {k: max(4, min(10 if (k in SPLIT or k in SPLIT.values()) else 15, math.ceil(wl(v[2]) / 2.6 + 1.6))) for k, v in SPK.items()}
+
 LEAD = 0.6
 SEQ = [('v01', 1, 'o', WIN[1]), ('v02', 2, 'o', WIN[2]), ('v03', 3, 'lead', WIN[3]), ('v04', 4, 'sp', None),
        ('v05', 5, 'lead', WIN[5]), ('v06', 6, 'sp', None), ('v07', 7, 'o', WIN[7]),
@@ -37,6 +48,12 @@ SEQ = [('v01', 1, 'o', WIN[1]), ('v02', 2, 'o', WIN[2]), ('v03', 3, 'lead', WIN[
        ('v10', 10, 'lead', WIN[10]), ('v11', 11, 'sp', None), ('v12', 12, 'o', WIN[12]),
        ('v13', 13, 'lead', (WIN[13][0], CUT13)), ('v13b', 13, 'sp', None), ('v14', 14, 'lead', WIN[14]), ('v15', 15, 'sp', None),
        ('v16', 16, 'o', WIN[16]), ('v17', 17, 'o', WIN[17]), ('v18', 18, 'o', WIN[18]), ('v19', 19, 'o', WIN[19]), ('v20', 20, 'o', (WIN[20][0], END))]
+_seq = []
+for _e in SEQ:
+    _seq.append(_e)
+    if _e[0] in SPLIT: _seq.append((SPLIT[_e[0]],) + tuple(_e[1:]))
+SEQ = _seq
+
 out = []; t = 0.0; win = []
 def put(x):
     global t; out.append(x); t += len(x) / sr
@@ -99,6 +116,9 @@ ACT = {'v01': "Very slow pull back. Sunset over the hills of Hebron; olive trees
  'v18': "Slow push in. At the city gate Abraham and Ephron clasp hands to seal the agreement; the elders raise their hands as witnesses.",
  'v19': "Slow, reverent tracking shot. Abraham and his men carry Sarah's wrapped body on a bier into the cave of Machpelah at sunset.",
  'v20': "Very slow pull back. Abraham stands alone by the sealed cave in the warm sunset light, the field quiet and peaceful."}
+for _k, _k2 in SPLIT.items():
+    ACT[_k2] = ACT[_k].replace('speaks', 'continues speaking')
+
 q = []
 for x in win:
     k = x['shot']; v = x['verse']
