@@ -1,6 +1,6 @@
 # QUICK BRIEF — read this first, then only the files it points to
 
-_Last updated: 2026-11-09 08:20 (Africa/Lagos) — Genesis 19 done; Genesis 20 finished._
+_Last updated: 2026-11-10 03:40 — **read CONTINUE.md first** (it is newer than this brief). Esther Prophetic Implication in production; Genesis 21 paused._
 Keep this file under ~150 lines. Update it at the end of every work session (and after each finished stage).
 
 ## What this repo is
