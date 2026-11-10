@@ -73,7 +73,7 @@ for x in win:
     s = dict(verse=x['verse'], clip=f"../video/Genesis_21_{x['shot']}.mp4", start=x['start'], end=x['end'], method='auto')
     if x.get('speech'): s['clip_gain'] = 1.3; s['note'] = x['speaker'] + ' speaks own words'
     shots.append(s)
-plan = {'voiceover': '../audio/Genesis_21_voiceover_dialogue.wav', 'music': '../music/Genesis_21_music.wav', 'music_gain_db': -9.8, 'ambient_gain': 0.22, 'dissolve': 0.5, 'outro': 3.0,
+plan = {'voiceover': '../audio/Genesis_21_voiceover_dialogue.wav', 'music': '../music/Genesis_21_music.wav', 'music_gain_db': -11.2, 'ambient_gain': 0.22, 'dissolve': 0.5, 'outro': 3.0,
         'output': '../final/Genesis_21_clean.mp4', 'badge': {'image': '../../_tools/references/Radiant Golden Portal Emblem.png', 'cx': 1740, 'cy': 898, 'size': 150}, 'shots': shots}
 json.dump(plan, open('genesis21_full.json', 'w'), indent=1)
 R2 = 'https://pub-2993fb3bf56d45ffb3d678320781fe03.r2.dev/generated_shots/genesis-chapter-21-verse-'

@@ -59,7 +59,7 @@ for x in win:
     s = dict(verse=x['verse'], clip=f"../video/Genesis_23_{x['shot']}.mp4", start=x['start'], end=x['end'], method='auto')
     if x.get('speech'): s['clip_gain'] = 1.3; s['note'] = x['speaker'] + ' speaks his own words'
     shots.append(s)
-plan = {'voiceover': '../audio/Genesis_23_voiceover_dialogue.wav', 'music': '../music/Genesis_23_music.wav', 'music_gain_db': -9.8, 'ambient_gain': 0.22, 'dissolve': 0.5, 'outro': 3.0,
+plan = {'voiceover': '../audio/Genesis_23_voiceover_dialogue.wav', 'music': '../music/Genesis_23_music.wav', 'music_gain_db': -11.2, 'ambient_gain': 0.22, 'dissolve': 0.5, 'outro': 3.0,
         'output': '../final/Genesis_23_clean.mp4', 'badge': {'image': '../../_tools/references/Radiant Golden Portal Emblem.png', 'cx': 1740, 'cy': 898, 'size': 150}, 'shots': shots}
 json.dump(plan, open('genesis23_full.json', 'w'), indent=1)
 # ---- Vids clip queue

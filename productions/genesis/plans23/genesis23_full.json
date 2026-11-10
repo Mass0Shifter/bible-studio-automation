@@ -1,7 +1,7 @@
 {
  "voiceover": "../audio/Genesis_23_voiceover_dialogue.wav",
  "music": "../music/Genesis_23_music.wav",
- "music_gain_db": -9.8,
+ "music_gain_db": -11.2,
  "ambient_gain": 0.22,
  "dissolve": 0.5,
  "outro": 3.0,
