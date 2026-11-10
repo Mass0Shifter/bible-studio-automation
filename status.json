@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T14:25+01:00",
+ "updated": "2026-11-10T14:30+01:00",
  "books": {
   "Genesis": {
    "workspace": "The Book Genesis",
@@ -240,13 +240,16 @@
       ]
      },
      "clips": "32/32 Vids 1080p (done 10 Nov 14:05; last 11 on u/5 Precious Chikezie)",
-     "final": "none",
+     "final": "Genesis_22_final.mp4 3:59.6",
      "portraits_made": [
       "Isaac (Young Adult)"
      ],
      "chatgpt_scene4": "https://chatgpt.com/c/6aee94a1-a7d0-83e9-8be3-becc8123c705",
      "music_gain_db": -11.2,
-     "status": "clips done — ready to render"
+     "status": "final",
+     "clean": "Genesis_22_clean.mp4 3:54.4",
+     "rendered": "2026-11-10",
+     "detail": "productions/genesis/22.md"
     },
     "23": {
      "project_id": "01a1b3f9-5dcb-70a9-ab18-91d53526cbd9",
