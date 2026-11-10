@@ -64,7 +64,7 @@ def main(a):
         if m2 and len(m2.group(1).split()) <= 5 and s['scene'] in (2, 3, 4, 5):
             title = m2.group(1)
             e = st + 3.0
-            ev.append((4, st, e, 'SubGlow', r"{\fad(300,400)\3a&H40&" + flame(st, e, gold=True) + "}" + esc(title.upper())))
+            pass   # sub-point titles: no glow (user 10 Nov)
             ev.append((6, st, e, 'Sub', r"{\fad(300,400)}" + esc(title.upper())))
             s['_skip_n'] = len(title.split())
     # current-point label, top-left, after each main card until the next main point
@@ -135,7 +135,7 @@ Style: Point,{FONT},128,&H00F4FFFF,&H000000FF,&H00106AB4,&H00000000,-1,0,0,0,100
 Style: PointGlow,{FONT},128,&HFF000000,&H000000FF,&H0000B0FF,&H00000000,-1,0,0,0,100,100,6,0,1,14,0,5,100,100,0,1
 Style: PointNum,{FONT},56,&H00A8F0FF,&H000000FF,&H00102040,&H96000000,-1,0,0,0,100,100,14,0,1,1.2,3,8,100,100,322,1
 Style: PointTag,{FONT},68,&H00FFFFFF,&H000000FF,&H00102040,&H96000000,-1,-1,0,0,100,100,1,0,1,1.2,3,2,100,100,322,1
-Style: Sub,{FONT},74,&H00F4FFFF,&H000000FF,&H00106AB4,&H00000000,-1,0,0,0,100,100,5,0,1,2.5,0,8,100,100,70,1
+Style: Sub,{FONT},74,&H00F4FFFF,&H000000FF,&H00106AB4,&H96000000,-1,0,0,0,100,100,5,0,1,3,2.5,8,100,100,70,1
 Style: SubGlow,{FONT},74,&HFF000000,&H000000FF,&H0000B0FF,&H00000000,-1,0,0,0,100,100,5,0,1,11,0,8,100,100,70,1
 Style: Label,{FONT},50,&H0090ECFF,&H000000FF,&H00102040,&H96000000,-1,0,0,0,100,100,4,0,1,1.2,3,7,60,60,40,1
 

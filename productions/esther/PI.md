@@ -38,3 +38,4 @@
 - New caption style: no bar; bold white subtitles with black outline, ≤ 2 lines × 5 words; spoken word highlighted in the badge's gold (karaoke, from STT words); point cards + top-left point label + sub-point titles in the same gold; no logo over the outro. Previews 1–8 iterated with the user (orange → white → purple → black-outline + gold).
 - `final\Esther_PI_final.mp4` (3:44.5) replaced; old bar version in `_to_delete\`.
 - Render path: pi_captions.py → 19 × 12 s pieces burned in the Linux shell (one.sh) → Windows `CAT Esther` join. CapCut ffmpeg has no `ass` filter.
+- 12:22 — sub-point titles no longer glow (user); full film re-rendered → `final\Esther_PI_final.mp4` 3:44.5.
