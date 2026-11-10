@@ -29,3 +29,12 @@ Newest first. When a lesson is merged into the skill, delete it here.
 - Google accounts signed in (2026-11-08): 5 (A = u/0 … E = u/4). Account A had Vids AI-video allowance on 8 Nov.
 
 - **Upload from ChatGPT without leaving the chat (2026-11-08):** append a hidden `<iframe src="/robots.txt">` to the ChatGPT page; build the form + target iframe inside that frame's document and submit — works while the ChatGPT queue keeps running in the same tab.
+
+## Lessons from Esther PI (10 Nov 2026)
+- **Browser pane reset** can sign out every site and wipe chatgpt.com IndexedDB/localStorage (queue state + finished pictures). Upload pictures to the app as soon as they finish; don't rely on IndexedDB surviving.
+- **Upload from `chatgpt.com/robots.txt`**, not from a ChatGPT chat page: the iframe-form POST to the app's signed link fails silently from a chat page (CSP). ChatGPT also blocks `fetch` to GitHub — paste tool source into the tab directly.
+- **`preview_start` can silently REUSE another tab of the same site** (it reused the helper's Vids tab twice and killed its queue). With a helper agent running, open tabs only with `tabs_create` + `navigate`, and give each agent its own sites. The pane holds ~7 tabs — close finished ones.
+- **Google accounts after re-sign-in (10 Nov):** u/1 = Glorify Michaels (Vids AI video OK, 1080p), u/2 = Nâcham Technology and Solutions (no Vids AI video — "Upgrade"), u/3 = Nâcham Media (has AI video but the duration slider stayed disabled from JS; one 4 s clip worked). Re-check after any sign-out.
+- **New blank Vids docs** keep re-opening the "Let's start creating" welcome screen, which blocks the AI-video settings; reuse a doc that already has content, or pick an option in the welcome screen.
+- **Flow (Nov 2026):** new models Omni 1.2 Flash (default) and Omni 1.1 Flash ("Leaving Dec 5"); pick the model under "Select model family" in the settings chip; duration radios 4/6/8/10 s appear after the model is chosen. Download: clip page → ⋮ → Download media → 1080p Upscaled. Flow misspelled the card footnote ("peried") — `intro_restore` fixes it.
+- **Prophetic Implication films:** `finish.json` `"plain_subs": true` = sentence subtitles with "(Esther 7:10)" refs, no [Vn]; last shot = channel outro (10 s, `badge: false`); render on Windows with a job file `PI <Book> <plan base>` (run_pi.bat, no speech_fit).

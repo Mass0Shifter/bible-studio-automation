@@ -1,4 +1,5 @@
 @echo off
+if /i "%~1"=="PI" call "%~dp0run_pi.bat" %2 %3 & exit /b
 rem usage: run_chapter.bat <chapter number> <plan base name without .json>
 set T=C:\Users\USER\Bible Studio\_tools
 cd /d "C:\Users\USER\Bible Studio\Genesis %1\plans"
