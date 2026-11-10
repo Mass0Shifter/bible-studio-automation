@@ -17,41 +17,11 @@ Read this whole file first. Then `QUICK_BRIEF.md` (repo; partly out of date — 
 - Can't delete files on the PC (no delete permission) — move junk to `_to_delete\` instead.
 - User's messages shouldn't stop the work; use your own judgement when they're away.
 
-## 1. What is happening right now (10 Nov 03:40)
-> **10 Nov ~03:55 update:** the browser pane was reset — it is **signed out of the Bible Studio app, Google and ChatGPT**, and the ChatGPT queue/uploader tabs are gone. Pictures stood at 34/41 (`plans\imgs.json` has 34). The user must sign back in (Claude never types passwords) before pictures/clips can continue. After sign-in: restart the `ePI` ChatGPT queue for the 7 missing shots (IndexedDB `__bds`/`kv` on chatgpt.com may still hold finished ones — check before regenerating).
-**Top priority: Esther — Prophetic Implication film** (whole-book "prophetic implication" film, user asked for it fast; Genesis 21 is paused for it).
-Title chosen: **"The Book Where God Is Never Named (But He's Everywhere)"**. Script approved. Storyboard shown (7 scenes, 42 shots).
-
-| Step | State |
-|---|---|
-| Script | ✅ `Prophetic Implications\Esther\Esther_PI_script.md` (repo `productions/esther/PI_script.md`) |
-| YouTube package (titles, thumbnails, tags, description) | ✅ `Esther_PI_youtube.md` — **chapter timestamps still estimates → replace** (see §3 step 7) |
-| Storyboard | ✅ `Esther_PI_storyboard.md/.json` (42 shots; shot 42 = scene 7 outro) |
-| App project | ✅ "Esther — Prophetic Implication" id `01a1bf45-9b32-724a-befe-008a6f896869` (workspace "The Book of Esther"; rows v1…v42 = shot order; file stems `Esther_1_1_10_3_S0n_SH0m`) |
-| Pictures (ChatGPT) | 🟡 **running** — 34/41 in the app at 03:35; queue tag `ePI` in browser tab "chatgpt.com …ai-bible-imagery" (tab-8). Auto-uploader runs in the `chatgpt.com/robots.txt` tab (tab-2) and puts each finished picture into the app. Its upload links **expire ~04:30 on 10 Nov** — if pictures are still missing after that, see §2 "refresh links". Shot 42 (outro) needs no picture. |
-| Intro card | ✅ `images\Esther_PI_INTRO.png` (also on r2 as `generated_shots/genesis-chapter-21-verse-1-scene-1-shot-1-a2m88k.png` — it was uploaded into a Genesis 21 slot only to get a public link) |
-| Narration | ✅ `audio\Esther_PI_voiceover.wav/.mp4` 3:34.9 (Vids Paz, account B doc "Esther PI Narration") |
-| Speech-to-text | ✅ `audio\Esther_PI_stt.json` (ElevenLabs) |
-| Shot timings | ✅ `plans\windows.json` (42 shot windows, all aligned well), `plans\words.json`, `plans\shots_text.json` |
-| Vids clip queue | ✅ built: `plans\vids_queue.json` by `plans\mkqueue.py` (34 clips, 215 s). **Not started yet.** Re-run `mkqueue.py` after updating `plans\imgs.json` with the last 7 pictures. |
-| Music | ✅ `music\Esther_PI_music.wav` 229.1 s (10 Nov 03:55) = take1 "Crown of Silk" 0–100 s + 40 s–end, 5 s crossfade at the quiet break (~95–100 s). Bed at −9.8 dB. |
-| Clips / edit / finish | ⬜ |
-
-## 2. How to pick up the Esther film — step by step
-1. **Check pictures.** In a biblestudio.nachamtns.com tab:
-   `const BDS=(await import('/bds-bridge.js?v='+Date.now())).default||window.BDS; const a=(await BDS.shots('01a1bf45-9b32-724a-befe-008a6f896869',{light:true})); a.filter(x=>!x.hasImage).map(x=>x.order)` (shots objects have `order, shotId, hasImage, imageUrl, fileStem`).
-   - Missing ones still generating: look at tab-8 `__q.status('ePI')` (log lines `ok …`, `error …`). Retry errors with `__q.reset('ePI',[keys]); __q.run('ePI')`. Keys are `ePI_S<scene>_SH<shot>`.
-   - Picture done in the queue but not in the app = upload link expired. **Refresh links**: in the app tab `BDS.uploadLink('shot_image', shotId)` gives a new signed link; put it into `localStorage.__LePI` (map key → [stem, link]) in the robots.txt tab, then `__upload({key: L[key]})` (code for `__upload` is in the session log of 10 Nov; it reads the picture from IndexedDB `__bds`/`kv`, converts to JPEG 0.93 and posts it through a hidden iframe form).
-   - If the ChatGPT image limit hits: wait ~5–7 h, it resets.
-2. **Update `plans\imgs.json`** (shot order → r2 path from `imageUrl`) and run `python3 mkqueue.py` in `Prophetic Implications\Esther\plans`.
-3. **Vids clips** with `tools/vids_queue.js` (header of that file explains everything). Use account **B (u/1)** first (full on 9 Nov), then E, then re-check A, C, D. Open `docs.google.com/videos/u/1/create`, right panel → AI Video → Animate, load the source with the Trusted-Types trick (`trustedTypes.createPolicy('bds'+Date.now(),{createScript:s=>s}); eval(p.createScript(localStorage.__vqsrc))`), set `window.__vqtag='ePI'`, `window.__vq=<contents of vids_queue.json>`, `__vqueue.run()`. Clips download to `Downloads` as `<uuid>.tmp` or real name — match by size with `_tools\grab_tmp_by_size.py` and move to `Esther\video\Esther_PI_vNN.mp4`. Refused clips → Flow (Omni Flash 1.1) → Grok.
-   - Also make an **intro animation** from the intro card (8 s, gentle push-in, light rays) — key `vINTRO`.
-4. **Music**: ✅ done (229.1 s).
-5. **Plan + edit**: copy `Genesis 20\plans\mkplan20.py` as a model → `mkplanPI.py`: shots from `windows.json`, intro card + intro clip first, last shot = the channel outro `CAN_YOU_BEHOLD_HIM_OUTTRO.mp4` (same file Genesis 19/20 used) over shot 42's narration. Then `_tools\speech_fit.py` → `_tools\fit_edit.py` (re-run until it prints "wrote") → `_tools\finish.py` (re-run if cut off) → `_tools\film_check.py plans\finish.json`. **Subtitles: sentence subtitles with the KJV reference** from each shot's `ref` field (references are not spoken).
-   - Keep each PC command ≤ ~170 s; the scripts are resumable (long background jobs on the PC get killed).
-6. **Deliver** `final\Esther_PI_final.mp4` and `final\Esther_PI_clean.mp4` (clean = no subtitles), send to the user.
-7. **YouTube chapters**: replace the estimated times in `Esther_PI_youtube.md` with real ones (scene starts in the final film = intro length + windows: Hook 0.0, One 30.0, Two 67.7, Three 109.5, Four 146.3, Summary 185.3 s of narration).
-8. Update repo `productions/esther/PI.md`, `status.json`, `QUICK_BRIEF.md`, and this file.
+## 1. What is happening right now (10 Nov 05:45)
+**Esther Prophetic Implication film is FINISHED** — `Prophetic Implications\Esther\final\Esther_PI_final.mp4` (3:44) + `_clean.mp4` (3:38); details in `productions/esther/PI.md`. Still to do for it: thumbnail upload/YouTube posting is the user's.
+**Now: Genesis.** The helper agent is making Genesis 22 clips (Vids, Glorify Michaels account u/1), then Genesis 23, then 21. When a chapter's clips are complete, the lead queues its render (Windows watcher).
+- Google slots after the 10 Nov re-sign-in: u/0 Precious Ebubechukwu Chikezie, u/1 Glorify Michaels (Vids AI video OK), u/2 Nâcham Technology and Solutions (no AI video), u/3 Nâcham Media (out today), u/4 EBUBE PC, u/5 Precious Chikezie.
+- Windows render watcher (`_tools\win\watcher.bat`) was started by the user at 05:32 — check its window is still open before queueing.
 
 ## 3. After Esther: back to Genesis
 - **Genesis 21** (paused): read `productions/genesis/21.md` "PAUSED" section — narration wav, STT, windows done; check verse 34 timing (came out 0.3 s); then quotes for divine/angel voices, `mkplan21` (copy of mkplan20.py), Vids queue, intro card + Paz intro line, music extend.

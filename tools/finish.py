@@ -84,6 +84,7 @@ def main(path):
     blocks = []
     spans = []   # consecutive shots of the same verse (e.g. a dialogue shot) share one subtitle span
     for k, s in enumerate(E["shots"]):
+        if s.get("nosub"): continue   # e.g. the channel outro clip: no bar/subtitle over it (it has its own text)
         n = s.get("verse", k + 1)
         if spans and spans[-1][0] == n: spans[-1][2] = s["end"]
         else: spans.append([n, s["start"], s["end"]])
@@ -187,6 +188,9 @@ def main(path):
             count = end_fr - fr[-1]; L = count / FPS; fade = min(1.5, L / 2)
             g = (f"[1:v]format=rgba,fade=t=out:st=0:d=0.6:alpha=1[s];[0:v][2:v]overlay=0:0[a];[a][s]overlay=0:0,"
                  f"fade=t=out:st={L-fade:.3f}:d={fade:.3f},format=yuv420p[v]")
+            if F.get("outro_logo", True) is False:   # outro shot carries its own branding: no extra logo
+                g = (f"[1:v]format=rgba,fade=t=out:st=0:d=0.6:alpha=1[s];[0:v][s]overlay=0:0,"
+                     f"fade=t=out:st={L-fade:.3f}:d={fade:.3f},format=yuv420p[v]")
             ff(["-ss", f"{fr[-1]/FPS:.4f}", "-i", film, "-loop", "1", "-framerate", str(FPS), "-i", os.path.join(work, f"ov_{len(blocks)-1:03d}.png"),
                 "-loop", "1", "-framerate", str(FPS), "-i", logo_png, "-filter_complex", g, "-map", "[v]", "-frames:v", str(count)] + VENC + [o + ".tmp.mp4"])
             os.replace(o + ".tmp.mp4", o)

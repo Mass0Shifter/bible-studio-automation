@@ -37,12 +37,12 @@ If this video helped you behold Christ in the Old Testament, please like, share,
 
 🎬 **Video Chapters**
 0:00 The Real Story of Esther
-0:44 The Hidden Hand
-1:31 The Ancient Enemy
-2:20 The Royal Mediator
-3:09 The Great Reversal
-4:03 Esther's Message of Salvation
-*(estimated from the script; replace with the real times once the voiceover is recorded)*
+0:36 The Hidden Hand
+1:13 The Ancient Enemy
+1:55 The Royal Mediator
+2:32 The Great Reversal
+3:11 Esther's Message of Salvation
+3:34 Subscribe
 
 📱 **Connect & Support**
 Subscribe: [Insert Link]

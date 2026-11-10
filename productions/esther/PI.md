@@ -26,3 +26,9 @@
 - Quota: Glorify Michaels made ~265 s of clips today and was never refused (not out). Nâcham Media (u/3): duration slider won't set (lead) = out.
 - Snags: v02–v05 pictures were 404 on r2 for a while (app said hasImage) — fixed by re-upload, then clipped. Browser pane reset once mid-run and another agent's `preview_start` reused the Vids tab twice — queue state survives in localStorage (`__vq_state_ePI`, sizes in `__vqsizes`), so re-load and re-run skips finished keys.
 - `plans\grab_clips.py "vNN size" …` copies Downloads (named or `.tmp` by exact size) → `video\` and prints ffprobe size/length.
+
+## ✅ 10 Nov 05:40 — FINISHED
+- `final\Esther_PI_final.mp4` 3:44.5 (intro 6.0 s + film, sentence subtitles + refs, badge, logo) and `final\Esther_PI_clean.mp4` 3:38.5; SRTs beside them.
+- Rendered on Windows (watcher.bat, job `PI Esther esther_pi_full`) in ~4 min.
+- Fixes after first render: bar label "Esther 1-10" (long "The Book of Esther" was clipped at the left edge); outro shot `nosub` + finish `outro_logo: false` (no bar/subtitle/extra logo over the channel outro).
+- YouTube chapters updated with real times (0:00, 0:36, 1:13, 1:55, 2:32, 3:11, 3:34).

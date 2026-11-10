@@ -307,6 +307,7 @@
    "end": 218.05,
    "method": "trim",
    "badge": false,
+   "nosub": true,
    "note": "channel outro"
   }
  ]
