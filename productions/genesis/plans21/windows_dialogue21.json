@@ -1,0 +1,386 @@
+[
+ {
+  "shot": "v01",
+  "verse": 1,
+  "pic": 1,
+  "start": 0.0,
+  "end": 13.29,
+  "duration": 13.29,
+  "clip_len": 14
+ },
+ {
+  "shot": "v03",
+  "verse": 3,
+  "pic": 3,
+  "start": 13.29,
+  "end": 25.43,
+  "duration": 12.14,
+  "clip_len": 13
+ },
+ {
+  "shot": "v05",
+  "verse": 5,
+  "pic": 5,
+  "start": 25.43,
+  "end": 30.33,
+  "duration": 4.9,
+  "clip_len": 6
+ },
+ {
+  "shot": "v06",
+  "verse": 6,
+  "pic": 6,
+  "start": 30.33,
+  "end": 32.04,
+  "duration": 1.71,
+  "clip_len": 4
+ },
+ {
+  "shot": "v06b",
+  "verse": 6,
+  "pic": 6,
+  "start": 32.04,
+  "end": 39.54,
+  "duration": 7.5,
+  "speech": true,
+  "clip_len": 8,
+  "speaker": "Sarah",
+  "words": "God hath made me to laugh, so that all that hear will laugh with me."
+ },
+ {
+  "shot": "v07",
+  "verse": 7,
+  "pic": 6,
+  "start": 39.54,
+  "end": 41.23,
+  "duration": 1.69,
+  "clip_len": 4
+ },
+ {
+  "shot": "v07b",
+  "verse": 7,
+  "pic": 6,
+  "start": 41.23,
+  "end": 51.73,
+  "duration": 10.5,
+  "speech": true,
+  "clip_len": 11,
+  "speaker": "Sarah",
+  "words": "Who would have said unto Abraham, that Sarah should have given children suck? for I have born him a son in his old age."
+ },
+ {
+  "shot": "v08",
+  "verse": 8,
+  "pic": 8,
+  "start": 51.73,
+  "end": 58.21,
+  "duration": 6.48,
+  "clip_len": 8
+ },
+ {
+  "shot": "v09",
+  "verse": 9,
+  "pic": 9,
+  "start": 58.21,
+  "end": 63.79,
+  "duration": 5.58,
+  "clip_len": 7
+ },
+ {
+  "shot": "v10",
+  "verse": 10,
+  "pic": 10,
+  "start": 63.79,
+  "end": 66.25,
+  "duration": 2.46,
+  "clip_len": 4
+ },
+ {
+  "shot": "v10b",
+  "verse": 10,
+  "pic": 10,
+  "start": 66.25,
+  "end": 76.75,
+  "duration": 10.5,
+  "speech": true,
+  "clip_len": 11,
+  "speaker": "Sarah",
+  "words": "Cast out this bondwoman and her son: for the son of this bondwoman shall not be heir with my son, even with Isaac."
+ },
+ {
+  "shot": "v11",
+  "verse": 11,
+  "pic": 11,
+  "start": 76.75,
+  "end": 81.1,
+  "duration": 4.35,
+  "clip_len": 5
+ },
+ {
+  "shot": "v12",
+  "verse": 12,
+  "pic": 12,
+  "start": 81.1,
+  "end": 94.09,
+  "duration": 12.99,
+  "clip_len": 14
+ },
+ {
+  "shot": "v13",
+  "verse": 13,
+  "pic": 12,
+  "start": 94.09,
+  "end": 100.11,
+  "duration": 6.02,
+  "clip_len": 7
+ },
+ {
+  "shot": "v14",
+  "verse": 14,
+  "pic": 14,
+  "start": 100.11,
+  "end": 114.67,
+  "duration": 14.56,
+  "clip_len": 15
+ },
+ {
+  "shot": "v15",
+  "verse": 15,
+  "pic": 15,
+  "start": 114.67,
+  "end": 119.75,
+  "duration": 5.08,
+  "clip_len": 6
+ },
+ {
+  "shot": "v16",
+  "verse": 16,
+  "pic": 16,
+  "start": 119.75,
+  "end": 126.87,
+  "duration": 7.12,
+  "clip_len": 8
+ },
+ {
+  "shot": "v16b",
+  "verse": 16,
+  "pic": 16,
+  "start": 126.87,
+  "end": 132.37,
+  "duration": 5.5,
+  "speech": true,
+  "clip_len": 6,
+  "speaker": "Hagar",
+  "words": "Let me not see the death of the child."
+ },
+ {
+  "shot": "v16c",
+  "verse": 16,
+  "pic": 16,
+  "start": 132.37,
+  "end": 137.07,
+  "duration": 4.7,
+  "clip_len": 6
+ },
+ {
+  "shot": "v17",
+  "verse": 17,
+  "pic": 17,
+  "start": 137.07,
+  "end": 149.44,
+  "duration": 12.37,
+  "clip_len": 13
+ },
+ {
+  "shot": "v18",
+  "verse": 18,
+  "pic": 17,
+  "start": 149.44,
+  "end": 156.14,
+  "duration": 6.7,
+  "clip_len": 8
+ },
+ {
+  "shot": "v19",
+  "verse": 19,
+  "pic": 19,
+  "start": 156.14,
+  "end": 164.86,
+  "duration": 8.72,
+  "clip_len": 10
+ },
+ {
+  "shot": "v20",
+  "verse": 20,
+  "pic": 20,
+  "start": 164.86,
+  "end": 177.46,
+  "duration": 12.6,
+  "clip_len": 14
+ },
+ {
+  "shot": "v22",
+  "verse": 22,
+  "pic": 22,
+  "start": 177.46,
+  "end": 185.04,
+  "duration": 7.58,
+  "clip_len": 9
+ },
+ {
+  "shot": "v22b",
+  "verse": 22,
+  "pic": 22,
+  "start": 185.04,
+  "end": 190.54,
+  "duration": 5.5,
+  "speech": true,
+  "clip_len": 6,
+  "speaker": "Abimelech",
+  "words": "God is with thee in all that thou doest"
+ },
+ {
+  "shot": "v23",
+  "verse": 23,
+  "pic": 22,
+  "start": 190.54,
+  "end": 202.04,
+  "duration": 11.5,
+  "speech": true,
+  "clip_len": 12,
+  "speaker": "Abimelech",
+  "words": "Now therefore swear unto me here by God that thou wilt not deal falsely with me, nor with my son, nor with my son\u2019s son"
+ },
+ {
+  "shot": "v23b",
+  "verse": 23,
+  "pic": 22,
+  "start": 202.04,
+  "end": 212.54,
+  "duration": 10.5,
+  "speech": true,
+  "clip_len": 11,
+  "speaker": "Abimelech",
+  "words": "but according to the kindness that I have done unto thee, thou shalt do unto me, and to the land wherein thou hast sojourned."
+ },
+ {
+  "shot": "v24",
+  "verse": 24,
+  "pic": 24,
+  "start": 212.54,
+  "end": 214.37,
+  "duration": 1.83,
+  "clip_len": 4
+ },
+ {
+  "shot": "v24b",
+  "verse": 24,
+  "pic": 24,
+  "start": 214.37,
+  "end": 217.87,
+  "duration": 3.5,
+  "speech": true,
+  "clip_len": 4,
+  "speaker": "Abraham",
+  "words": "I will swear."
+ },
+ {
+  "shot": "v25",
+  "verse": 25,
+  "pic": 24,
+  "start": 217.87,
+  "end": 224.22,
+  "duration": 6.35,
+  "clip_len": 7
+ },
+ {
+  "shot": "v26",
+  "verse": 26,
+  "pic": 24,
+  "start": 224.22,
+  "end": 225.82,
+  "duration": 1.6,
+  "clip_len": 4
+ },
+ {
+  "shot": "v26b",
+  "verse": 26,
+  "pic": 24,
+  "start": 225.82,
+  "end": 236.32,
+  "duration": 10.5,
+  "speech": true,
+  "clip_len": 11,
+  "speaker": "Abimelech",
+  "words": "I wot not who hath done this thing: neither didst thou tell me, neither yet heard I of it, but to day."
+ },
+ {
+  "shot": "v27",
+  "verse": 27,
+  "pic": 27,
+  "start": 236.32,
+  "end": 245.48,
+  "duration": 9.16,
+  "clip_len": 10
+ },
+ {
+  "shot": "v29",
+  "verse": 29,
+  "pic": 29,
+  "start": 245.48,
+  "end": 247.92,
+  "duration": 2.44,
+  "clip_len": 4
+ },
+ {
+  "shot": "v29b",
+  "verse": 29,
+  "pic": 29,
+  "start": 247.92,
+  "end": 254.42,
+  "duration": 6.5,
+  "speech": true,
+  "clip_len": 7,
+  "speaker": "Abimelech",
+  "words": "What mean these seven ewe lambs which thou hast set by themselves?"
+ },
+ {
+  "shot": "v30",
+  "verse": 30,
+  "pic": 29,
+  "start": 254.42,
+  "end": 256.21,
+  "duration": 1.79,
+  "clip_len": 4
+ },
+ {
+  "shot": "v30b",
+  "verse": 30,
+  "pic": 29,
+  "start": 256.21,
+  "end": 267.71,
+  "duration": 11.5,
+  "speech": true,
+  "clip_len": 12,
+  "speaker": "Abraham",
+  "words": "For these seven ewe lambs shalt thou take of my hand, that they may be a witness unto me, that I have digged this well."
+ },
+ {
+  "shot": "v31",
+  "verse": 31,
+  "pic": 31,
+  "start": 267.71,
+  "end": 281.84,
+  "duration": 14.13,
+  "clip_len": 15
+ },
+ {
+  "shot": "v33",
+  "verse": 33,
+  "pic": 33,
+  "start": 281.84,
+  "end": 293.052,
+  "duration": 11.212,
+  "clip_len": 12
+ }
+]

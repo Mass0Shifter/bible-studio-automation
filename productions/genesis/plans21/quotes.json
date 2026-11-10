@@ -1,0 +1,90 @@
+{
+ "s6": {
+  "start": 31.44,
+  "end": 35.74,
+  "prev_end": 31.44,
+  "next_start": 36.68,
+  "text": "God hath made me to laugh, so that all that hear will laugh with me.",
+  "verse": 6
+ },
+ "s7": {
+  "start": 37.62,
+  "end": 43.74,
+  "prev_end": 37.24,
+  "next_start": 44.8,
+  "text": "Who would have said unto Abraham, that Sarah should have given children suck? for I have born him a son in his old age.",
+  "verse": 7
+ },
+ "s10": {
+  "start": 58.2,
+  "end": 65.22,
+  "prev_end": 58.18,
+  "next_start": 65.9,
+  "text": "Cast out this bondwoman and her son: for the son of this bondwoman shall not be heir with my son, even with Isaac.",
+  "verse": 10
+ },
+ "h16": {
+  "start": 115.08,
+  "end": 117.58,
+  "prev_end": 115.08,
+  "next_start": 118.44,
+  "text": "Let me not see the death of the child.",
+  "verse": 16
+ },
+ "a22": {
+  "start": 170.08,
+  "end": 172.88,
+  "prev_end": 170.08,
+  "next_start": 173.68,
+  "text": "God is with thee in all that thou doest:",
+  "verse": 22
+ },
+ "a23a": {
+  "start": 173.68,
+  "end": 180.16,
+  "prev_end": 172.88,
+  "next_start": 180.82,
+  "text": "Now therefore swear unto me here by God that thou wilt not deal falsely with me, nor with my son, nor with my son\u2019s son:",
+  "verse": 23
+ },
+ "a23b": {
+  "start": 180.82,
+  "end": 186.82,
+  "prev_end": 180.16,
+  "next_start": 187.76,
+  "text": "but according to the kindness that I have done unto thee, thou shalt do unto me, and to the land wherein thou hast sojourned.",
+  "verse": 23
+ },
+ "b24": {
+  "start": 188.64,
+  "end": 189.6,
+  "prev_end": 188.46,
+  "next_start": 191.18,
+  "text": "I will swear.",
+  "verse": 24
+ },
+ "a26": {
+  "start": 197.94,
+  "end": 204.04,
+  "prev_end": 197.68,
+  "next_start": 204.04,
+  "text": "I wot not who hath done this thing: neither didst thou tell me, neither yet heard I of it, but to day.",
+  "verse": 26
+ },
+ "a29": {
+  "start": 215.28,
+  "end": 217.96,
+  "prev_end": 214.98,
+  "next_start": 219.34,
+  "text": "What mean these seven ewe lambs which thou hast set by themselves?",
+  "verse": 29
+ },
+ "b30": {
+  "start": 220.22,
+  "end": 225.3,
+  "prev_end": 219.78,
+  "next_start": 226.78,
+  "text": "For these seven ewe lambs shalt thou take of my hand, that they may be a witness unto me, that I have digged this well.",
+  "verse": 30
+ }
+}
