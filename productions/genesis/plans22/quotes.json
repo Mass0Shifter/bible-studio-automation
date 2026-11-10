@@ -1,0 +1,58 @@
+{
+ "abr1": {
+  "start": 8.039,
+  "end": 10.12,
+  "prev_end": 8.039,
+  "next_start": 10.7,
+  "text": "Behold, here I am.",
+  "verse": 1
+ },
+ "abr5": {
+  "start": 46.32,
+  "end": 51.54,
+  "prev_end": 45.94,
+  "next_start": 52.44,
+  "text": "Abide ye here with the ass; and I and the lad will go yonder and worship, and come again to you,",
+  "verse": 5
+ },
+ "isa7a": {
+  "start": 65.04,
+  "end": 65.94,
+  "prev_end": 64.879,
+  "next_start": 66.44,
+  "text": "My father:",
+  "verse": 7
+ },
+ "abr7": {
+  "start": 67.1,
+  "end": 68.06,
+  "prev_end": 66.92,
+  "next_start": 68.96,
+  "text": "Here am I, my son.",
+  "verse": 7
+ },
+ "isa7b": {
+  "start": 69.46,
+  "end": 73.52,
+  "prev_end": 69.4,
+  "next_start": 74.46,
+  "text": "Behold the fire and the wood: but where is the lamb for a burnt offering?",
+  "verse": 7
+ },
+ "abr8": {
+  "start": 75.38,
+  "end": 79.02,
+  "prev_end": 75.22,
+  "next_start": 79.66,
+  "text": "My son, God will provide himself a lamb for a burnt offering:",
+  "verse": 8
+ },
+ "abr11": {
+  "start": 106.2,
+  "end": 106.7,
+  "prev_end": 106.12,
+  "next_start": 107.86,
+  "text": "Here am I.",
+  "verse": 11
+ }
+}

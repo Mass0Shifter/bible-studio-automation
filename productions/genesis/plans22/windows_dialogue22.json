@@ -1,0 +1,279 @@
+[
+ {
+  "shot": "v01",
+  "verse": 1,
+  "start": 0.0,
+  "end": 8.64,
+  "duration": 8.64,
+  "clip_len": 10
+ },
+ {
+  "shot": "v01b",
+  "verse": 1,
+  "start": 8.64,
+  "end": 12.14,
+  "duration": 3.5,
+  "speech": true,
+  "clip_len": 4,
+  "speaker": "Abraham",
+  "words": "Behold, here I am."
+ },
+ {
+  "shot": "v02",
+  "verse": 2,
+  "start": 12.14,
+  "end": 26.12,
+  "duration": 13.98,
+  "clip_len": 15
+ },
+ {
+  "shot": "v03",
+  "verse": 3,
+  "start": 26.12,
+  "end": 40.23,
+  "duration": 14.11,
+  "clip_len": 15
+ },
+ {
+  "shot": "v04",
+  "verse": 4,
+  "start": 40.23,
+  "end": 45.75,
+  "duration": 5.52,
+  "clip_len": 7
+ },
+ {
+  "shot": "v05",
+  "verse": 5,
+  "start": 45.75,
+  "end": 48.33,
+  "duration": 2.58,
+  "clip_len": 4
+ },
+ {
+  "shot": "v05b",
+  "verse": 5,
+  "start": 48.33,
+  "end": 57.83,
+  "duration": 9.5,
+  "speech": true,
+  "clip_len": 10,
+  "speaker": "Abraham",
+  "words": "Abide ye here with the ass; and I and the lad will go yonder and worship, and come again to you"
+ },
+ {
+  "shot": "v06",
+  "verse": 6,
+  "start": 57.83,
+  "end": 67.77,
+  "duration": 9.94,
+  "clip_len": 11
+ },
+ {
+  "shot": "v07",
+  "verse": 7,
+  "start": 67.77,
+  "end": 71.38,
+  "duration": 3.61,
+  "clip_len": 5
+ },
+ {
+  "shot": "v07b",
+  "verse": 7,
+  "start": 71.38,
+  "end": 74.88,
+  "duration": 3.5,
+  "speech": true,
+  "clip_len": 4,
+  "speaker": "Isaac",
+  "words": "My father"
+ },
+ {
+  "shot": "v07c",
+  "verse": 7,
+  "start": 74.88,
+  "end": 76.27,
+  "duration": 1.39,
+  "clip_len": 4
+ },
+ {
+  "shot": "v07d",
+  "verse": 7,
+  "start": 76.27,
+  "end": 79.77,
+  "duration": 3.5,
+  "speech": true,
+  "clip_len": 4,
+  "speaker": "Abraham",
+  "words": "Here am I, my son."
+ },
+ {
+  "shot": "v07e",
+  "verse": 7,
+  "start": 79.77,
+  "end": 81.29,
+  "duration": 1.52,
+  "clip_len": 4
+ },
+ {
+  "shot": "v07f",
+  "verse": 7,
+  "start": 81.29,
+  "end": 88.79,
+  "duration": 7.5,
+  "speech": true,
+  "clip_len": 8,
+  "speaker": "Isaac",
+  "words": "Behold the fire and the wood: but where is the lamb for a burnt offering?"
+ },
+ {
+  "shot": "v08",
+  "verse": 8,
+  "start": 88.79,
+  "end": 90.68,
+  "duration": 1.89,
+  "clip_len": 4
+ },
+ {
+  "shot": "v08b",
+  "verse": 8,
+  "start": 90.68,
+  "end": 97.18,
+  "duration": 6.5,
+  "speech": true,
+  "clip_len": 7,
+  "speaker": "Abraham",
+  "words": "My son, God will provide himself a lamb for a burnt offering"
+ },
+ {
+  "shot": "v08c",
+  "verse": 8,
+  "start": 97.18,
+  "end": 99.1,
+  "duration": 1.92,
+  "clip_len": 4
+ },
+ {
+  "shot": "v09",
+  "verse": 9,
+  "start": 99.1,
+  "end": 111.01,
+  "duration": 11.91,
+  "clip_len": 13
+ },
+ {
+  "shot": "v10",
+  "verse": 10,
+  "start": 111.01,
+  "end": 117.03,
+  "duration": 6.02,
+  "clip_len": 7
+ },
+ {
+  "shot": "v11",
+  "verse": 11,
+  "start": 117.03,
+  "end": 124.6,
+  "duration": 7.57,
+  "clip_len": 9
+ },
+ {
+  "shot": "v11b",
+  "verse": 11,
+  "start": 124.6,
+  "end": 128.1,
+  "duration": 3.5,
+  "speech": true,
+  "clip_len": 4,
+  "speaker": "Abraham",
+  "words": "Here am I."
+ },
+ {
+  "shot": "v12",
+  "verse": 12,
+  "start": 128.1,
+  "end": 139.66,
+  "duration": 11.56,
+  "clip_len": 13
+ },
+ {
+  "shot": "v13",
+  "verse": 13,
+  "start": 139.66,
+  "end": 153.13,
+  "duration": 13.47,
+  "clip_len": 15
+ },
+ {
+  "shot": "v14",
+  "verse": 14,
+  "start": 153.13,
+  "end": 161.37,
+  "duration": 8.24,
+  "clip_len": 9
+ },
+ {
+  "shot": "v15",
+  "verse": 15,
+  "start": 161.37,
+  "end": 174.2,
+  "duration": 12.83,
+  "clip_len": 14
+ },
+ {
+  "shot": "v17",
+  "verse": 17,
+  "start": 174.2,
+  "end": 186.26,
+  "duration": 12.06,
+  "clip_len": 13
+ },
+ {
+  "shot": "v18",
+  "verse": 18,
+  "start": 186.26,
+  "end": 192.1,
+  "duration": 5.84,
+  "clip_len": 7
+ },
+ {
+  "shot": "v19",
+  "verse": 19,
+  "start": 192.1,
+  "end": 199.96,
+  "duration": 7.86,
+  "clip_len": 9
+ },
+ {
+  "shot": "v20",
+  "verse": 20,
+  "start": 199.96,
+  "end": 209.08,
+  "duration": 9.12,
+  "clip_len": 10
+ },
+ {
+  "shot": "v21",
+  "verse": 21,
+  "start": 209.08,
+  "end": 218.21,
+  "duration": 9.13,
+  "clip_len": 10
+ },
+ {
+  "shot": "v23",
+  "verse": 23,
+  "start": 218.21,
+  "end": 224.17,
+  "duration": 5.96,
+  "clip_len": 7
+ },
+ {
+  "shot": "v24",
+  "verse": 24,
+  "start": 224.17,
+  "end": 231.17,
+  "duration": 7.0,
+  "clip_len": 8
+ }
+]
