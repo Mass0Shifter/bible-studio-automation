@@ -1,0 +1,210 @@
+[
+ {
+  "shot": "v01",
+  "verse": 1,
+  "start": 0.0,
+  "end": 6.6,
+  "duration": 6.6,
+  "clip_len": 8
+ },
+ {
+  "shot": "v02",
+  "verse": 2,
+  "start": 6.6,
+  "end": 14.94,
+  "duration": 8.34,
+  "clip_len": 9
+ },
+ {
+  "shot": "v03",
+  "verse": 3,
+  "start": 14.94,
+  "end": 22.2,
+  "duration": 7.26,
+  "clip_len": 8
+ },
+ {
+  "shot": "v04",
+  "verse": 4,
+  "start": 22.2,
+  "end": 34.7,
+  "duration": 12.5,
+  "speech": true,
+  "clip_len": 13,
+  "speaker": "Abraham",
+  "words": "I am a stranger and a sojourner with you: give me a possession of a buryingplace with you, that I may bury my dead out of my sight."
+ },
+ {
+  "shot": "v05",
+  "verse": 5,
+  "start": 34.7,
+  "end": 39.07,
+  "duration": 4.37,
+  "clip_len": 5
+ },
+ {
+  "shot": "v06",
+  "verse": 6,
+  "start": 39.07,
+  "end": 53.57,
+  "duration": 14.5,
+  "speech": true,
+  "clip_len": 15,
+  "speaker": "the white-bearded elder of the sons of Heth",
+  "words": "Hear us, my lord: thou art a mighty prince among us: in the choice of our sepulchres bury thy dead; none of us shall withhold from thee his sepulchre, but that thou mayest bury thy dead."
+ },
+ {
+  "shot": "v07",
+  "verse": 7,
+  "start": 53.57,
+  "end": 58.95,
+  "duration": 5.38,
+  "clip_len": 6
+ },
+ {
+  "shot": "v08",
+  "verse": 8,
+  "start": 58.95,
+  "end": 61.82,
+  "duration": 2.87,
+  "clip_len": 4
+ },
+ {
+  "shot": "v08b",
+  "verse": 8,
+  "start": 61.82,
+  "end": 73.32,
+  "duration": 11.5,
+  "speech": true,
+  "clip_len": 12,
+  "speaker": "Abraham",
+  "words": "If it be your mind that I should bury my dead out of my sight; hear me, and intreat for me to Ephron the son of Zohar,"
+ },
+ {
+  "shot": "v09",
+  "verse": 9,
+  "start": 73.32,
+  "end": 82.82,
+  "duration": 9.5,
+  "speech": true,
+  "clip_len": 10,
+  "speaker": "Abraham",
+  "words": "That he may give me the cave of Machpelah, which he hath, which is in the end of his field;"
+ },
+ {
+  "shot": "v09b",
+  "verse": 9,
+  "start": 82.82,
+  "end": 92.32,
+  "duration": 9.5,
+  "speech": true,
+  "clip_len": 10,
+  "speaker": "Abraham",
+  "words": "for as much money as it is worth he shall give it me for a possession of a buryingplace amongst you."
+ },
+ {
+  "shot": "v10",
+  "verse": 10,
+  "start": 92.32,
+  "end": 102.8,
+  "duration": 10.48,
+  "clip_len": 12
+ },
+ {
+  "shot": "v11",
+  "verse": 11,
+  "start": 102.8,
+  "end": 117.3,
+  "duration": 14.5,
+  "speech": true,
+  "clip_len": 15,
+  "speaker": "Ephron",
+  "words": "Nay, my lord, hear me: the field give I thee, and the cave that is therein, I give it thee; in the presence of the sons of my people give I it thee: bury thy dead."
+ },
+ {
+  "shot": "v12",
+  "verse": 12,
+  "start": 117.3,
+  "end": 120.48,
+  "duration": 3.18,
+  "clip_len": 4
+ },
+ {
+  "shot": "v13",
+  "verse": 13,
+  "start": 120.48,
+  "end": 124.91,
+  "duration": 4.43,
+  "clip_len": 6
+ },
+ {
+  "shot": "v13b",
+  "verse": 13,
+  "start": 124.91,
+  "end": 138.41,
+  "duration": 13.5,
+  "speech": true,
+  "clip_len": 14,
+  "speaker": "Abraham",
+  "words": "But if thou wilt give it, I pray thee, hear me: I will give thee money for the field; take it of me, and I will bury my dead there."
+ },
+ {
+  "shot": "v14",
+  "verse": 14,
+  "start": 138.41,
+  "end": 141.82,
+  "duration": 3.41,
+  "clip_len": 5
+ },
+ {
+  "shot": "v15",
+  "verse": 15,
+  "start": 141.82,
+  "end": 153.32,
+  "duration": 11.5,
+  "speech": true,
+  "clip_len": 12,
+  "speaker": "Ephron",
+  "words": "My lord, hearken unto me: the land is worth four hundred shekels of silver; what is that betwixt me and thee? bury therefore thy dead."
+ },
+ {
+  "shot": "v16",
+  "verse": 16,
+  "start": 153.32,
+  "end": 164.97,
+  "duration": 11.65,
+  "clip_len": 13
+ },
+ {
+  "shot": "v17",
+  "verse": 17,
+  "start": 164.97,
+  "end": 175.87,
+  "duration": 10.9,
+  "clip_len": 12
+ },
+ {
+  "shot": "v18",
+  "verse": 18,
+  "start": 175.87,
+  "end": 184.8,
+  "duration": 8.93,
+  "clip_len": 10
+ },
+ {
+  "shot": "v19",
+  "verse": 19,
+  "start": 184.8,
+  "end": 192.4,
+  "duration": 7.6,
+  "clip_len": 9
+ },
+ {
+  "shot": "v20",
+  "verse": 20,
+  "start": 192.4,
+  "end": 199.709,
+  "duration": 7.309,
+  "clip_len": 8
+ }
+]
