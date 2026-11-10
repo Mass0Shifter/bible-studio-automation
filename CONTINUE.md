@@ -17,11 +17,12 @@ Read this whole file first. Then `QUICK_BRIEF.md` (repo; partly out of date — 
 - Can't delete files on the PC (no delete permission) — move junk to `_to_delete\` instead.
 - User's messages shouldn't stop the work; use your own judgement when they're away.
 
-## 1. What is happening right now (10 Nov 12:50) — PAUSED by the user
-- **Esther Prophetic Implication: FINISHED & user-approved** — `Prophetic Implications\Esther\final\Esther_PI_final.mp4` (3:44, new PI caption style) + `_clean.mp4`. New style = no bar, bold white subtitles with black outline (≤2 lines × 5 words), spoken word highlighted in the badge's gold, gold point cards, sub-point titles without glow, no logo over the outro. How to render: `skill/prophetic-implication/SKILL.md` (end) + `tools/pi_captions.py`, `tools/pi/burn_piece.sh`, Windows job `CAT <Book>`.
-- **Music is now −11.2 dB everywhere** (chapters too). **Voice: always Paz in Vids**; ElevenLabs only if Vids refuses.
-- **Genesis 22–23–21 clips: PAUSED.** Helper was running the Vids queue (tag `g22`) on account **u/5 Precious Chikezie** (doc "Genesis 15 Clips", browser tab-5); g22 had reached v11 at 12:47. Check `productions/genesis/22.md` for the exact done/left list. Other accounts' Vids quota was used up on 10 Nov (u/0, u/1, u/4); u/2 has no AI video; u/3's duration slider is locked. Resume = reload vids_queue.js in a Vids doc with content, `__vqtag='g22'`, run (finished keys are skipped), then g23, g21.
-- Windows render watcher (`_tools\win\watcher.bat`) must be open for renders.
+## 1. What is happening right now (10 Nov 14:35) — waiting for Vids quota
+- **Done today:** Esther PI (new caption style, approved) and **Genesis 22** (`Genesis 22\final\Genesis_22_final.mp4` 3:59.6, all checks pass).
+- **Genesis 23:** clips 9/23 (left: v08b, v09, v09b, v10, v11, v13, v13b, v14, v15, v16, v17, v18, v19, v20). Intro card + Paz intro line + Flow intro animation, music (218 s), finish.json: ready.
+- **Genesis 21:** clips 0/39. Intro, music (313 s), finish.json: ready.
+- **Blocker:** all Google Vids AI-video quota used on 10 Nov (u/0, u/1, u/4, u/5; u/2 has none; u/3 slider locked). Resume after the daily reset: Vids doc with content (e.g. u/5 "Genesis 15 Clips"), load `_tools\vids_queue.js`, `__vqtag='g23'`, queue from `productions/genesis/plans23/`, run (finished keys skipped), then g21. Move clips with `_tools\grab_vids.py`. Then Windows jobs `23 genesis23_full`, `21 genesis21_full` (watcher.bat open).
+- **Rules (10 Nov):** music −11.2 dB; voice Paz in Vids (ElevenLabs only if Vids refuses); 2 helper agents allowed; Flow credits only with the user's own yes in the session (relayed yes is blocked).
 
 ## 3. After Esther: back to Genesis
 - **Genesis 21** (paused): read `productions/genesis/21.md` "PAUSED" section — narration wav, STT, windows done; check verse 34 timing (came out 0.3 s); then quotes for divine/angel voices, `mkplan21` (copy of mkplan20.py), Vids queue, intro card + Paz intro line, music extend.
