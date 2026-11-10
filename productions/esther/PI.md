@@ -19,3 +19,10 @@
 - `tools/finish.py`: new `"plain_subs": true` option = subtitles without the [Vn] verse number (for Prophetic Implication films).
 - Intro animation: Flow project "Nov 10 - 04:00" has the card uploaded, Omni 1.1 Flash 8 s, prompt typed — **waiting for the user's OK to spend Flow credits**.
 - Intro voice: none yet (finish.json expects `audio/Esther_PI_intro_voice.wav`).
+
+## 10 Nov 03:00–04:28 (PC clock) — Vids clips ✅ (helper agent)
+- **All 41 clips** in `video\Esther_PI_v01…v41.mp4`, 1920×1080, each within 0.1 s of the planned length (257 s total). v39 made by the lead; the rest in one Vids doc "Untitled video" on **Glorify Michaels (u/1)**, Omni 1080p. No refusals → no Grok, no Flow credits.
+- Google slots after the 10 Nov re-sign-in (names only): u/0 Precious Ebubechukwu Chikezie, u/1 Glorify Michaels, u/2 Nâcham Technology and Solutions, u/3 Nâcham Media, u/4 EBUBE PC, u/5 Precious Chikezie. The old A–E letters no longer map 1:1 — use names.
+- Quota: Glorify Michaels made ~265 s of clips today and was never refused (not out). Nâcham Media (u/3): duration slider won't set (lead) = out.
+- Snags: v02–v05 pictures were 404 on r2 for a while (app said hasImage) — fixed by re-upload, then clipped. Browser pane reset once mid-run and another agent's `preview_start` reused the Vids tab twice — queue state survives in localStorage (`__vq_state_ePI`, sizes in `__vqsizes`), so re-load and re-run skips finished keys.
+- `plans\grab_clips.py "vNN size" …` copies Downloads (named or `.tmp` by exact size) → `video\` and prints ffprobe size/length.
