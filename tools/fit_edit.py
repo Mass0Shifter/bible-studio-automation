@@ -7,7 +7,7 @@ Plan (JSON, paths relative to the plan file):
 {
   "voiceover": "../audio/Genesis_6_voiceover.wav",
   "music": "../music/Genesis_6_music.wav",   # optional "music_start"
-  "music_gain_db": -9.8,        # bed level (user's standard)
+  "music_gain_db": -11.2,       # bed level (user's standard; was -9.8 until 10 Nov 2026: "15 % lower, it competes with the voice")
   "ambient_gain": 0.22,         # clips' own natural sound
   "dissolve": 0.5,              # cross-dissolve between shots (seconds)
   "end_tail": 0.4,              # seconds kept after the last word (when there is no outro)
@@ -31,7 +31,7 @@ import json, os, subprocess, sys, time, math, shutil, hashlib, re
 
 W, H, FPS = 1920, 1080, 24
 CHUNK = 2.5        # seconds of source per motion-interpolation chunk
-BUDGET = 110       # seconds of work per run
+BUDGET = float(os.environ.get("FE_BUDGET", 110))   # seconds of work per run (FE_BUDGET env overrides; 2026-11-08)
 T0 = time.time()
 CONF = f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps={FPS},setsar=1"
 
@@ -205,7 +205,7 @@ def main(plan_path):
         fl.append(f"{cur}apad,atrim=0:{total:.3f},volume=1[amb]")
         fl.append(f"[{vi}:a]aresample=48000,aformat=channel_layouts=stereo,atrim={t0:.3f}:{t0+total:.3f},asetpts=PTS-STARTPTS,apad,atrim=0:{total:.3f}" + "".join(f",volume=enable='between(t,{a-t0:.3f},{b-t0:.3f})':volume=0" for a, b in P.get("vo_mute", [])) + "[vo]")
         fl.append(f"[{mi}:a]aresample=48000,aformat=channel_layouts=stereo,atrim={ms:.3f}:{ms+total:.3f},asetpts=PTS-STARTPTS,"
-                  f"volume={P.get('music_gain_db',-9.8)}dB,afade=t=in:st=0:d=1.5,afade=t=out:st={max(total-max(3, outro),0):.3f}:d={max(3, outro)}[mus]")
+                  f"volume={P.get('music_gain_db',-11.2)}dB,afade=t=in:st=0:d=1.5,afade=t=out:st={max(total-max(3, outro),0):.3f}:d={max(3, outro)}[mus]")
         fl.append("[vo][amb][mus]amix=inputs=3:duration=first:normalize=0,alimiter=limit=0.95[aout]")
         ff(args + ["-filter_complex", ";".join(fl), "-map", "[aout]", "-c:a", "aac", "-b:a", "192k", audio + ".tmp.m4a"])
         os.replace(audio + ".tmp.m4a", audio)

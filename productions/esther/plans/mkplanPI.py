@@ -11,7 +11,7 @@ for n, (s, w) in enumerate(zip(sb, win), 1):
         shots.append(dict(verse=42, clip=OUT, start=w['start'], end=round(w['start'] + 10.0, 3), method='trim', badge=False, nosub=True, note='channel outro'))
     else:
         shots.append(dict(verse=n, clip=f'../video/Esther_PI_v{n:02d}.mp4', start=w['start'], end=w['end'], method='auto'))
-plan = {'voiceover': '../audio/Esther_PI_voiceover.wav', 'music': '../music/Esther_PI_music.wav', 'music_gain_db': -9.8, 'ambient_gain': 0.22,
+plan = {'voiceover': '../audio/Esther_PI_voiceover.wav', 'music': '../music/Esther_PI_music.wav', 'music_gain_db': -11.2, 'ambient_gain': 0.22,
         'dissolve': 0.5, 'end_tail': 0.4, 'output': '../final/Esther_PI_clean.mp4',
         'badge': {'image': '../../../_tools/references/Radiant Golden Portal Emblem.png', 'cx': 1740, 'cy': 898, 'size': 150}, 'shots': shots}
 json.dump(plan, open('esther_pi_full.json', 'w'), indent=1)

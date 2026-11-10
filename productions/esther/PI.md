@@ -32,3 +32,9 @@
 - Rendered on Windows (watcher.bat, job `PI Esther esther_pi_full`) in ~4 min.
 - Fixes after first render: bar label "Esther 1-10" (long "The Book of Esther" was clipped at the left edge); outro shot `nosub` + finish `outro_logo: false` (no bar/subtitle/extra logo over the channel outro).
 - YouTube chapters updated with real times (0:00, 0:36, 1:13, 1:55, 2:32, 3:11, 3:34).
+
+## 10 Nov 12:06 — re-finished in the new PI style (user-approved)
+- Music bed lowered 15 % (−9.8 → −11.2 dB) for all productions (fit_edit default + SKILL). Clean film re-rendered on Windows.
+- New caption style: no bar; bold white subtitles with black outline, ≤ 2 lines × 5 words; spoken word highlighted in the badge's gold (karaoke, from STT words); point cards + top-left point label + sub-point titles in the same gold; no logo over the outro. Previews 1–8 iterated with the user (orange → white → purple → black-outline + gold).
+- `final\Esther_PI_final.mp4` (3:44.5) replaced; old bar version in `_to_delete\`.
+- Render path: pi_captions.py → 19 × 12 s pieces burned in the Linux shell (one.sh) → Windows `CAT Esther` join. CapCut ffmpeg has no `ass` filter.

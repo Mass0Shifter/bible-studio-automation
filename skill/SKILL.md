@@ -5,8 +5,6 @@ description: Produce a Bible chapter end-to-end in Bible Director Studio (bibles
 
 # Bible Director Studio — chapter production
 
-> Synced from the PC copy `Bible Studio\_tools\SKILL.md` on 2026-11-07. The media folder is `C:\Users\USER\Bible Studio` on the Oct–Nov PC and `Desktop\Bible Studio` on revivalist-hp — see `docs/ENVIRONMENT.md`. Helper scripts it names are in `tools/` of this repo.
-
 The user (Nâcham Media) produces KJV Bible chapter films in their own app, **Bible Director Studio** (live: `https://biblestudio.nachamtns.com`, repo: `Mass0Shifter/bible-director-studio`, Laravel + Inertia). A request like **"Create Genesis Chapter 6"** means: run the pipeline below for that passage.
 
 **Cost rule:** never use the app's paid AI buttons ("1-Click AI Exegesis", "1-Click AI Storyboard", "Render AI", "Synthesize Voiceover TTS", "Batch Render") — they spend API keys. Text JSON is written by Claude itself; images come from ChatGPT (subscription); voice from Google Vids; video clips from Google Vids AI video by default (free) or Google Flow when the user asks for Flow (subscription credits); music from Google Flow Music (subscription credits).
@@ -116,8 +114,8 @@ File → Download → MP4. Downloading needs the user's OK (state the file name 
 
 ## 9. Video clips — which engine (user rule, 2026-10-22)
 
-- **Order (user rule, 2026-11-07): Google Vids → Google Flow → Grok Imagine.** Use Vids AI video first (free, Omni, 1080p; 9V). When Vids can't (quota used up on every signed-in Google account, or it refuses), use Google Flow with **Omni Flash 1.1** (9F; tell the user the credit total first). Only when Omni Flash rejects the prompt/start image, use Grok Imagine (see "Fallback tools").
-- Cycle the user's signed-in Google accounts (5–7) for Vids quota and Flow credits before moving down the order; keep the per-account table in `docs/ENVIRONMENT.md`.
+- **Default = Google Vids AI video** (free, Omni, 1080p). "Generate Genesis 11" / "make the videos for chapter 11" → Vids (9V below).
+- **Order (user rule, 2026-11-07): Google Vids → Google Flow (Omni Flash 1.1) → Grok Imagine.** Vids first; Flow when Vids can't (cycle the signed-in Google accounts first; tell the user the credit total); Grok only when Omni Flash rejects the prompt/start image.
 - 9a (measuring the verses) and 9d (fitting the clips) are the same for both engines. Character-speech, death-scene and unclothed-figure rules apply to both.
 
 **9V. Generate in Google Vids (default, no credits).** Tested 2026-10-22 on Genesis 10 shots.
@@ -181,12 +179,12 @@ Plans live in `<Book> <Ch>\plans\` next to the media. The script renders piece b
    - Google Flow Music is its own site: `https://www.flowmusic.app` (separate sign-in — ask the user). Click **New session**, type the brief into "Let's create…", press the send arrow. The Producer writes a sound prompt and renders in ~30–60 s; the session is titled from the brief.
    - Download: the track's ⋯ → Download → WAV menu did not save a file in the browser pane. Instead read the clip's `wav_url` from the `POST /__api/clips` response (network log; `storage.googleapis.com/producer-app-public/clips/<clip_id>.wav`), then in the Flow Music tab: `fetch(wav_url).then(r=>r.blob())` → blob link with `download='<Book>_<Chapter>_music.wav'` → click. Copy from Downloads to `music\`.
    - Tracks come out around 2:50; if the voiceover is longer, extend by repeating a middle section with a crossfade so the track's own ending closes the film (Genesis 6: 0–82 s + 60 s–end, 4 s `acrossfade`).
-2. Assemble on the PC with `automation/assemble/fit_edit.py` (device shell) — one plan covering every shot (9d): clips from `video\` in shot order, fitted to their verse windows, conformed to 1920×1080/24fps with 0.5 s dissolves, the Vids voiceover as the narration track, music underneath with fades at **−9.8 dB** gain on the Flow Music track (the user's standard after reviewing Genesis 6 — −13.5 dB and −12.1 dB were too low; the mix lands ≈ −17 LUFS), the clips' own natural sound low underneath (`ambient_gain` 0.22). For a character-speech shot the clip's own audio carries the spoken words: per-shot `"clip_gain"` (default = `ambient_gain`) and plan-level `"vo_mute"` (see 9c, Character speech). Output `final\<Book>_<Chapter>_final.mp4`.
+2. Assemble on the PC with `automation/assemble/fit_edit.py` (device shell) — one plan covering every shot (9d): clips from `video\` in shot order, fitted to their verse windows, conformed to 1920×1080/24fps with 0.5 s dissolves, the Vids voiceover as the narration track, music underneath with fades at **−11.2 dB** gain on the Flow Music track (user rule 10 Nov 2026: 15 % lower than the old −9.8 dB, which competed with the voiceover; −13.5 and −12.1 dB had been too low after Genesis 6). Write `"music_gain_db": -11.2` in every new plan (older mkplan scripts copied as models still say −9.8 — change it), the clips' own natural sound low underneath (`ambient_gain` 0.22). For a character-speech shot the clip's own audio carries the spoken words: per-shot `"clip_gain"` (default = `ambient_gain`) and plan-level `"vo_mute"` (see 9c, Character speech). Output `final\<Book>_<Chapter>_final.mp4`.
 3. Send the user the final file and a short summary; finish the log.
 
 ## 11. Intro, subtitles and logo (finishing)
 
-References (images + exact prompts): `references/` in the bible-studio-automation repo (also `automation/references/` in the app repo), copies on the PC in `C:\Users\USER\Bible Studio\_tools\references\` — see `PROMPTS.md` there.
+References (images + exact prompts): `automation/references/` in the repo, copies on the PC in `C:\Users\USER\Bible Studio\_tools\references\` — see `PROMPTS.md` there.
 
 **11a. Two films per chapter (always).** `final\<Book>_<Ch>_clean.mp4` = the chapter film alone (no intro, no subtitles, no logo — the backup the user cuts other content from) and `final\<Book>_<Ch>_final.mp4` = intro + film with subtitles and logo. Deliver both.
 
@@ -230,17 +228,11 @@ Examples: `chapter-intro-example-ruth-2.jpg`, `book-intro-example-ruth.jpg`. **P
 
 **11g. Logo.** `logo-can-you-behold-him.png` top-right (≈ 270 px wide, ≈ 25 px from the top and right edges) at **40 % opacity**, over the whole chapter film.
 
-## Exact timings — speech-to-text (user tip 2026-11-09)
-Verse windows and the start/end of each quoted line come from a transcript **with word times**, aligned to the KJV text by `tools/stt_align.py` (`python3 stt_align.py stt.json verses.json narration.wav <dir>`; `from stt_align import find`).
-- **First choice: Gemini** (gemini.google.com) in one of the user's signed-in Google accounts — free, no ElevenLabs credits. Upload the narration audio and ask: "Transcribe this audio word by word. Return only JSON: {\"segments\":[{\"words\":[{\"text\":\"...\",\"start_time\":seconds,\"end_time\":seconds}]}]}". Check a few word times against pauses (`silencedetect`) before trusting them.
-- Gemini note (9 Nov): from the browser pane Gemini could not be given the file — its page blocks fetching r2 and it cannot read media links ("I encountered an error"). It works only if the user drags the audio into Gemini themselves.
-- **Fallback: ElevenLabs Speech to Text** (very precise, costs plan credits): pass the narration by link — upload it as a black-picture mp4 into a shot's video slot (curl from the PC to `BDS.uploadLink('shot_video', shotId)`), read the r2 link from the project page, paste it under "URL", Transcribe, then Export → JSON (timestamps on) → Downloads.
-
 ## Fallback tools — Grok video and ElevenLabs voice (user rule, 2026-11-07)
 
 Use these **only when the normal tool fails** and the user's subscription for them is signed in (check in the browser pane; if it isn't, tell the user — never type passwords).
 
-**Video: Grok Imagine** (`https://grok.com/imagine`) — third choice after Vids and Flow, for a shot whose clip **Omni Flash rejects** (Vids or Flow refuses the prompt / start image, even after one softened retry). Don't use it for shots that work in Vids/Flow.
+**Video: Grok Imagine** (`https://grok.com/imagine`) — for a shot whose clip **Omni Flash rejects** (Vids or Flow refuses the prompt / start image, even after one softened retry). Don't use it for shots that work in Vids/Flow.
 - Same inputs as 9V/9F: the shot picture as the start image + the motion prompt + the audio rule (no narration; character speech only as the exact quoted KJV words).
 - Download the clip, name it `video\<Book>_<Ch>_S<scene>_SH<shot>.mp4` like the others, and note in the chapter log which shots came from Grok (they have their own look and possibly a watermark — check the corners and cover with the badge if needed).
 - Flow default model is **Omni Flash 1.1** (cheaper) — user rule 2026-11-07.
@@ -296,7 +288,7 @@ The bridge source is `automation/bridge/bds-bridge.src.js` in the repo; `node au
 - **Flow 1080p in bulk from a second tab:** clip id = the UUID in the grid thumbnail `…/image/<id>` (in a freshly loaded tab the thumbnails use `/asb/…` URLs instead, so collect ids in the tab where you generated). Edit view `/project/<pid>/edit/<id>` (pushState + popstate, going via the project page each time; wait until the `<video>` src contains the id — after many quick pushStates the view went black and needed a reload) → the `download` button → menu item `/1080p\s*Upscaled/` → wait while "Upscaling your video" is on screen (45–240 s). Share the id list between the two Flow tabs through `localStorage` (same origin).
 
 ## Lessons from Genesis 16 (2026-10-30)
-- **Vids on Google account A**: 720p only (1080p greyed out), ~70 s of free clip quota, up to 3 clips queued. When the duration slider locks at 3 s with "Exceeds your remaining quota", switch the rest of the chapter to Flow on Google account B. Plan for a mixed film: 720p Vids clips are scaled up by fit_edit.
+- **Vids on ebubzypc@gmail.com**: 720p only (1080p greyed out), ~70 s of free clip quota, up to 3 clips queued. When the duration slider locks at 3 s with "Exceeds your remaining quota", switch the rest of the chapter to Flow on ebubziy@gmail.com. Plan for a mixed film: 720p Vids clips are scaled up by fit_edit.
 - **Badge only where the Vids watermark is**: put `"badge": false` on every Flow shot (in mkplan.py keep a `VIDS` set of the shots made in Vids).
 - **Flow 1080p downloads**: do one clip at a time with a FULL page load of `/project/<pid>/edit/<id>` (not pushState, not the Previous/Next buttons), click `download` → menuitem "1080p Upscaled", wait until "Upscaling your video" disappears (~30–60 s). The grid thumbnails no longer carry the id in their src; click the tile and read `location.href`.
 - **Intro card animation in Flow**: 6 s, 10 credits; prompt "keep the title card's composition and text exactly; camera still; only the background moves". intro_restore [[0.775,0.985]] still fits.
@@ -317,7 +309,7 @@ The bridge source is `automation/bridge/bds-bridge.src.js` in the repo; `node au
 - The first time a new preset is used in a chapter, send the user a short before/after preview.
 
 ## Lessons from Genesis 17 (2026-10-30)
-- **Accounts.** Clip engines in order: Vids on any account with quota (all free accounts so far are 720p only, ~70 s/day; Google account C added 2026-10-30), then Flow. User rule: animate every shot (no still-picture shortcuts to save credits); when Flow credits run out, stop and tell the user — they sign in to another Flow account (Google account D, 600 credits, added 2026-10-30). Never pick accounts on accounts.google.com yourself (blocked) — ask the user.
+- **Accounts.** Clip engines in order: Vids on any account with quota (all free accounts so far are 720p only, ~70 s/day; gethsemanegroup.org@gmail.com added 2026-10-30), then Flow. User rule: animate every shot (no still-picture shortcuts to save credits); when Flow credits run out, stop and tell the user — they sign in to another Flow account (glorifymichaels@gmail.com, 600 credits, added 2026-10-30). Never pick accounts on accounts.google.com yourself (blocked) — ask the user.
 - **Tools now in `_tools/`:** `chatgpt_queue.js` (ChatGPT image queue: specs in localStorage, images to IndexedDB, one chat per scene), `flow_queue.js` (Flow: upload r2 images by drag-drop, settings, start frame via "Search assets" + item + **"Add to prompt"**, prompt via execCommand — never selectAll the page, it deletes the start-frame chip), `divine_voice.py`.
 - **Flow out of credits** shows as the Generate button staying disabled (no message). Check the balance in the profile menu ("N Google Flow credits").
 - **Flow downloads:** files now arrive with real names (`<Title>_<id>_1080p.mp4`). Get clip ids by clicking each tile under the sidebar **Videos** filter (viewport 1600×6000) with history.back between; in the edit view use the `Download media` button → "1080p Upscaled". A full navigate per id; after a navigate, `eval` of a stored function works only on a freshly loaded page.

@@ -1,5 +1,6 @@
 """Prophetic Implication captions (user style, 10 Nov 2026): no lower-third bar, bold "flame" subtitles of at most
-5 words at a time timed to the STT words, plus the script's POINTS shown on screen:
+2 lines (<= 5 words per line) at a time timed to the STT words, the word being spoken
+highlighted with a hotter flame (karaoke), plus the script's POINTS shown on screen:
   - main points ("One. The Hidden Hand — the God who is never named.") -> big centred title card (~4 s), then a small
     top-left label of the current point for the rest of the section;
   - sub-points (a shot whose narration starts with a short title sentence, "The Gallows.") -> medium title near the top (~3 s).
@@ -20,14 +21,16 @@ def ts(t):
 def esc(t):
     return t.replace('{', '(').replace('}', ')').replace('\n', ' ')
 
-def flame(t0, t1):
+def flame(t0, t1, gold=False):
     """flicker of the glow layer: alternate blur/colour every 0.35 s"""
     out, k, d = '', 0, 350
     n = int((t1 - t0) * 1000 // d)
     for i in range(min(n, 40)):
         a, b = i * d, (i + 1) * d
-        if i % 2 == 0: out += f"\\t({a},{b},\\blur14\\3c&H0030E0&)"
-        else: out += f"\\t({a},{b},\\blur9\\3c&H0060FF&)"
+        c1, c2 = ('&H0040D8FF&', '&H0000A8F5&') if gold else ('&H0030E0&', '&H0060FF&')
+        bl = (20, 13) if gold else (14, 9)
+        if i % 2 == 0: out += f"\\t({a},{b},\\blur{bl[0]}\\3c{c1})"
+        else: out += f"\\t({a},{b},\\blur{bl[1]}\\3c{c2})"
     return out
 
 def main(a):
@@ -47,7 +50,7 @@ def main(a):
             mains.append((st, f"{num} · {title}"))
             e = min(st + 4.2, win[i + 1]['start'] - 0.1 if i + 1 < len(win) else st + 4.2)
             ev.append((5, st, e, 'PointNum', r"{\fad(400,500)}" + f"POINT {num}"))
-            ev.append((4, st, e, 'PointGlow', r"{\fad(400,500)" + flame(st, e) + "}" + esc(title)))
+            ev.append((4, st, e, 'PointGlow', r"{\fad(400,500)\3a&H40&" + flame(st, e, gold=True) + "}" + esc(title)))
             ev.append((6, st, e, 'Point', r"{\fad(400,500)}" + esc(title)))
             ev.append((6, st + 0.4, e, 'PointTag', r"{\fad(400,500)}" + esc(tag)))
             s['_skip_all'] = True
@@ -55,13 +58,13 @@ def main(a):
         if s['scene'] == 6 and (i == 0 or sb[i - 1]['scene'] != 6):     # summary section
             mains.append((st, 'IN SUMMARY'))
             e = st + 3.2
-            ev.append((4, st, e, 'PointGlow', r"{\fad(400,500)" + flame(st, e) + "}IN SUMMARY"))
+            ev.append((4, st, e, 'PointGlow', r"{\fad(400,500)\3a&H40&" + flame(st, e, gold=True) + "}IN SUMMARY"))
             ev.append((6, st, e, 'Point', r"{\fad(400,500)}IN SUMMARY"))
         m2 = re.match(r"^((?:The |A |An )?[A-Z][\w'’ ]{2,40}?)\.\s+\S", n)
         if m2 and len(m2.group(1).split()) <= 5 and s['scene'] in (2, 3, 4, 5):
             title = m2.group(1)
             e = st + 3.0
-            ev.append((4, st, e, 'SubGlow', r"{\fad(300,400)" + flame(st, e) + "}" + esc(title.upper())))
+            ev.append((4, st, e, 'SubGlow', r"{\fad(300,400)\3a&H40&" + flame(st, e, gold=True) + "}" + esc(title.upper())))
             ev.append((6, st, e, 'Sub', r"{\fad(300,400)}" + esc(title.upper())))
             s['_skip_n'] = len(title.split())
     # current-point label, top-left, after each main card until the next main point
@@ -77,21 +80,45 @@ def main(a):
         ws = sorted(ws, key=lambda x: x['i'])[s.get('_skip_n', 0):]
         chunk = []
         chunks = []
+        # chunks of up to 2 lines (<= 5 words per line, <= 10 words), ending at sentence ends / long pauses
+        chunks = []
         for w in ws:
+            if chunk and (w['s'] - chunk[-1]['e'] > 0.7): chunks.append(chunk); chunk = []
             chunk.append(w)
-            end_p = re.search(r"[.,;:?!—]['\"”’]?$", w['w'])
-            if len(chunk) == 5 or (end_p and len(chunk) >= 2) or (end_p and re.search(r"[.?!]['\"”’]?$", w['w'])):
+            if len(chunk) == 10 or re.search(r"[.?!]['\"”’]?$", w['w']) or (len(chunk) >= 6 and re.search(r"[,;:—]['\"”’]?$", w['w'])):
                 chunks.append(chunk); chunk = []
         if chunk:
-            if chunks and len(chunk) == 1 and len(chunks[-1]) < 5: chunks[-1] += chunk
+            if chunks and len(chunk) <= 2 and len(chunks[-1]) + len(chunk) <= 10: chunks[-1] += chunk
             else: chunks.append(chunk)
         for j, c in enumerate(chunks):
             a0 = c[0]['s'] - 0.05
             nxt = chunks[j + 1][0]['s'] - 0.05 if j + 1 < len(chunks) else None
             b0 = nxt if nxt is not None and nxt - c[-1]['e'] < 0.8 else c[-1]['e'] + 0.35
-            txt = esc(' '.join(x['w'] for x in c))
-            ev.append((1, a0, b0, 'SubFlameGlow', r"{\fad(120,80)" + flame(a0, b0) + "}" + txt))
-            ev.append((2, a0, b0, 'SubFlame', r"{\fad(120,80)}" + txt))
+            # line break: 1 line up to 5 words; else split near the middle, preferring a comma
+            n = len(c); br = None
+            if n > 5:
+                mid = n / 2; cands = [k for k in range(2, n - 1) if re.search(r"[,;:—]['\"”’]?$", c[k - 1]['w']) and abs(k - mid) <= 2]
+                br = min(cands, key=lambda k: abs(k - mid)) if cands else (n + 1) // 2
+                br = max(n - 5, min(br, 5))
+            def text(hot=None, glow_only=False):
+                out = []
+                for k, x in enumerate(c):
+                    wd = esc(x['w'])
+                    if glow_only: wd = (r"{\alpha&H50&}" + wd + r"{\alpha&HFF&}") if k == hot else wd
+                    elif k == hot: wd = r"{\1c&H00F4FFFF&\3c&H00106AB4&\bord3.5\shad0}" + wd + r"{\r}"
+                    out.append(wd)
+                    if br is not None and k == br - 1: out.append(r"\N")
+                return ' '.join(out).replace(r" \N ", r"\N")
+            pass   # (no orange glow behind plain words: black outline only — user 10 Nov)
+            # karaoke: one event per spoken word; the current word gets a hotter fill and its own big flame glow
+            for k, x in enumerate(c):
+                ws0 = a0 if k == 0 else x['s']
+                ws1 = c[k + 1]['s'] if k + 1 < n else b0
+                if ws1 <= ws0: continue
+                fin = r"\fad(120,0)" if k == 0 else ""
+                fout = r"\fad(0,80)" if k == n - 1 else ""
+                ev.append((2, ws0, ws1, 'SubFlame', "{" + fin + fout + "}" + text(hot=k)))
+                ev.append((0, ws0, ws1, 'HotGlow', r"{\alpha&HFF&" + fin + fout + flame(ws0, ws1, gold=True) + "}" + text(hot=k, glow_only=True)))
     hdr = f"""[Script Info]
 ScriptType: v4.00+
 PlayResX: 1920
@@ -101,15 +128,16 @@ ScaledBorderAndShadow: yes
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: SubFlame,{FONT},92,&H0080EAFF,&H000000FF,&H00106CFF,&H00000000,-1,0,0,0,100,100,1,0,1,2.5,0,2,120,120,78,1
-Style: SubFlameGlow,{FONT},92,&HFF000000,&H000000FF,&H0000A0FF,&H00000000,-1,0,0,0,100,100,1,0,1,9,0,2,120,120,78,1
-Style: Point,{FONT},128,&H0070E6FF,&H000000FF,&H00106CFF,&H00000000,-1,0,0,0,100,100,6,0,1,3,0,5,100,100,0,1
-Style: PointGlow,{FONT},128,&HFF000000,&H000000FF,&H0000A0FF,&H00000000,-1,0,0,0,100,100,6,0,1,14,0,5,100,100,0,1
-Style: PointNum,{FONT},46,&H00B8E4F5,&H000000FF,&H00000000,&H64000000,-1,0,0,0,100,100,14,0,1,1.5,2,8,100,100,330,1
-Style: PointTag,{FONT},58,&H00F0F6FF,&H000000FF,&H00000000,&H64000000,0,-1,0,0,100,100,1,0,1,2,2,2,100,100,330,1
-Style: Sub,{FONT},74,&H0070E6FF,&H000000FF,&H00106CFF,&H00000000,-1,0,0,0,100,100,5,0,1,2.5,0,8,100,100,70,1
-Style: SubGlow,{FONT},74,&HFF000000,&H000000FF,&H0000A0FF,&H00000000,-1,0,0,0,100,100,5,0,1,11,0,8,100,100,70,1
-Style: Label,{FONT},40,&H0078D8F2,&H000000FF,&H00000000,&H78000000,-1,0,0,0,100,100,4,0,1,1.5,1.5,7,60,60,46,1
+Style: SubFlame,{FONT},90,&H00FFFFFF,&H000000FF,&H00000000,&H96000000,-1,0,0,0,100,100,1.5,0,1,5,2.5,2,120,120,78,1
+Style: SubFlameGlow,{FONT},90,&HFF000000,&H000000FF,&H0000A0FF,&H00000000,-1,0,0,0,100,100,1,0,1,9,0,2,120,120,78,1
+Style: HotGlow,{FONT},90,&H0060D8FF,&H000000FF,&H0000B0FF,&H00000000,-1,0,0,0,100,100,1,0,1,13,0,2,120,120,78,1
+Style: Point,{FONT},128,&H00F4FFFF,&H000000FF,&H00106AB4,&H00000000,-1,0,0,0,100,100,6,0,1,3,0,5,100,100,0,1
+Style: PointGlow,{FONT},128,&HFF000000,&H000000FF,&H0000B0FF,&H00000000,-1,0,0,0,100,100,6,0,1,14,0,5,100,100,0,1
+Style: PointNum,{FONT},56,&H00A8F0FF,&H000000FF,&H00102040,&H96000000,-1,0,0,0,100,100,14,0,1,1.2,3,8,100,100,322,1
+Style: PointTag,{FONT},68,&H00FFFFFF,&H000000FF,&H00102040,&H96000000,-1,-1,0,0,100,100,1,0,1,1.2,3,2,100,100,322,1
+Style: Sub,{FONT},74,&H00F4FFFF,&H000000FF,&H00106AB4,&H00000000,-1,0,0,0,100,100,5,0,1,2.5,0,8,100,100,70,1
+Style: SubGlow,{FONT},74,&HFF000000,&H000000FF,&H0000B0FF,&H00000000,-1,0,0,0,100,100,5,0,1,11,0,8,100,100,70,1
+Style: Label,{FONT},50,&H0090ECFF,&H000000FF,&H00102040,&H96000000,-1,0,0,0,100,100,4,0,1,1.2,3,7,60,60,40,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
@@ -117,7 +145,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
     lines = [f"Dialogue: {L},{ts(s0 + off)},{ts(e0 + off)},{st},,0,0,0,,{t}" for L, s0, e0, st, t in sorted(ev, key=lambda x: (x[1], x[0]))]
     open(out, 'w', encoding='utf-8').write(hdr + "\n".join(lines) + "\n")
     print(f"{out}: {len(lines)} events, {len(mains)} main points, {sum(1 for e in ev if e[3]=='Sub')} sub-points, "
-          f"{sum(1 for e in ev if e[3]=='SubFlame')} subtitle chunks")
+          f"{sum(1 for e in ev if e[3]=='SubFlame')} word events")
 
 if __name__ == '__main__':
     main(sys.argv[1:])

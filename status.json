@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T05:45+01:00",
+ "updated": "2026-11-10T12:10+01:00",
  "books": {
   "Genesis": {
    "workspace": "The Book Genesis",
@@ -438,9 +438,9 @@
  "prophetic_implications": {
   "Esther": {
    "status": "final",
-   "final": "Esther_PI_final.mp4 3:44.5",
+   "final": "Esther_PI_final.mp4 3:44.5 (new PI caption style, music −11.2 dB)",
    "clean": "Esther_PI_clean.mp4 3:38.5",
-   "rendered": "2026-11-10",
+   "rendered": "2026-11-10 12:06",
    "detail": "productions/esther/PI.md"
   }
  }

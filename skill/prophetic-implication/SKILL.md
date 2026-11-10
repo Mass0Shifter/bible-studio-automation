@@ -85,7 +85,7 @@ Same pipeline as the chapter films (`../SKILL.md`), with these differences:
 - **Pictures:** ChatGPT project "Ai Bible Imagery", the Image Prompt + the named characters' portraits attached (the `[Use existing character model for X]` tag means: attach X's Character Library portrait).
 - **Voice:** Google Vids, voice **Paz**, one scene of the script per Vids scene, each part ≤ ~620 characters (a Vids scene export stops at the scene length). Quoted words of Jesus or God are read by the narrator (this is teaching, not drama), with no divine-voice treatment unless the user asks.
 - **Clips:** Google Vids AI video (default) from the Animation Prompts; Flow only if the user says so.
-- **Music:** Flow Music, a reflective, building score; same −9.8 dB mix.
+- **Music:** Flow Music, a reflective, building score; mixed at **−11.2 dB** (user rule, 10 Nov 2026: 15 % lower than the old −9.8 dB, which competed with the voice).
 - **Outro (every PI):** the last shot is the channel outro `CAN_YOU_BEHOLD_HIM_OUTTRO.mp4` — PC: `Bible Studio\_tools\references\`, repo: `references/`. It is 10 s, 1920×1080, 24 fps, silent: the narrator's subscribe line plays over it and the music carries on and fades out with it. Use it as is — no Vids badge, no logo and no subtitle bar over it (the logo and title are already in it). If the subscribe line runs longer than 10 s, hold the outro's last frame.
 - **Finishing:** intro card (as in the chapter films, with the title "THE BOOK OF <BOOK>" and "PROPHETIC IMPLICATION" in place of the chapter line), logo, then the outro as the ending (it replaces the usual calm 3 s ending). Subtitles: show the narration sentence by sentence (there are no verse numbers); when a KJV quote is on screen, add its reference.
 - Deliver `<Book>_PI_final.mp4` and `<Book>_PI_clean.mp4`.
@@ -101,3 +101,12 @@ Same pipeline as the chapter films (`../SKILL.md`), with these differences:
 - **Titles:** "The Hidden Secret of Jonah (It's Not About the Fish)", "Why Jesus Called Himself 'Jonah'", "The Dark Truth About the Book of Jonah", "Jonah vs. Jesus: The Shocking Comparison", "The Most Misunderstood Book in the Bible".
 - **Outro:** the channel outro video closes every PI, under the subscribe line.
 - **Description chapters:** 0:00 The Real Story of Jonah · 0:39 The Sign of Jonah · 1:25 The Scandal of Global Grace · 2:00 The Contrast of Two Saviors · 2:36 The Ultimate Message of Salvation.
+
+
+## PI caption style + voice rule (user-approved on Esther, 10 Nov 2026)
+- **Voice:** always Google Vids **Paz**; ElevenLabs only when Vids refuses the script (and only for that part). ElevenLabs speech-to-text for timings is fine.
+- **No lower-third bar.** Subtitles: bold Cormorant Garamond, white with a thick black outline, up to 2 lines (≤ 5 words per line), timed to the STT words.
+- **Karaoke highlight:** the spoken word lights up in the badge colours (white centre, dark-gold ring, soft flickering golden glow); only that word is in flame.
+- **Points on screen:** main point → centred gold title card (~4 s) with "POINT ONE" above and the tagline in bold white italic, then a top-left "ONE · THE HIDDEN HAND" label until the next point; sub-points ("The Gallows.") → gold title near the top (~3 s); "IN SUMMARY" card for the summary.
+- Logo top-right + Vids badge; nothing over the channel outro.
+- **Render:** `tools/pi_captions.py` → `pi_clean.ass`; burn onto the clean film in 12 s pieces in the Linux device shell (`tools/pi/burn_piece.sh <n>`, ffmpeg `ass` filter; CapCut's ffmpeg has no libass); join intro section + pieces with the Windows job `CAT <Book>` (`tools/win/run_cat.bat`). Always send a 12 s preview before a full render.
