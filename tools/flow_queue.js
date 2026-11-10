@@ -50,7 +50,7 @@ async function pickStart(name) {   // 2026-10-30: picker items show the file nam
     const st = [...document.querySelectorAll('button')].find(b => vis(b) && b.innerText.trim() === 'Start');
     (st || ing).click(); await sl(1800);
   }
-  const box = [...document.querySelectorAll('input')].find(i => vis(i) && /Search assets/i.test(i.placeholder || ''));
+  const box = [...document.querySelectorAll('input')].find(i => vis(i) && /Search assets/i.test((i.placeholder || '') + ' ' + (i.getAttribute('aria-label') || ''))  /* 10 Nov: the box has aria-label, no placeholder */);
   if (box) { box.focus(); box.select(); document.execCommand('insertText', false, name.replace(/\.png$/, '')); box.dispatchEvent(new Event('input', { bubbles: true })); await sl(2000); }
   let it = null;
   for (let i = 0; i < 12 && !it; i++) { it = [...document.querySelectorAll('button.asset-item')].find(b => vis(b) && (b.querySelector('.asset-title') || b).innerText.trim() === name); if (!it) await sl(1000); }
