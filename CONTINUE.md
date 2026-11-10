@@ -18,6 +18,7 @@ Read this whole file first. Then `QUICK_BRIEF.md` (repo; partly out of date — 
 - User's messages shouldn't stop the work; use your own judgement when they're away.
 
 ## 1. What is happening right now (10 Nov 03:40)
+> **10 Nov ~03:55 update:** the browser pane was reset — it is **signed out of the Bible Studio app, Google and ChatGPT**, and the ChatGPT queue/uploader tabs are gone. Pictures stood at 34/41 (`plans\imgs.json` has 34). The user must sign back in (Claude never types passwords) before pictures/clips can continue. After sign-in: restart the `ePI` ChatGPT queue for the 7 missing shots (IndexedDB `__bds`/`kv` on chatgpt.com may still hold finished ones — check before regenerating).
 **Top priority: Esther — Prophetic Implication film** (whole-book "prophetic implication" film, user asked for it fast; Genesis 21 is paused for it).
 Title chosen: **"The Book Where God Is Never Named (But He's Everywhere)"**. Script approved. Storyboard shown (7 scenes, 42 shots).
 
@@ -33,7 +34,7 @@ Title chosen: **"The Book Where God Is Never Named (But He's Everywhere)"**. Scr
 | Speech-to-text | ✅ `audio\Esther_PI_stt.json` (ElevenLabs) |
 | Shot timings | ✅ `plans\windows.json` (42 shot windows, all aligned well), `plans\words.json`, `plans\shots_text.json` |
 | Vids clip queue | ✅ built: `plans\vids_queue.json` by `plans\mkqueue.py` (34 clips, 215 s). **Not started yet.** Re-run `mkqueue.py` after updating `plans\imgs.json` with the last 7 pictures. |
-| Music | 🟡 two takes in `music\_raw\` (take1 "Crown of Silk" 174 s, take2 "Beyond the Veil" 161 s). Needs extending to ~3:35 + ~10 s outro (repeat a middle section with acrossfade, like Genesis 19/20). Bed at −9.8 dB. |
+| Music | ✅ `music\Esther_PI_music.wav` 229.1 s (10 Nov 03:55) = take1 "Crown of Silk" 0–100 s + 40 s–end, 5 s crossfade at the quiet break (~95–100 s). Bed at −9.8 dB. |
 | Clips / edit / finish | ⬜ |
 
 ## 2. How to pick up the Esther film — step by step
@@ -45,7 +46,7 @@ Title chosen: **"The Book Where God Is Never Named (But He's Everywhere)"**. Scr
 2. **Update `plans\imgs.json`** (shot order → r2 path from `imageUrl`) and run `python3 mkqueue.py` in `Prophetic Implications\Esther\plans`.
 3. **Vids clips** with `tools/vids_queue.js` (header of that file explains everything). Use account **B (u/1)** first (full on 9 Nov), then E, then re-check A, C, D. Open `docs.google.com/videos/u/1/create`, right panel → AI Video → Animate, load the source with the Trusted-Types trick (`trustedTypes.createPolicy('bds'+Date.now(),{createScript:s=>s}); eval(p.createScript(localStorage.__vqsrc))`), set `window.__vqtag='ePI'`, `window.__vq=<contents of vids_queue.json>`, `__vqueue.run()`. Clips download to `Downloads` as `<uuid>.tmp` or real name — match by size with `_tools\grab_tmp_by_size.py` and move to `Esther\video\Esther_PI_vNN.mp4`. Refused clips → Flow (Omni Flash 1.1) → Grok.
    - Also make an **intro animation** from the intro card (8 s, gentle push-in, light rays) — key `vINTRO`.
-4. **Music**: extend the better take to ≈ 225 s (narration 214.9 s + outro). Save `music\Esther_PI_music.wav`.
+4. **Music**: ✅ done (229.1 s).
 5. **Plan + edit**: copy `Genesis 20\plans\mkplan20.py` as a model → `mkplanPI.py`: shots from `windows.json`, intro card + intro clip first, last shot = the channel outro `CAN_YOU_BEHOLD_HIM_OUTTRO.mp4` (same file Genesis 19/20 used) over shot 42's narration. Then `_tools\speech_fit.py` → `_tools\fit_edit.py` (re-run until it prints "wrote") → `_tools\finish.py` (re-run if cut off) → `_tools\film_check.py plans\finish.json`. **Subtitles: sentence subtitles with the KJV reference** from each shot's `ref` field (references are not spoken).
    - Keep each PC command ≤ ~170 s; the scripts are resumable (long background jobs on the PC get killed).
 6. **Deliver** `final\Esther_PI_final.mp4` and `final\Esther_PI_clean.mp4` (clean = no subtitles), send to the user.
