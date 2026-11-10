@@ -38,3 +38,7 @@ Newest first. When a lesson is merged into the skill, delete it here.
 - **New blank Vids docs** keep re-opening the "Let's start creating" welcome screen, which blocks the AI-video settings; reuse a doc that already has content, or pick an option in the welcome screen.
 - **Flow (Nov 2026):** new models Omni 1.2 Flash (default) and Omni 1.1 Flash ("Leaving Dec 5"); pick the model under "Select model family" in the settings chip; duration radios 4/6/8/10 s appear after the model is chosen. Download: clip page → ⋮ → Download media → 1080p Upscaled. Flow misspelled the card footnote ("peried") — `intro_restore` fixes it.
 - **Prophetic Implication films:** `finish.json` `"plain_subs": true` = sentence subtitles with "(Esther 7:10)" refs, no [Vn]; last shot = channel outro (10 s, `badge: false`); render on Windows with a job file `PI <Book> <plan base>` (run_pi.bat, no speech_fit).
+
+## Music too short (10 Nov 2026)
+- `tools/extend_music.py <in.wav> <out.wav> <target_s>` extends a Flow Music track automatically: it finds a late jump point and an earlier re-entry point with matching loudness, repeats the middle with a 5 s crossfade (as many times as needed) and keeps the track's own ending. Keep the original in `music\_raw\<Book>_<Ch>_music_orig.wav`. Target = dialogue narration length + ~15 s (speech_fit can lengthen speech shots; the outro adds 3 s).
+- Done 10 Nov: Genesis 22 175 → 250 s, Genesis 23 167 → 218 s, Genesis 21 161 → 313 s.
