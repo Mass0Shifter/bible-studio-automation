@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T12:10+01:00",
+ "updated": "2026-11-10T14:07+01:00",
  "books": {
   "Genesis": {
    "workspace": "The Book Genesis",
@@ -239,13 +239,14 @@
        "Genesis_22_music_take2.wav 2:54"
       ]
      },
-     "clips": "21/32 in video\\ (all 1080p). Left: v12,v13,v14,v15,v17,v18,v19,v20,v21,v23,v24. Paused 10 Nov 12:48 by the user. Vids: Glorify Michaels (u/1) quota used up; u/5 Precious Chikezie has quota (tab-5, doc 'Genesis 15 Clips'). Queue plans22/vids22_queue.json, tag g22",
+     "clips": "32/32 Vids 1080p (done 10 Nov 14:05; last 11 on u/5 Precious Chikezie)",
      "final": "none",
      "portraits_made": [
       "Isaac (Young Adult)"
      ],
      "chatgpt_scene4": "https://chatgpt.com/c/6aee94a1-a7d0-83e9-8be3-becc8123c705",
-     "music_gain_db": -11.2
+     "music_gain_db": -11.2,
+     "status": "clips done — ready to render"
     },
     "23": {
      "project_id": "01a1b3f9-5dcb-70a9-ab18-91d53526cbd9",
