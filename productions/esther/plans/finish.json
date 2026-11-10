@@ -1,0 +1,29 @@
+{
+ "film": "../final/Esther_PI_clean.mp4",
+ "edit_plan": "esther_pi_full.json",
+ "verses": "subs.json",
+ "plain_subs": true,
+ "reference": "The Book of Esther",
+ "intro_video": "../video/Esther_PI_INTRO.mp4",
+ "intro_voice": "../audio/Esther_PI_intro_voice.wav",
+ "intro_card": "../images/Esther_PI_INTRO.png",
+ "intro_restore": [
+  [
+   0.7,
+   1.0
+  ]
+ ],
+ "intro_min": 6.0,
+ "intro_max": 8.0,
+ "intro_loop": false,
+ "bar_opacity": 0.8,
+ "references": "../../../_tools/references",
+ "fonts": "../../../_tools/fonts",
+ "output": "../final/Esther_PI_final.mp4",
+ "badge": {
+  "image": "../../../_tools/references/Radiant Golden Portal Emblem.png",
+  "cx": 1740,
+  "cy": 898,
+  "size": 150
+ }
+}

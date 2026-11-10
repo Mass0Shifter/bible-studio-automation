@@ -210,6 +210,13 @@
 "prompt": "Static camera; storm clouds roll behind the gallows, a gust blows dust. Keep every face, beard and garment exactly as in the start image. God is never shown: no figure, no face, no light-being. Everyone stays modestly and fully clothed. No violence. No text on screen. No narration, no voiceover, no dialogue, no music. Natural ambient sound only."
 },
 {
+"key": "v31",
+"len": 5,
+"img": "https://pub-2993fb3bf56d45ffb3d678320781fe03.r2.dev/generated_shots/esther-chapter-1-verse-31-scene-5-shot-3-csvptm.jpg",
+"name": "Esther_PI_v31.mp4",
+"prompt": "Slow push-in; a scribe unrolls a scroll, lamp flames flicker. Keep every face, beard and garment exactly as in the start image. God is never shown: no figure, no face, no light-being. Everyone stays modestly and fully clothed. No violence. No text on screen. No narration, no voiceover, no dialogue, no music. Natural ambient sound only."
+},
+{
 "key": "v32",
 "len": 6,
 "img": "https://pub-2993fb3bf56d45ffb3d678320781fe03.r2.dev/generated_shots/esther-chapter-1-verse-32-scene-5-shot-4-kdzyuq.jpg",
@@ -236,5 +243,47 @@
 "img": "https://pub-2993fb3bf56d45ffb3d678320781fe03.r2.dev/generated_shots/esther-chapter-1-verse-35-scene-5-shot-7-ajicud.jpg",
 "name": "Esther_PI_v35.mp4",
 "prompt": "Slow push-in toward the open tomb; light rays and mist drift out. Keep every face, beard and garment exactly as in the start image. God is never shown: no figure, no face, no light-being. Everyone stays modestly and fully clothed. No violence. No text on screen. No narration, no voiceover, no dialogue, no music. Natural ambient sound only."
+},
+{
+"key": "v36",
+"len": 7,
+"img": "https://pub-2993fb3bf56d45ffb3d678320781fe03.r2.dev/generated_shots/esther-chapter-1-verse-36-scene-5-shot-8-m6yfgq.jpg",
+"name": "Esther_PI_v36.mp4",
+"prompt": "Static camera, very slow push-in; light slowly brightens across the scroll. Keep every face, beard and garment exactly as in the start image. God is never shown: no figure, no face, no light-being. Everyone stays modestly and fully clothed. No violence. No text on screen. No narration, no voiceover, no dialogue, no music. Natural ambient sound only."
+},
+{
+"key": "v37",
+"len": 6,
+"img": "https://pub-2993fb3bf56d45ffb3d678320781fe03.r2.dev/generated_shots/esther-chapter-1-verse-37-scene-6-shot-1-tyb1dq.jpg",
+"name": "Esther_PI_v37.mp4",
+"prompt": "Slow push-in; stars twinkle, a light breeze moves her veil. Keep every face, beard and garment exactly as in the start image. God is never shown: no figure, no face, no light-being. Everyone stays modestly and fully clothed. No violence. No text on screen. No narration, no voiceover, no dialogue, no music. Natural ambient sound only."
+},
+{
+"key": "v38",
+"len": 6,
+"img": "https://pub-2993fb3bf56d45ffb3d678320781fe03.r2.dev/generated_shots/esther-chapter-1-verse-38-scene-6-shot-2-jo2qwv.jpg",
+"name": "Esther_PI_v38.mp4",
+"prompt": "Slow push-in; banners and silk hangings sway gently. Keep every face, beard and garment exactly as in the start image. God is never shown: no figure, no face, no light-being. Everyone stays modestly and fully clothed. No violence. No text on screen. No narration, no voiceover, no dialogue, no music. Natural ambient sound only."
+},
+{
+"key": "v39",
+"len": 4,
+"img": "https://pub-2993fb3bf56d45ffb3d678320781fe03.r2.dev/generated_shots/esther-chapter-1-verse-39-scene-6-shot-3-psmesn.jpg",
+"name": "Esther_PI_v39.mp4",
+"prompt": "Slow drone rise over the courtyard; lamp flames flicker, garments swirl. Keep every face, beard and garment exactly as in the start image. God is never shown: no figure, no face, no light-being. Everyone stays modestly and fully clothed. No violence. No text on screen. No narration, no voiceover, no dialogue, no music. Natural ambient sound only."
+},
+{
+"key": "v40",
+"len": 7,
+"img": "https://pub-2993fb3bf56d45ffb3d678320781fe03.r2.dev/generated_shots/esther-chapter-1-verse-40-scene-6-shot-4-jmdfnh.jpg",
+"name": "Esther_PI_v40.mp4",
+"prompt": "Slow push-in through the crowd toward the light; light rays shimmer. Keep every face, beard and garment exactly as in the start image. God is never shown: no figure, no face, no light-being. Everyone stays modestly and fully clothed. No violence. No text on screen. No narration, no voiceover, no dialogue, no music. Natural ambient sound only."
+},
+{
+"key": "v41",
+"len": 6,
+"img": "https://pub-2993fb3bf56d45ffb3d678320781fe03.r2.dev/generated_shots/esther-chapter-1-verse-41-scene-6-shot-5-nnpgcr.jpg",
+"name": "Esther_PI_v41.mp4",
+"prompt": "Static camera, very slow push-in; soft light rays move across the hands. Keep every face, beard and garment exactly as in the start image. God is never shown: no figure, no face, no light-being. Everyone stays modestly and fully clothed. No violence. No text on screen. No narration, no voiceover, no dialogue, no music. Natural ambient sound only."
 }
 ]

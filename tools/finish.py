@@ -90,10 +90,12 @@ def main(path):
     for k, (n, sa, sb) in enumerate(spans):
         a, b = sa - t0, sb - t0
         if k == len(spans) - 1 and film_len - b < 0.5: b = film_len   # no outro in the film: last subtitle runs to the end
-        text = f"[V{n}] {verses[n]}"
+        pre = "" if F.get("plain_subs") else f"[V{n}]"   # plain_subs: sentence subtitles (Prophetic Implication films), no verse number
+        text = f"{pre} {verses[n]}".strip()
         if overlay.fits(text, fonts):
             blocks.append((a, b, text)); continue
-        parts, ratios = overlay.split_verse(f"[V{n}]", verses[n], fonts)
+        parts, ratios = overlay.split_verse(pre, verses[n], fonts)
+        parts = [x.strip() for x in parts]
         cuts = []
         for r in ratios:
             guess = a + (b - a) * r

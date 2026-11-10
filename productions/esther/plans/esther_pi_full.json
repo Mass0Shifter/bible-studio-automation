@@ -1,0 +1,313 @@
+{
+ "voiceover": "../audio/Esther_PI_voiceover.wav",
+ "music": "../music/Esther_PI_music.wav",
+ "music_gain_db": -9.8,
+ "ambient_gain": 0.22,
+ "dissolve": 0.5,
+ "end_tail": 0.4,
+ "output": "../final/Esther_PI_clean.mp4",
+ "badge": {
+  "image": "../../../_tools/references/Radiant Golden Portal Emblem.png",
+  "cx": 1740,
+  "cy": 898,
+  "size": 150
+ },
+ "shots": [
+  {
+   "verse": 1,
+   "clip": "../video/Esther_PI_v01.mp4",
+   "start": 0.0,
+   "end": 6.81,
+   "method": "auto"
+  },
+  {
+   "verse": 2,
+   "clip": "../video/Esther_PI_v02.mp4",
+   "start": 6.81,
+   "end": 11.11,
+   "method": "auto"
+  },
+  {
+   "verse": 3,
+   "clip": "../video/Esther_PI_v03.mp4",
+   "start": 11.11,
+   "end": 17.82,
+   "method": "auto"
+  },
+  {
+   "verse": 4,
+   "clip": "../video/Esther_PI_v04.mp4",
+   "start": 17.82,
+   "end": 26.06,
+   "method": "auto"
+  },
+  {
+   "verse": 5,
+   "clip": "../video/Esther_PI_v05.mp4",
+   "start": 26.06,
+   "end": 30.01,
+   "method": "auto"
+  },
+  {
+   "verse": 6,
+   "clip": "../video/Esther_PI_v06.mp4",
+   "start": 30.01,
+   "end": 33.94,
+   "method": "auto"
+  },
+  {
+   "verse": 7,
+   "clip": "../video/Esther_PI_v07.mp4",
+   "start": 33.94,
+   "end": 38.24,
+   "method": "auto"
+  },
+  {
+   "verse": 8,
+   "clip": "../video/Esther_PI_v08.mp4",
+   "start": 38.24,
+   "end": 44.68,
+   "method": "auto"
+  },
+  {
+   "verse": 9,
+   "clip": "../video/Esther_PI_v09.mp4",
+   "start": 44.68,
+   "end": 48.88,
+   "method": "auto"
+  },
+  {
+   "verse": 10,
+   "clip": "../video/Esther_PI_v10.mp4",
+   "start": 48.88,
+   "end": 54.96,
+   "method": "auto"
+  },
+  {
+   "verse": 11,
+   "clip": "../video/Esther_PI_v11.mp4",
+   "start": 54.96,
+   "end": 62.51,
+   "method": "auto"
+  },
+  {
+   "verse": 12,
+   "clip": "../video/Esther_PI_v12.mp4",
+   "start": 62.51,
+   "end": 67.69,
+   "method": "auto"
+  },
+  {
+   "verse": 13,
+   "clip": "../video/Esther_PI_v13.mp4",
+   "start": 67.69,
+   "end": 72.35,
+   "method": "auto"
+  },
+  {
+   "verse": 14,
+   "clip": "../video/Esther_PI_v14.mp4",
+   "start": 72.35,
+   "end": 81.91,
+   "method": "auto"
+  },
+  {
+   "verse": 15,
+   "clip": "../video/Esther_PI_v15.mp4",
+   "start": 81.91,
+   "end": 87.51,
+   "method": "auto"
+  },
+  {
+   "verse": 16,
+   "clip": "../video/Esther_PI_v16.mp4",
+   "start": 87.51,
+   "end": 91.18,
+   "method": "auto"
+  },
+  {
+   "verse": 17,
+   "clip": "../video/Esther_PI_v17.mp4",
+   "start": 91.18,
+   "end": 95.72,
+   "method": "auto"
+  },
+  {
+   "verse": 18,
+   "clip": "../video/Esther_PI_v18.mp4",
+   "start": 95.72,
+   "end": 101.31,
+   "method": "auto"
+  },
+  {
+   "verse": 19,
+   "clip": "../video/Esther_PI_v19.mp4",
+   "start": 101.31,
+   "end": 105.8,
+   "method": "auto"
+  },
+  {
+   "verse": 20,
+   "clip": "../video/Esther_PI_v20.mp4",
+   "start": 105.8,
+   "end": 109.5,
+   "method": "auto"
+  },
+  {
+   "verse": 21,
+   "clip": "../video/Esther_PI_v21.mp4",
+   "start": 109.5,
+   "end": 113.17,
+   "method": "auto"
+  },
+  {
+   "verse": 22,
+   "clip": "../video/Esther_PI_v22.mp4",
+   "start": 113.17,
+   "end": 116.96,
+   "method": "auto"
+  },
+  {
+   "verse": 23,
+   "clip": "../video/Esther_PI_v23.mp4",
+   "start": 116.96,
+   "end": 121.56,
+   "method": "auto"
+  },
+  {
+   "verse": 24,
+   "clip": "../video/Esther_PI_v24.mp4",
+   "start": 121.56,
+   "end": 126.33,
+   "method": "auto"
+  },
+  {
+   "verse": 25,
+   "clip": "../video/Esther_PI_v25.mp4",
+   "start": 126.33,
+   "end": 130.24,
+   "method": "auto"
+  },
+  {
+   "verse": 26,
+   "clip": "../video/Esther_PI_v26.mp4",
+   "start": 130.24,
+   "end": 135.49,
+   "method": "auto"
+  },
+  {
+   "verse": 27,
+   "clip": "../video/Esther_PI_v27.mp4",
+   "start": 135.49,
+   "end": 138.97,
+   "method": "auto"
+  },
+  {
+   "verse": 28,
+   "clip": "../video/Esther_PI_v28.mp4",
+   "start": 138.97,
+   "end": 146.26,
+   "method": "auto"
+  },
+  {
+   "verse": 29,
+   "clip": "../video/Esther_PI_v29.mp4",
+   "start": 146.26,
+   "end": 150.07,
+   "method": "auto"
+  },
+  {
+   "verse": 30,
+   "clip": "../video/Esther_PI_v30.mp4",
+   "start": 150.07,
+   "end": 154.71,
+   "method": "auto"
+  },
+  {
+   "verse": 31,
+   "clip": "../video/Esther_PI_v31.mp4",
+   "start": 154.71,
+   "end": 158.85,
+   "method": "auto"
+  },
+  {
+   "verse": 32,
+   "clip": "../video/Esther_PI_v32.mp4",
+   "start": 158.85,
+   "end": 163.87,
+   "method": "auto"
+  },
+  {
+   "verse": 33,
+   "clip": "../video/Esther_PI_v33.mp4",
+   "start": 163.87,
+   "end": 170.25,
+   "method": "auto"
+  },
+  {
+   "verse": 34,
+   "clip": "../video/Esther_PI_v34.mp4",
+   "start": 170.25,
+   "end": 175.26,
+   "method": "auto"
+  },
+  {
+   "verse": 35,
+   "clip": "../video/Esther_PI_v35.mp4",
+   "start": 175.26,
+   "end": 179.76,
+   "method": "auto"
+  },
+  {
+   "verse": 36,
+   "clip": "../video/Esther_PI_v36.mp4",
+   "start": 179.76,
+   "end": 185.29,
+   "method": "auto"
+  },
+  {
+   "verse": 37,
+   "clip": "../video/Esther_PI_v37.mp4",
+   "start": 185.29,
+   "end": 190.0,
+   "method": "auto"
+  },
+  {
+   "verse": 38,
+   "clip": "../video/Esther_PI_v38.mp4",
+   "start": 190.0,
+   "end": 194.54,
+   "method": "auto"
+  },
+  {
+   "verse": 39,
+   "clip": "../video/Esther_PI_v39.mp4",
+   "start": 194.54,
+   "end": 197.29,
+   "method": "auto"
+  },
+  {
+   "verse": 40,
+   "clip": "../video/Esther_PI_v40.mp4",
+   "start": 197.29,
+   "end": 202.89,
+   "method": "auto"
+  },
+  {
+   "verse": 41,
+   "clip": "../video/Esther_PI_v41.mp4",
+   "start": 202.89,
+   "end": 208.05,
+   "method": "auto"
+  },
+  {
+   "verse": 42,
+   "clip": "../../../_tools/references/CAN_YOU_BEHOLD_HIM_OUTTRO.mp4",
+   "start": 208.05,
+   "end": 218.05,
+   "method": "trim",
+   "badge": false,
+   "note": "channel outro"
+  }
+ ]
+}

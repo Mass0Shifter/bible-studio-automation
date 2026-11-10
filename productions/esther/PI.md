@@ -11,3 +11,11 @@
 ## 10 Nov 03:55 — music
 - `music\Esther_PI_music.wav` 229.1 s: take1 "Crown of Silk" 0–100 s + 40 s–end, 5 s crossfade at the quiet break. Mix at −9.8 dB.
 - Browser pane reset (signed out of app/Google/ChatGPT); pictures 34/41, waiting on user sign-in.
+
+## 10 Nov 04:05 — pictures done, edit plan ready
+- All 41 pictures in the app (shots 31, 39, 40, 41 regenerated in ChatGPT after the browser reset; uploaded from the chatgpt.com/robots.txt tab — posting from a normal ChatGPT page fails silently).
+- `plans/vids_queue.json` = all 41 clips (256 s); helper agent is making them in Vids.
+- `plans/mkplanPI.py` → `esther_pi_full.json` (edit, shot 42 = channel outro, 10 s, no badge), `subs.json` (sentence + KJV ref), `finish.json` (plain_subs).
+- `tools/finish.py`: new `"plain_subs": true` option = subtitles without the [Vn] verse number (for Prophetic Implication films).
+- Intro animation: Flow project "Nov 10 - 04:00" has the card uploaded, Omni 1.1 Flash 8 s, prompt typed — **waiting for the user's OK to spend Flow credits**.
+- Intro voice: none yet (finish.json expects `audio/Esther_PI_intro_voice.wav`).
