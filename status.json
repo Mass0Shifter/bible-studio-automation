@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T14:30+01:00",
+ "updated": "2026-11-11T12:20+01:00",
  "books": {
   "Genesis": {
    "workspace": "The Book Genesis",
@@ -267,12 +267,15 @@
       ]
      },
      "clips": "9/23 Vids 1080p (v01-v08, v12); 14 left, Vids quota used up on u/5 and u/1",
-     "final": "none",
+     "final": "Genesis_23_final.mp4 3:35.6",
      "portraits_made": [
       "Ephron (Adult) — uploaded to Character Library 2026-11-08; copy references\\Ephron_Adult.jpg"
      ],
      "music_gain_db": -11.2,
-     "status": "clips in progress — waiting for Vids quota"
+     "status": "final",
+     "clean": "Genesis_23_clean.mp4 3:31.5",
+     "rendered": "2026-11-11",
+     "detail": "productions/genesis/23.md"
     },
     "24": {
      "project_id": "01a1b401-17d9-72a7-8794-12486f23f96f",
