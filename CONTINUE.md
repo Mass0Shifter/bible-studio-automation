@@ -17,12 +17,12 @@ Read this whole file first. Then `QUICK_BRIEF.md` (repo; partly out of date — 
 - Can't delete files on the PC (no delete permission) — move junk to `_to_delete\` instead.
 - User's messages shouldn't stop the work; use your own judgement when they're away.
 
-## 1. What is happening right now (10 Nov 14:35) — waiting for Vids quota
-- **Done today:** Esther PI (new caption style, approved) and **Genesis 22** (`Genesis 22\final\Genesis_22_final.mp4` 3:59.6, all checks pass).
-- **Genesis 23:** clips 9/23 (left: v08b, v09, v09b, v10, v11, v13, v13b, v14, v15, v16, v17, v18, v19, v20). Intro card + Paz intro line + Flow intro animation, music (218 s), finish.json: ready.
-- **Genesis 21:** clips 0/39. Intro, music (313 s), finish.json: ready.
-- **Blocker:** all Google Vids AI-video quota used on 10 Nov (u/0, u/1, u/4, u/5; u/2 has none; u/3 slider locked). Resume after the daily reset: Vids doc with content (e.g. u/5 "Genesis 15 Clips"), load `_tools\vids_queue.js`, `__vqtag='g23'`, queue from `productions/genesis/plans23/`, run (finished keys skipped), then g21. Move clips with `_tools\grab_vids.py`. Then Windows jobs `23 genesis23_full`, `21 genesis21_full` (watcher.bat open).
-- **Rules (10 Nov):** music −11.2 dB; voice Paz in Vids (ElevenLabs only if Vids refuses); 2 helper agents allowed; Flow credits only with the user's own yes in the session (relayed yes is blocked).
+## 1. What is happening right now (11 Nov 12:45)
+- **Finished:** Esther PI (new caption style), **Genesis 22** (3:59.6), **Genesis 23** (3:35.6) — all checks pass.
+- **Genesis 21:** 19/45 clips saved (`productions/genesis/21.md` has the list + Flow clip IDs). **Flow credits ran low** ("You're running low on Google Flow credits", generate button disabled from v16c). Missing 26: v07b_2 (made in Flow but 1080p download never arrives — redo), v15 (never appeared — redo), v16c, v17–v20, v22, v22b, v23, v23_2, v23b, v23b_2, v24b, v25, v26, v26b, v26b_2, v27, v29, v29b, v30, v30b, v30b_2, v31, v33.
+- **Plan:** make the 26 in **Google Vids** once an account resets (checked 12:44: u/0, u/1, u/4, u/5 still "Exceeds your remaining quota"; resets seem ~24 h after use). Vids allows ≤15 s so the split speech keys still work as planned. Then Windows job `21 genesis21_full` (intro, music 331 s, finish.json are ready).
+- Flow projects: G23 3c51cf25-efb5-423c-9b1d-d7309cd3b67e, G23-split + G21 42babf38-0e95-4ec7-a133-06d283ffe1d5. flow_queue.js fixed for the new "Search assets" aria-label.
+- **Rules:** music −11.2 dB; voice Paz (Vids), ElevenLabs only if Vids refuses; 2 helpers; Flow credits only with the user's own yes; keep the browser pane visible (hidden = queue slows to 1 clip / 11 min); PC sleep interrupts everything.
 
 ## 3. After Esther: back to Genesis
 - **Genesis 21** (paused): read `productions/genesis/21.md` "PAUSED" section — narration wav, STT, windows done; check verse 34 timing (came out 0.3 s); then quotes for divine/angel voices, `mkplan21` (copy of mkplan20.py), Vids queue, intro card + Paz intro line, music extend.
