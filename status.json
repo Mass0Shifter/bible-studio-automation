@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T12:20+01:00",
+ "updated": "2026-11-12T04:10+01:00",
  "books": {
   "Genesis": {
    "workspace": "The Book Genesis",
@@ -210,8 +210,8 @@
        "Genesis_21_music_take2.wav 2:59"
       ]
      },
-     "clips": "0/39; plan plans21/ (v34 narration added, divine+angel voices); queue tag g21, waits for Vids quota",
-     "final": "none",
+     "clips": "45/45 (19 Flow 1080p, 26 Grok Imagine 720p on 12 Nov)",
+     "final": "Genesis_21_final.mp4 5:27.3",
      "portraits_made": [
       "Hagar (Adult)",
       "Isaac (Infant)",
@@ -220,7 +220,12 @@
      "issues": [
       "Ishmael stored as 'symbol' — no portrait"
      ],
-     "music_gain_db": -11.2
+     "music_gain_db": -11.2,
+     "clean": "Genesis_21_clean.mp4",
+     "status": "final",
+     "rendered": "2026-11-12",
+     "checks": "speech_check 0 FAIL; film_check 1 FAIL = v23b_2 lip sync 2 frames (-0.08 s), 2 WARN loudness — accepted",
+     "detail": "productions/genesis/21.md"
     },
     "22": {
      "project_id": "01a1b3e0-4126-703d-821c-a3d60dd1e626",

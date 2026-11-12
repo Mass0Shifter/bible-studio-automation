@@ -42,3 +42,11 @@ Newest first. When a lesson is merged into the skill, delete it here.
 ## Music too short (10 Nov 2026)
 - `tools/extend_music.py <in.wav> <out.wav> <target_s>` extends a Flow Music track automatically: it finds a late jump point and an earlier re-entry point with matching loudness, repeats the middle with a 5 s crossfade (as many times as needed) and keeps the track's own ending. Keep the original in `music\_raw\<Book>_<Ch>_music_orig.wav`. Target = dialogue narration length + ~15 s (speech_fit can lengthen speech shots; the outro adds 3 s).
 - Done 10 Nov: Genesis 22 175 → 250 s, Genesis 23 167 → 218 s, Genesis 21 161 → 313 s.
+
+## Grok Imagine as a clip source (12 Nov 2026)
+- 1080p is NOT on the plan — submitting at 1080p silently does nothing. Set **720p**.
+- Script `.click()` on Submit doesn't start a generation; a real browser click (computer tool on the blue arrow, ~(756,451–468) in an 800-wide pane) does.
+- Attach the start image: capture `HTMLInputElement.prototype.click`, click Upload → "Upload media", set `input.files` with a File made from `<img crossOrigin>` → canvas. Clear old image first ("Remove image").
+- Navigate back with the sidebar `a[href="/imagine"]` (SPA) so injected helper functions survive.
+- The finished video is `assets.grok.com/users/<uid>/generated/<post id>/generated_video.mp4`; fetch it from the `<video>` src with `cache:'no-store'` (an early 404 gets cached). The page URL can jump to the image post after finishing — keep the post id from right after the click.
+- Grok clips come with their own sound/voices; speech_fit + speech_check handled them fine.
