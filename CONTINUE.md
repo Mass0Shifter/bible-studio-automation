@@ -17,6 +17,10 @@ Read this whole file first. Then `QUICK_BRIEF.md` (repo; partly out of date — 
 - Can't delete files on the PC (no delete permission) — move junk to `_to_delete\` instead.
 - User's messages shouldn't stop the work; use your own judgement when they're away.
 
+## 1a. Update 12 Nov 04:10
+- **Genesis 21 FINISHED** (`final\Genesis_21_final.mp4` 5:27). Last 26 clips made in **Grok Imagine** at 720p (Vids still out on all accounts; Flow credits low). How-to in `docs/LESSONS.md` → "Grok Imagine as a clip source".
+- Next: Genesis 24 (pictures 33/40), 25–28.
+
 ## 1. What is happening right now (11 Nov 12:45)
 - **Finished:** Esther PI (new caption style), **Genesis 22** (3:59.6), **Genesis 23** (3:35.6) — all checks pass.
 - **Genesis 21:** 19/45 clips saved (`productions/genesis/21.md` has the list + Flow clip IDs). **Flow credits ran low** ("You're running low on Google Flow credits", generate button disabled from v16c). Missing 26: v07b_2 (made in Flow but 1080p download never arrives — redo), v15 (never appeared — redo), v16c, v17–v20, v22, v22b, v23, v23_2, v23b, v23b_2, v24b, v25, v26, v26b, v26b_2, v27, v29, v29b, v30, v30b, v30b_2, v31, v33.
