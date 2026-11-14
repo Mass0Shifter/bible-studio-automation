@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T04:10+01:00",
+ "updated": "2026-11-14T12:05+01:00",
  "books": {
   "Genesis": {
    "workspace": "The Book Genesis",
@@ -299,8 +299,8 @@
        "Genesis_24_music_take2.wav 2:39"
       ]
      },
-     "clips": "none",
-     "final": "none",
+     "clips": "64 Flow (Nâcham Media, 1050 -> 231 credits)",
+     "final": "Genesis_24_final.mp4 9:22",
      "portraits_needed": [
       "Abraham's Eldest Servant",
       "Rebekah (Young Adult)",
@@ -310,7 +310,12 @@
      ],
      "user_todo": [
       "Set Abraham life stage = Elder on Continuity tab"
-     ]
+     ],
+     "status": "final",
+     "clean": "Genesis_24_clean.mp4 9:17",
+     "rendered": "2026-11-14",
+     "checks": "film_check 0 FAIL; all 67 verses subtitled",
+     "detail": "productions/genesis/24.md"
     },
     "25": {
      "project_id": "01a1b50b-2cd8-72fb-ba8a-8e083f139d32",
