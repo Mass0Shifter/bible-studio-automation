@@ -50,3 +50,8 @@ Newest first. When a lesson is merged into the skill, delete it here.
 - Navigate back with the sidebar `a[href="/imagine"]` (SPA) so injected helper functions survive.
 - The finished video is `assets.grok.com/users/<uid>/generated/<post id>/generated_video.mp4`; fetch it from the `<video>` src with `cache:'no-store'` (an early 404 gets cached). The page URL can jump to the image post after finishing — keep the post id from right after the click.
 - Grok clips come with their own sound/voices; speech_fit + speech_check handled them fine.
+
+## Flow downloads without titles (14 Nov 2026, Genesis 24)
+- Flow's grid is virtualised (only ~18 tiles in the DOM) and tile titles are AI summaries, so order/title mapping is unreliable. Download everything at "1080p Upscaled", then on the PC match each new file to its key by **first frame vs the start picture** (48×27 grey MSE) **plus duration** — `Genesis 24\plans\match24.py`. Same-picture/same-length pairs may swap, which is harmless (same shot).
+- Many upscales at once queue up ("Refrain from starting multiple upscaling jobs"); they still all arrive within ~10 min.
+- A hidden browser pane throttles the page to ~1 action per 12 minutes. Keep it visible.
